@@ -5,7 +5,16 @@ import './index.css';
 
 
 export const MainRight=()=>{
-  return(
-    <div className="audi-container">Hello</div>
-  )
+  return (
+    <div className="audi-container">
+      <div className="sections">
+        <h4>TRIM</h4>
+        <h4>EXTERIOR</h4>
+        <h4>INTERIOR</h4>
+        <h4>OPTIONS</h4>
+        <h4>PACKAGES</h4>
+        <h4>SUMMARY</h4>
+      </div>
+    </div>
+  );
 }
