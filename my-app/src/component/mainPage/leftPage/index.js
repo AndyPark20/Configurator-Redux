@@ -7,7 +7,7 @@ export const MainLeft = () => {
   return (
     <div className="audi-container">
       <div className="row-section">
-        <div clasasName="col section-width-left">
+        <div className="col section-left">
           <div className="description">
             <h2 className="year-model">2022</h2>
             <h1 className="audi-model">
