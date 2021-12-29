@@ -1,9 +1,9 @@
 import React from "react";
-import Data from "../DataObject";
+import Data from "../../DataObject";
 
 import "./index.css";
 
-export const Main = () => {
+export const MainLeft = () => {
   return (
     <div className="audi-container">
       <div className="row-section">

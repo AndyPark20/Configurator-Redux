@@ -1,10 +1,10 @@
 import React from 'react';
-import {Main} from './main';
+import {MainLeft} from '../component/mainPage/leftPage';
 
 export const App =()=>{
   return(
     <div>
-      <Main/>
+      <MainLeft/>
     </div>
   );
 };
