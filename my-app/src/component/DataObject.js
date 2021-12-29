@@ -12,7 +12,11 @@ const carData = {
         standard: {
           extImage: {
             "Navarra Blue metallic": [
-              require("../img/Q440e-tron/NavarraBluemetallic/Audi-Q4-40-e-tron-back-angle-shot-Navarra-Blue-metallic.png")
+              require("../img/Q440e-tron/NavarraBluemetallic/1-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Q440e-tron/NavarraBluemetallic/2-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Q440e-tron/NavarraBluemetallic/3-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Q440e-tron/NavarraBluemetallic/4-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Q440e-tron/NavarraBluemetallic/5-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png")
             ],
           },
         },
