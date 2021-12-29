@@ -1,6 +1,8 @@
 import React from "react";
 import Data from "../DataObject";
 
+import "./index.css";
+
 export const Main = () => {
   return (
     <div className="audi-container">
@@ -21,6 +23,8 @@ export const Main = () => {
                 "Navarra Blue metallic"
               ][0]
             }
+            className="default-image"
+            alt="test"
           />
         </div>
       </div>
