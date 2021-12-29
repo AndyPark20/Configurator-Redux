@@ -1,6 +1,7 @@
 import React from "react";
 import Data from "../../DataObject";
 
+//CSS Styling
 import "./index.css";
 
 export const MainLeft = () => {
