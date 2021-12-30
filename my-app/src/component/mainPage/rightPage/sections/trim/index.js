@@ -3,7 +3,14 @@ import Data from '../../../../DataObject';
 
 
 export const Trim =()=>{
+
+  const RenderTrim =()=>{
+    return(
+      <div>Hello</div>
+    )
+  }
+
   return(
-    <div>Hello</div>
+    <div>{console.log(Data)}</div>
   )
 }

@@ -3,6 +3,9 @@ import React from 'react';
 //CSS style
 import './index.css';
 
+//Import Components
+import {Trim} from './sections/trim/';
+
 
 export const MainRight=()=>{
   return (
@@ -15,6 +18,7 @@ export const MainRight=()=>{
         <h4>PACKAGES</h4>
         <h4>SUMMARY</h4>
       </div>
+      <Trim/>
     </div>
   );
 }
