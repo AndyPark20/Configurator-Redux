@@ -1,16 +1,21 @@
-import React from 'react';
-import Data from '../../../../DataObject';
+import React from "react";
+import {connect} from 'react-redux';
+
+export const Trim = ({ data }) => {
+
+  const RenderTrim = () => {
+    return <div>{console.log(data)}</div>;
+  };
 
 
-export const Trim =()=>{
+  return <div>{RenderTrim()}</div>;
+};
 
-  const RenderTrim =()=>{
-    return(
-      <div>Hello</div>
-    )
-  }
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {
+    data: state,
+  };
+};
 
-  return(
-    <div>{console.log(Data)}</div>
-  )
-}
+export default connect(mapStateToProps)(Trim);
