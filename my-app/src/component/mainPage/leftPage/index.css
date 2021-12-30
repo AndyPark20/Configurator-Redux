@@ -26,8 +26,8 @@ body{
 .default-image{
   width:60%;
   position:absolute;
-  top:29%;
-  left:3%;
+  top:24%;
+  left:-3%;
   z-index:-1;
 }
 

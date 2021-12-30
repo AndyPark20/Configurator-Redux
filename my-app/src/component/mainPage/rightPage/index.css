@@ -1,5 +1,7 @@
 .audi-container{
   width:50%;
+  border-left:1px solid #e0e0e0;
+  height:80vh;
 }
 
 .sections{
