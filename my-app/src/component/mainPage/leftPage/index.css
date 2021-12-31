@@ -68,3 +68,12 @@ body{
   height:70vh;
   align-items: center;
 }
+
+/****Specification styling****/
+.spec-category-style{
+  font-size:.8rem;
+}
+
+.engine-type{
+  font-size:.5rem;
+}

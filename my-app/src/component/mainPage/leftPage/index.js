@@ -2,7 +2,7 @@ import React from "react";
 import Data from "../../DataObject";
 
 //Connect functionality from React-Redux;
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 //CSS Styling
 import "./index.css";
@@ -10,16 +10,16 @@ import "./index.css";
 const MainLeft = (data) => {
 
   //Specification Render for Trim Selected
-  const specRender=()=>{
-    return(
-      <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
-      <p><span className="spec-category-style">Max. output</span><span className="engine-type">Asynchronous electric motor</span></p>
-      <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
-      <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
-
+  const specRender = () => {
+    return (
+      <div clasName="spec">
+        <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
+        <p><span className="spec-category-style">Max. output</span><span className="engine-type">201</span>HP</p>
+        <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">N/A</span>LB-FT</p>
+        <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">7.9</span>Seconds</p>
+      </div>
     )
   }
-
 
   return (
     <div className="audi-container">
@@ -35,20 +35,19 @@ const MainLeft = (data) => {
             </h1>
           </div>
           <img
-            src={data.carData.Premium["Q4 40 e-tron"].spec.standard.extImage["Navarra Blue metallic"][0]} className="default-image" alt="Q4 40 e-tron Navarra Blue metallic"/>
+            src={data.carData.Premium["Q4 40 e-tron"].spec.standard.extImage["Navarra Blue metallic"][0]}
+            className="default-image" alt="Q4 40 e-tron Navarra Blue metallic" />
         </div>
-        <div className="spec">
           {specRender()}
-        </div>
       </div>
     </div>
   );
 };
 
-const mapStateToProps =(state)=>{
+const mapStateToProps = (state) => {
   console.log(state.carData)
-  return{
-    carData:state.carData
+  return {
+    carData: state.carData
   }
 };
 
