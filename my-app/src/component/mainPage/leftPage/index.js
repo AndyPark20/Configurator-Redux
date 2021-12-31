@@ -12,11 +12,11 @@ const MainLeft = (data) => {
   //Specification Render for Trim Selected
   const specRender = () => {
     return (
-      <div clasName="spec">
-        <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
-        <p><span className="spec-category-style">Max. output</span><span className="engine-type">201</span>HP</p>
-        <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">N/A</span>LB-FT</p>
-        <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">7.9</span>Seconds</p>
+      <div className="spec">
+        <p ><span className="spec-category-style">Engine Type: </span><span className="engine-type">Asynchronous electric motor</span></p>
+        <p><span className="spec-category-style">Max. output: </span><span className="engine-type">{'Hello'} HP</span></p>
+        <p><span className="spec-category-style">Engine Type: </span><span className="engine-type">{'Hello'} LB-FT</span></p>
+        <p><span className="spec-category-style">Engine Type: </span><span className="engine-type">{'Hello'} Seconds</span></p>
       </div>
     )
   }

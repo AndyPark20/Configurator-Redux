@@ -29,6 +29,7 @@ body{
 }
 
 .spec{
+  width:100%;
   display:flex;
   justify-content: space-around;
   margin-top:1.5%;
@@ -72,8 +73,9 @@ body{
 /****Specification styling****/
 .spec-category-style{
   font-size:.8rem;
+  font-weight:600;
 }
 
 .engine-type{
-  font-size:.5rem;
+  font-size:.7rem;
 }
