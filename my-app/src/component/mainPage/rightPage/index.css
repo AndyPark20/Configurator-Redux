@@ -1,15 +1,18 @@
 .audi-container{
   width:50%;
-  border-left:1px solid #e0e0e0;
   height:100vh;
 }
 
 .sections{
+  width:99%;
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top:6%;
 }
 
 .right-side-background{
-  background:#e0e0e0;
+  display:flex;
+  flex-direction:column;
+  align-items: flex-start;
+  background:#f9f9f9;
 }
