@@ -8,6 +8,19 @@ import {connect} from 'react-redux';
 import "./index.css";
 
 const MainLeft = (data) => {
+
+  //Specification Render for Trim Selected
+  const specRender=()=>{
+    return(
+      <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
+      <p><span className="spec-category-style">Max. output</span><span className="engine-type">Asynchronous electric motor</span></p>
+      <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
+      <p><span className="spec-category-style">Engine Type:</span><span className="engine-type">Asynchronous electric motor</span></p>
+
+    )
+  }
+
+
   return (
     <div className="audi-container">
       <div className="row-section">
@@ -22,17 +35,10 @@ const MainLeft = (data) => {
             </h1>
           </div>
           <img
-            src={
-              data.carData.Premium["Q4 40 e-tron"].spec.standard.extImage[
-                "Navarra Blue metallic"
-              ][0]
-            }
-            className="default-image"
-            alt="Q4 40 e-tron Navarra Blue metallic"
-          />
+            src={data.carData.Premium["Q4 40 e-tron"].spec.standard.extImage["Navarra Blue metallic"][0]} className="default-image" alt="Q4 40 e-tron Navarra Blue metallic"/>
         </div>
-        <div>
-          <h1>Hello</h1>
+        <div className="spec">
+          {specRender()}
         </div>
       </div>
     </div>
