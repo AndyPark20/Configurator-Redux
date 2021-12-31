@@ -52,7 +52,6 @@ const Trim = ({ data }) => {
 
 //React-Redux connect to retrieve values from the Redux Store
 const thisMapStateToProps = (state) => {
-  console.log('update',state)
   return {
     data: state.carData,
   };

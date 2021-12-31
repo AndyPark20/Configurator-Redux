@@ -7,22 +7,22 @@ import { connect } from 'react-redux';
 import "./index.css";
 
 //Import Components
-
 import {Gallery} from './gallery';
 
 const MainLeft = (data) => {
-
   //Destructre data
-  //==>For Current User Selection
+  //For Current User Selection:
   const { level, trim, wheel_Selection, ext_Color } = data.currentSelection;
-  //==>For carData
+  //For carData:
   const { acceleration, engine, hp, torque } = data.carData[level][trim].spec;
+
+  //Gallery:
+  const galleryPictures = data.carData[level][trim].spec[wheel_Selection].extImage[ext_Color]
 
   //Specification Render for Trim Selected
   const specRender = () => {
     return (
       <div className="spec">
-        {console.log(data)}
         <p><span className="spec-category-style">Engine Type: </span><span className="engine-type">{engine}</span></p>
         <p><span className="spec-category-style">Max. Output: </span><span className="engine-type">{hp} HP</span></p>
         <p><span className="spec-category-style">Max. Torque: </span><span className="engine-type">{torque} LB-FT</span></p>
@@ -44,7 +44,7 @@ const MainLeft = (data) => {
               </span>
             </h1>
           </div>
-          <Gallery/>
+          <Gallery carData={data.currentSelection} extGallery={galleryPictures}/>
           {/* <img
             src={data.carData[level][trim].spec[wheel_Selection].extImage[ext_Color][0]}
             className="default-image" alt="Q4 40 e-tron Navarra Blue metallic" /> */}
