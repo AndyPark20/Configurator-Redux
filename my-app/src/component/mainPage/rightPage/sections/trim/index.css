@@ -1,0 +1,22 @@
+
+
+/****Master Trim Container ****/
+.trim-container-width{
+  width:100%;
+}
+
+/****Trim level container (Each Trim)****/
+.trim-level-container{
+  text-align:center;
+}
+
+
+/****Trim Border styling ****/
+.trim-border-style{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:50px;
+  border:1px solid black;
+  margin:2% 15%;
+}
