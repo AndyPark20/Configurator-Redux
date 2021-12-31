@@ -13,6 +13,7 @@ const MainLeft = (data) => {
   const specRender = () => {
     return (
       <div className="spec">
+        {console.log()}
         <p ><span className="spec-category-style">Engine Type: </span><span className="engine-type">Asynchronous electric motor</span></p>
         <p><span className="spec-category-style">Max. output: </span><span className="engine-type">{'Hello'} HP</span></p>
         <p><span className="spec-category-style">Engine Type: </span><span className="engine-type">{'Hello'} LB-FT</span></p>
