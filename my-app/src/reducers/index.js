@@ -40,16 +40,16 @@ const carData = () => {
           wheels:{
             wheelImage:[
 
-            ];
+            ]
           },
           standard_wheel_one:{
             extImage:{
               "Navarra Blue metallic": [
-                require("../img/premium/1-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-                require("../img/premium/2-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallicpng"),
-                require("../img/premium/3-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-                require("../img/premium/4-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-                require("../img/premium/5-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png")
+                require("../img/premium/Q450e-tron/NavarraBluemetallic/1-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/NavarraBluemetallic/2-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/NavarraBluemetallic/3-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/NavarraBluemetallic/4-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/NavarraBluemetallic/5-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png")
               ],
             }
           }
