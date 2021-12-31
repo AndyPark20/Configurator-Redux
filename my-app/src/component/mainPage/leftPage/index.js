@@ -8,16 +8,23 @@ import { connect } from 'react-redux';
 import "./index.css";
 
 const MainLeft = (data) => {
+  //Destructre data
+    //==>For Current User Selection
+  const {level, trim,wheel_Selection,ext_Color} = data.currentSelection;
+
+    //==>For carData
+    const {acceleration,engine,hp,torque} = data.carData[level][trim].spec;
 
   //Specification Render for Trim Selected
   const specRender = () => {
+
     return (
       <div className="spec">
-        {console.log()}
-        <p ><span className="spec-category-style">Engine Type: </span><span className="engine-type">Asynchronous electric motor</span></p>
-        <p><span className="spec-category-style">Max. output: </span><span className="engine-type">{'Hello'} HP</span></p>
-        <p><span className="spec-category-style">Engine Type: </span><span className="engine-type">{'Hello'} LB-FT</span></p>
-        <p><span className="spec-category-style">Engine Type: </span><span className="engine-type">{'Hello'} Seconds</span></p>
+        {console.log(data)}
+    <p><span className="spec-category-style">Engine Type: </span><span className="engine-type">{engine}</span></p>
+        <p><span className="spec-category-style">Max. Output: </span><span className="engine-type">{hp} HP</span></p>
+        <p><span className="spec-category-style">Max. Torque: </span><span className="engine-type">{torque} LB-FT</span></p>
+        <p><span className="spec-category-style">Acceleration: </span><span className="engine-type">{acceleration} Seconds</span></p>
       </div>
     )
   }
@@ -36,7 +43,7 @@ const MainLeft = (data) => {
             </h1>
           </div>
           <img
-            src={data.carData.Premium["Q4 40 e-tron"].spec.standard.extImage["Navarra Blue metallic"][0]}
+            src={data.carData[level][trim].spec[wheel_Selection].extImage[ext_Color][0]}
             className="default-image" alt="Q4 40 e-tron Navarra Blue metallic" />
         </div>
           {specRender()}
@@ -46,9 +53,10 @@ const MainLeft = (data) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.carData)
+
   return {
-    carData: state.carData
+    carData: state.carData,
+    currentSelection:state.userSelection
   }
 };
 

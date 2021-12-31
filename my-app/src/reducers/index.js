@@ -14,11 +14,11 @@ const carData = () => {
           wheels: {
             wheelImage: [
               //--> user Selection
-                //Need standard or premium key value pair
+                //Need standard_one two, etc or premium key value pair
             ],
           },
           //--> User Selection
-          standard: {
+          standard_wheel_one: {
             extImage: {
               "Navarra Blue metallic": [
                 require("../img/Q440e-tron/NavarraBluemetallic/1-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
@@ -33,7 +33,7 @@ const carData = () => {
       },
       "Q4 50 e-tron": {},
     },
-    Premium_Plus: {
+    "Premium Plus": {
       "Q4 40 e-tron": {},
       "Q4 50 e-tron": {},
     },
@@ -43,14 +43,15 @@ const carData = () => {
 const userSelectionDataObject={
   level:'Premium',
   trim:'Q4 40 e-tron',
-  wheel_Selection:'standard'
+  wheel_Selection:'standard_wheel_one',
+  ext_Color:'Navarra Blue metallic'
 };
 
-const userSelectedValues=(userSelectionDataObject,action)=>{
+const userSelectedValues=(userValue=userSelectionDataObject,action)=>{
   return userSelectionDataObject;
 }
 
 export default combineReducers({
   carData,
-  userSelection:userSelectionDataObject
+  userSelection:userSelectedValues
 });
