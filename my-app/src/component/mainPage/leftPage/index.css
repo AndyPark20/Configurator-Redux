@@ -2,9 +2,6 @@ body{
   margin: 0 auto;
 }
 
-.row-section{
-  display:flex;
-}
 
 .build-section{
   width:100%;
@@ -62,4 +59,12 @@ body{
 
 .current-trim-level{
   font-size:3.0rem;
+}
+
+/***** Car title picture and spec alignment****/
+.row-section{
+  display:flex;
+  flex-direction:column;
+  height:70vh;
+  align-items: center;
 }

@@ -10,10 +10,10 @@ const Trim = ({ data }) => {
   const renderTrimLevel = (values) => {
 
     //Array holding values of Audi trim based on package level (i.e. 'Premium', etc....)
-    const trimLevelValueList = Object.keys(data.carData[values]);
+    const trimLevelValueList = Object.keys(data[values]);
 
 
-    if (data.carData.hasOwnProperty(values)) {
+    if (data.hasOwnProperty(values)) {
       return (
         <div className="trim-level-container">
           <h4>{values}</h4>
@@ -31,7 +31,7 @@ const Trim = ({ data }) => {
   const renderPackageLevel = () => {
 
     //Get package level from data object
-    const packageLevel = Object.keys(data.carData);
+    const packageLevel = Object.keys(data);
 
     //loop thru the package list array and pass the value as an agument to renderTrimLevel function
     const renderPackage = packageLevel.map((values, index) => {
@@ -53,7 +53,7 @@ const Trim = ({ data }) => {
 //React-Redux connect to retrieve values from the Redux Store
 const thisMapStateToProps = (state) => {
   return {
-    data: state,
+    data: state.carData,
   };
 };
 

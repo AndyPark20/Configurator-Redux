@@ -1,10 +1,13 @@
 import React from "react";
 import Data from "../../DataObject";
 
+//Connect functionality from React-Redux;
+import {connect} from 'react-redux';
+
 //CSS Styling
 import "./index.css";
 
-export const MainLeft = () => {
+const MainLeft = (data) => {
   return (
     <div className="audi-container">
       <div className="row-section">
@@ -20,16 +23,27 @@ export const MainLeft = () => {
           </div>
           <img
             src={
-              Data.Premium["Q4 40 e-tron"].spec.standard.extImage[
+              data.carData.Premium["Q4 40 e-tron"].spec.standard.extImage[
                 "Navarra Blue metallic"
               ][0]
             }
             className="default-image"
-            alt="test"
+            alt="Q4 40 e-tron Navarra Blue metallic"
           />
         </div>
+        <div>
+          <h1>Hello</h1>
+        </div>
       </div>
-      {/* {console.log(Data.Premium['Q4 40 e-tron'].spec.standard.extImage['Navarra Blue metallic'])} */}
     </div>
   );
 };
+
+const mapStateToProps =(state)=>{
+  console.log(state.carData)
+  return{
+    carData:state.carData
+  }
+};
+
+export default connect(mapStateToProps)(MainLeft)
