@@ -1,0 +1,13 @@
+
+
+/****Align Gallery****/
+.gallery-alignment{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+/****Align and Style Arrows (Font-Awesome)***/
+.arrows{
+  text-align:center;
+}

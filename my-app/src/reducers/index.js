@@ -44,7 +44,8 @@ const userSelectionDataObject={
   level:'Premium',
   trim:'Q4 40 e-tron',
   wheel_Selection:'standard_wheel_one',
-  ext_Color:'Navarra Blue metallic'
+  ext_Color:'Navarra Blue metallic',
+  view_Position:'extImage'
 };
 
 const userSelectedValues=(userValue=userSelectionDataObject,action)=>{
@@ -53,5 +54,5 @@ const userSelectedValues=(userValue=userSelectionDataObject,action)=>{
 
 export default combineReducers({
   carData,
-  userSelection:userSelectedValues
+  user_Selection:userSelectedValues
 });
