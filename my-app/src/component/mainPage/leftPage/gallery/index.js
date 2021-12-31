@@ -15,10 +15,23 @@ export const Gallery = ({ carData, gallery}) => {
 
   //Function for changing gallery when user clicks left or right arrow
   const changePictures=(e)=>{
-    const event = e.target.className
-    if(event ==='fas fa-chevron-left'){
-      update_Ext_Gallery_Index++
+    const event = e.target.className;
+
+    if(event ==='fas fa-chevron-right'){
+      if(ext_Gallery_Index !== gallery.length){
+        update_Ext_Gallery_Index(ext_Gallery_Index++);
+      }else{
+        update_Ext_Gallery_Index(0);
+      }
+      //If user clicks LEFT arrow
+    }else{
+      if(ext_Gallery_Index !==-1){
+        update_Ext_Gallery_Index(ext_Gallery_Index--);
+      }else{
+        update_Ext_Gallery_Index(gallery.length-1);
+      }
     }
+
   }
 
   //Gallery render
@@ -34,9 +47,9 @@ export const Gallery = ({ carData, gallery}) => {
     <div className="gallery-container">
       {exterior()}
       <div className="arrows">
-        <i className="fas fa-chevron-left" onClick={(e)=>changePictures(e)}></i>
+        <i className="fas fa-chevron-left" onClick={(e) => changePictures(e)}></i>
         1/8
-        <i className="fas fa-chevron-right"></i>
+        <i className="fas fa-chevron-right" onClick={(e) => changePictures(e)}></i>
       </div>
     </div>
   )
