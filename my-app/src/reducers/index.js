@@ -3,6 +3,7 @@ import { combineReducers } from "redux";
 //Master Car Data
 const carData = () => {
   return {
+    //-->User Selection
     Premium: {
       "Q4 40 e-tron": {
         spec: {
@@ -11,8 +12,12 @@ const carData = () => {
           torque: "N/A",
           acceleration: "7.9",
           wheels: {
-            wheelImage: [],
+            wheelImage: [
+              //--> user Selection
+                //Need standard or premium key value pair
+            ],
           },
+          //--> User Selection
           standard: {
             extImage: {
               "Navarra Blue metallic": [
@@ -28,17 +33,24 @@ const carData = () => {
       },
       "Q4 50 e-tron": {},
     },
-    "Premium Plus": {
+    Premium_Plus: {
       "Q4 40 e-tron": {},
       "Q4 50 e-tron": {},
     },
   };
 };
 
-const userSelectedValues=()=>{
-  return
+const userSelectionDataObject={
+  level:'Premium',
+  trim:'Q4 40 e-tron',
+  wheel_Selection:'standard'
+};
+
+const userSelectedValues=(userSelectionDataObject,action)=>{
+  return userSelectionDataObject;
 }
 
 export default combineReducers({
   carData,
+  userSelection:userSelectionDataObject
 });
