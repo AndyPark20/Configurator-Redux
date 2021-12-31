@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
 
-export const Trim = ({ data }) => {
+const Trim = ({ data }) => {
 
   const RenderTrim = () => {
     return <div>{console.log(data)}</div>;
@@ -11,11 +11,11 @@ export const Trim = ({ data }) => {
   return <div>{RenderTrim()}</div>;
 };
 
-const mapStateToProps = (state) => {
+const thisMapStateToProps = (state) => {
   console.log(state);
   return {
     data: state,
   };
 };
 
-export default connect(mapStateToProps)(Trim);
+export default connect(thisMapStateToProps)(Trim);

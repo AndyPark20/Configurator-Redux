@@ -35,5 +35,5 @@ const carData = () => {
 };
 
 export default combineReducers({
-  carDataKey: carData,
+  carData,
 });

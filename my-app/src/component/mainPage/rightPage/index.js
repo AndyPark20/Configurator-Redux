@@ -4,7 +4,7 @@ import React from 'react';
 import './index.css';
 
 //Import Components
-import {Trim} from './sections/trim/';
+import Trim from './sections/trim/';
 
 
 export const MainRight=()=>{
