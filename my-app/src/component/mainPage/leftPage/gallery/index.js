@@ -8,27 +8,27 @@ import './index.css';
 export const Gallery = ({ carData, gallery}) => {
 
   //state track from local component for Exterior gallery index position
-  let [ext_Gallery_Index,update_Ext_Gallery_Index] = useState(0);
+  let [extGalleryIndex,updateExtGalleryIndex] = useState(0);
 
   //De-strcuture for current user selection
-  const { level, trim, wheel_Selection, ext_Color } = carData;
+  const { level, trim, wheelSelection, extColor } = carData;
 
   //Function for changing gallery when user clicks left or right arrow
   const changePictures=(e)=>{
     const event = e.target.className;
 
     if(event ==='fas fa-chevron-right'){
-      if(ext_Gallery_Index !== gallery.length){
-        update_Ext_Gallery_Index(ext_Gallery_Index++);
+      if(extGalleryIndex !== gallery.length){
+        updateExtGalleryIndex(extGalleryIndex++);
       }else{
-        update_Ext_Gallery_Index(0);
+        updateExtGalleryIndex(0);
       }
       //If user clicks LEFT arrow
     }else{
-      if(ext_Gallery_Index !==-1){
-        update_Ext_Gallery_Index(ext_Gallery_Index--);
+      if(extGalleryIndex !==-1){
+        updateExtGalleryIndex(extGalleryIndex--);
       }else{
-        update_Ext_Gallery_Index(gallery.length-1);
+        updateExtGalleryIndex(gallery.length-1);
       }
     }
 
@@ -38,7 +38,7 @@ export const Gallery = ({ carData, gallery}) => {
   const exterior =()=>{
     return(
       <div className="gallery-alignment">
-        <img src={gallery[ext_Gallery_Index]}alt="test"/>
+        <img src={gallery[extGalleryIndex]}alt="test"/>
       </div>
     )
   }

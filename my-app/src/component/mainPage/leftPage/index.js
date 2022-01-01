@@ -12,12 +12,12 @@ import {Gallery} from './gallery';
 const MainLeft = (data) => {
   //Destructre data
   //For Current User Selection:
-  const { level, trim, wheel_Selection, ext_Color,view_Position} = data.current_Selection;
+  const { level, trim, wheelSelection, extColor,viewPosition} = data.currentSelection;
   //For carData:
   const { acceleration, engine, hp, torque } = data.carData[level][trim].spec;
 
   //Gallery:
-  const gallery_Pictures = data.carData[level][trim].spec[wheel_Selection][view_Position][ext_Color]
+  const galleryPictures = data.carData[level][trim].spec[wheelSelection][viewPosition][extColor]
 
   //Specification Render for Trim Selected
   const specRender = () => {
@@ -44,7 +44,7 @@ const MainLeft = (data) => {
               </span>
             </h1>
           </div>
-          <Gallery carData={data.current_Selection} gallery={gallery_Pictures}/>
+          <Gallery carData={data.currentSelection} gallery={galleryPictures}/>
           {/* <img
             src={data.carData[level][trim].spec[wheel_Selection].extImage[ext_Color][0]}
             className="default-image" alt="Q4 40 e-tron Navarra Blue metallic" /> */}
@@ -58,7 +58,7 @@ const MainLeft = (data) => {
 const mapStateToProps = (state) => {
   return {
     carData: state.carData,
-    current_Selection: state.user_Selection
+    currentSelection: state.userSelection
   }
 };
 
