@@ -6,12 +6,16 @@ import './index.css';
 
 const Trim = ({ data }) => {
 
+
+  //get id value for each onClick
+  const trimSelection=(e)=>{
+    console.log(e.target.id)
+  }
+
   //Render Trim Level
   const renderTrimLevel = (values) => {
-
     //Array holding values of Audi trim based on package level (i.e. 'Premium', etc....)
     const trimLevelValueList = Object.keys(data[values]);
-
 
     if (data.hasOwnProperty(values)) {
       return (
@@ -19,7 +23,7 @@ const Trim = ({ data }) => {
           <h4>{values}</h4>
           {trimLevelValueList.map((trim, index) => {
             return (
-              <div key={index} className="trim-border-style">{trim}</div>
+              <div key={index} className="trim-border-style" id={trim} onClick={(e)=>trimSelection(e)}>{trim}</div>
             )
           })}
         </div>
