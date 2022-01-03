@@ -8,13 +8,7 @@ import './Trim.css';
 import {userSelectedTrim} from '../../../../../Actions';
 
 
-const Trim = ({ data }) => {
-
-  //selected trim function
-  // const trimSelection = (e,values) => {
-  //   userSelectedTrim(values);
-  // }
-
+const Trim = ({ data, userSelectedTrim }) => {
 
   //Render Trim Level
   const renderTrimLevel = (values) => {

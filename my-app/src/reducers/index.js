@@ -72,15 +72,21 @@ const userSelectionDataObject={
 };
 
 const userSelectedValues=(userValue=userSelectionDataObject,action)=>{
-  console.log(action.payload)
-  if (action.type === 'TRIM_SELECTED'){
-    console.log(action.payload)
-      return action.payload;
+  switch(action.type){
+    case 'TRIM_SELECTED':
+      let updatedSelection ={...userSelectionDataObject, level:action.payload};
+      return updatedSelection;
+
+    default:
+      return userValue;
   }
-  return userValue;
+
 }
+
+
 
 export default combineReducers({
   carData,
   userSelection:userSelectedValues
+
 });

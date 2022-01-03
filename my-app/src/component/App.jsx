@@ -3,8 +3,6 @@ import React from 'react';
 //CSS Style
 import './App.css';
 
-
-
 //Components
 import MainLeft from '../Component/MainPage/Leftpage/Leftpage';
 import {MainRight} from '../Component/MainPage/RightPage/Rightpage';
