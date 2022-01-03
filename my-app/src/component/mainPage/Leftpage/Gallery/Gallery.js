@@ -23,7 +23,7 @@ export const Gallery = ({ carData, gallery}) => {
       }else{
         updateExtGalleryIndex(0);
       }
-      //If user clicks LEFT arrow
+      //User clicks LEFT arrow
     }else{
       if(extGalleryIndex !==-1){
         updateExtGalleryIndex(extGalleryIndex--);
