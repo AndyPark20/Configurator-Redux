@@ -4,10 +4,10 @@ import React from "react";
 import { connect } from 'react-redux';
 
 //CSS Styling
-import "./index.css";
+import "./Gallery.css";
 
 //Import Components
-import {Gallery} from './gallery';
+import {Gallery} from './Gallery/Gallery.js';
 
 const MainLeft = (data) => {
   //Destructre data
