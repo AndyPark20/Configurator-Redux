@@ -74,7 +74,7 @@ const userSelectionDataObject={
 const userSelectedValues=(userValue=userSelectionDataObject,action)=>{
   switch(action.type){
     case 'TRIM_SELECTED':
-      let updatedSelection ={...userSelectionDataObject, level:action.payload};
+      let updatedSelection ={...userSelectionDataObject, level:action.payload.packageSelection, trim:action.payload.trim};
       return updatedSelection;
 
     default:

@@ -38,7 +38,7 @@ export const Gallery = ({ carData, gallery}) => {
   const exterior =()=>{
     return(
       <div className="gallery-alignment">
-        <img src={gallery[extGalleryIndex]}alt="test"/>
+        <img src={gallery[extGalleryIndex]}alt="gallery-size" className="gallery-size"/>
       </div>
     )
   }

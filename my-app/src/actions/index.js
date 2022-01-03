@@ -1,8 +1,8 @@
 
 
-export const userSelectedTrim =values=>{
+export const userSelectedTrim =(packageSelection,trim)=>{
   return{
     type:'TRIM_SELECTED',
-    payload:values
+    payload:{packageSelection,trim}
   };
 };

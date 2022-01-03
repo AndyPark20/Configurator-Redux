@@ -10,17 +10,19 @@ import {userSelectedTrim} from '../../../../../Actions';
 
 const Trim = ({ data, userSelectedTrim }) => {
 
+
+
   //Render Trim Level
-  const renderTrimLevel = (values) => {
-    //Array holding values of Audi trim based on package level (i.e. 'Premium', etc....)
-    const trimLevelValueList = Object.keys(data[values]);
-    if (data.hasOwnProperty(values)) {
+  const renderTrimLevel = (packageSelection) => {
+    //Array holding packageSelection of Audi trim based on package level (i.e. 'Premium', etc....)
+    const trimLevelValueList = Object.keys(data[packageSelection]);
+    if (data.hasOwnProperty(packageSelection)) {
       return (
         <div className="trim-level-container">
-          <h4>{values}</h4>
+          <h4>{packageSelection}</h4>
           {trimLevelValueList.map((trim, index) => {
             return (
-              <div key={index} id={trim} className="trim-border-style" onClick={(e) => userSelectedTrim(values)}> {trim}</div>
+              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(packageSelection,trim)}> {trim}</div>
             )
           })}
         </div>
@@ -34,10 +36,10 @@ const Trim = ({ data, userSelectedTrim }) => {
     //Get package level from data object
     const packageLevel = Object.keys(data);
     //loop thru the package list array and pass the value as an agument to renderTrimLevel function
-    const renderPackage = packageLevel.map((values, index) => {
+    const renderPackage = packageLevel.map((packageSelection, index) => {
       return (
         <div className="trim-option-width" key={index}>
-          {renderTrimLevel(values)}
+          {renderTrimLevel(packageSelection)}
         </div>
       )
     });
@@ -51,7 +53,7 @@ const Trim = ({ data, userSelectedTrim }) => {
 };
 
 
-//React-Redux connect to retrieve values from the Redux Store
+//React-Redux connect to retrieve packageSelection from the Redux Store
 const thisMapStateToProps = (state) => {
   console.log(state.userSelection)
   return {

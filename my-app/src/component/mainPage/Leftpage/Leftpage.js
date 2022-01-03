@@ -44,9 +44,6 @@ const MainLeft = (data) => {
             </h1>
           </div>
           <Gallery carData={data.currentSelection} gallery={galleryPictures}/>
-          {/* <img
-            src={data.carData[level][trim].spec[wheel_Selection].extImage[ext_Color][0]}
-            className="default-image" alt="Q4 40 e-tron Navarra Blue metallic" /> */}
         </div>
         {specRender()}
       </div>
