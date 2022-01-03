@@ -4,7 +4,7 @@ import React from "react";
 import { connect } from 'react-redux';
 
 //CSS Styling
-import "./Gallery.css";
+import "./Leftpage.css";
 
 //Import Components
 import {Gallery} from './Gallery/Gallery.js';

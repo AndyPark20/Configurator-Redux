@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 
 //import CSS
-import './Gallery/Gallery.css';
+import './Gallery.css';
 
 
 export const Gallery = ({ carData, gallery}) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 //CSS style
-import './index.css';
+import './Rightpage.css';
 
 //Import Components
 import Trim from './Sections/Trim/Trim';
