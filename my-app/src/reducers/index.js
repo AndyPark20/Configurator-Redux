@@ -72,11 +72,12 @@ const userSelectionDataObject={
 };
 
 const userSelectedValues=(userValue=userSelectionDataObject,action)=>{
+  console.log(action.payload)
   if (action.type === 'TRIM_SELECTED'){
     console.log(action.payload)
-      return 'Hello';
+      return action.payload;
   }
-  return userSelectionDataObject;
+  return userValue;
 }
 
 export default combineReducers({

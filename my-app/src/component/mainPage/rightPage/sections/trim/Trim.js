@@ -5,14 +5,15 @@ import { connect } from 'react-redux';
 import './Trim.css';
 
 //Import Reducers
-import userSelectedTrim from '../../../../../Actions';
+import {userSelectedTrim} from '../../../../../Actions';
+
 
 const Trim = ({ data }) => {
 
   //selected trim function
-  const trimSelection = (e,values) => {
-    userSelectedTrim(values);
-  }
+  // const trimSelection = (e,values) => {
+  //   userSelectedTrim(values);
+  // }
 
 
   //Render Trim Level
@@ -25,7 +26,7 @@ const Trim = ({ data }) => {
           <h4>{values}</h4>
           {trimLevelValueList.map((trim, index) => {
             return (
-              <div key={index} id={trim} className="trim-border-style" onClick={(e) => trimSelection(e,values)}> {trim}</div>
+              <div key={index} id={trim} className="trim-border-style" onClick={(e) => userSelectedTrim(values)}> {trim}</div>
             )
           })}
         </div>
@@ -58,10 +59,11 @@ const Trim = ({ data }) => {
 
 //React-Redux connect to retrieve values from the Redux Store
 const thisMapStateToProps = (state) => {
-  console.log(state)
+  console.log(state.userSelection)
   return {
     data: state.carData,
   };
 };
+
 
 export default connect(thisMapStateToProps,{userSelectedTrim})(Trim);
