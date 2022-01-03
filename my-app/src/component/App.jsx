@@ -6,8 +6,8 @@ import './App.css';
 
 
 //Components
-import MainLeft from '../Component/Mainpage/Leftpage/Leftpage';
-import {MainRight} from '../Component/Mainpage/Rightpage/Rightpage';
+import MainLeft from '../Component/MainPage/Leftpage/Leftpage';
+import {MainRight} from '../Component/MainPage/RightPage/Rightpage';
 
 
 export const App =()=>{

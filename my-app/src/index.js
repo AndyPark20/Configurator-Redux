@@ -5,7 +5,7 @@ import {App} from './Component/App';
 //Redux
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import reducers from './reducers';
+import reducers from './Reducers';
 
 
 ReactDOM.render(
