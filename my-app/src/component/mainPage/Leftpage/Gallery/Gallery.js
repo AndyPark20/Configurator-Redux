@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 //import CSS
 import './Gallery.css';
@@ -12,6 +12,10 @@ export const Gallery = ({ carData, gallery}) => {
 
   //De-strcuture for current user selection
   const { level, trim, wheelSelection, extColor } = carData;
+
+  useEffect(()=>{
+    console.log(extGalleryIndex)
+  })
 
   //Function for changing gallery when user clicks left or right arrow
   const changePictures=(e)=>{
