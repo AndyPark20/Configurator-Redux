@@ -73,7 +73,8 @@ const userSelectionDataObject={
 
 const userSelectedValues=(userValue=userSelectionDataObject,action)=>{
   if (action.type === 'TRIM_SELECTED'){
-    return 'Hello'
+    console.log(action.payload)
+      return 'Hello';
   }
   return userSelectionDataObject;
 }

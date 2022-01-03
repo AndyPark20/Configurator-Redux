@@ -64,4 +64,4 @@ const thisMapStateToProps = (state) => {
   };
 };
 
-export default connect(thisMapStateToProps)(Trim);
+export default connect(thisMapStateToProps,{userSelectedTrim})(Trim);
