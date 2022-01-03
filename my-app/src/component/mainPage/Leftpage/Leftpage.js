@@ -1,13 +1,12 @@
 import React from "react";
-
 //Connect functionality from React-Redux;
 import { connect } from 'react-redux';
-
 //CSS Styling
 import "./Leftpage.css";
-
 //Import Components
 import {Gallery} from './Gallery/Gallery.js';
+
+
 
 const MainLeft = (data) => {
   //Destructre data

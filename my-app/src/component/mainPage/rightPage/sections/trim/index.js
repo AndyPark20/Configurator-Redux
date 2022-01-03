@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 
 //Import CSS
 import './index.css';
+//Import Reducers
+import userSelectedTrim from '../../../Actions'
 
 const Trim = ({ data }) => {
 
 
   //get id value for each onClick
   const trimSelection=(e)=>{
-    console.log(e.target.id)
+    console.log(userSelectedTrim)
   }
 
   //Render Trim Level
@@ -61,4 +63,4 @@ const thisMapStateToProps = (state) => {
   };
 };
 
-export default connect(thisMapStateToProps)(Trim);
+export default connect(thisMapStateToProps,{userSelectedTrim})(Trim);

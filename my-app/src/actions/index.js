@@ -1,8 +1,9 @@
 
-const userSelectedTrim =()=>{
+
+const userSelectedTrim =(values)=>{
   return{
     type:'TRIM_SELECTED',
-    payload:'Premium'
+    payload:values
   };
 };
 
