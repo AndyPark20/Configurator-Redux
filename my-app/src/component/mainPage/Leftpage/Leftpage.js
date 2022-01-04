@@ -18,7 +18,7 @@ const MainLeft = (data) => {
 
   //Gallery:
   const galleryPictures = data.carData[trim][model].spec[wheelSelection][viewPosition][extColor];
-  console.log(galleryPictures)
+
 
 
   //Specification Render for Trim Selected
@@ -34,7 +34,7 @@ const MainLeft = (data) => {
   }
 
   return (
-    <div className="audi-container">
+    <div className="audi-container-left">
       <div className="row-section">
         <div className="col section-left">
           <div className="description">

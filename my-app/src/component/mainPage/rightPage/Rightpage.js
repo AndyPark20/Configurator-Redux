@@ -10,7 +10,7 @@ import ExteriorSection from "./Sections/Exterior/Exterior";
 
 export const MainRight=()=>{
   return (
-    <div className="audi-container right-side-background">
+    <div className="audi-container-right right-side-background">
       <div className="sections">
         <h4>TRIM</h4>
         <h4>EXTERIOR</h4>

@@ -1,18 +1,16 @@
 import React from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 //Import CSS
-import './Trim.css';
+import "./Trim.css";
 
 //Import Reducers
-import {userSelectedTrim} from '../../../../../Actions';
-
+import { userSelectedTrim } from "../../../../../Actions";
 
 const Trim = ({ data, currentSelection, userSelectedTrim }) => {
-
   //Check model to render Register mark
-  const modelRegMark =(model)=>{
-    if(model.includes('e-tron')){
+  const renderModelRegMark = (model) => {
+    if (model.includes("e-tron")) {
       return (
         <span className="model-title-style">
           {model}
@@ -20,33 +18,55 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
         </span>
       );
     }
-    return <span className="model-title-style">{model}</span>
-  }
+    return <span className="model-title-style">{model}</span>;
+  };
 
+  //Render Engine Layout (ie. Quattro, Rear-wheel-drive)
+  const renderEngineLayout = (model,trimSelection) => {
 
+    const engineLayout = data[trimSelection][model].spec;
+    // return engineLayout;
+    if(engineLayout){
+      return engineLayout.layout;
+    }
+  };
 
   //Render List of trim and Models
   const renderTrimLevel = (trimSelection) => {
     //Array holding trimSelection of Audi trim based on package level (i.e. 'Premium', etc....)
     const trimLevelValueList = Object.keys(data[trimSelection]);
-
     //Omit Exterior Color buttons
-    if (data.hasOwnProperty(trimSelection) && trimSelection !=='extColorButtons') {
+    if (
+      data.hasOwnProperty(trimSelection) &&
+      trimSelection !== "extColorButtons"
+    ) {
       return (
         <div className="trim-level-container">
           <h4>{trimSelection}</h4>
           {trimLevelValueList.map((model, index) => {
             return (
-              <div  className="trim-border-style" key={index} onClick={(e) => userSelectedTrim(trimSelection,model, currentSelection.extColor)}>
-                 <h3>{modelRegMark(model)}</h3>
+              <div
+                className="trim-border-style"
+                key={index}
+                onClick={(e) =>
+                  userSelectedTrim(
+                    trimSelection,
+                    model,
+                    currentSelection.extColor
+                  )
+                }
+              >
+                <div className="model-engine-layout-title-style">
+                  <h3>{renderModelRegMark(model)}</h3>
+                  <p className="engine-layout-title">{renderEngineLayout(model, trimSelection)}</p>
                 </div>
-            )
+              </div>
+            );
           })}
         </div>
       );
-    };
+    }
   };
-
 
   //Render Package level
   const renderPackageLevel = () => {
@@ -58,15 +78,12 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
         <div className="trim-option-width" key={index}>
           {renderTrimLevel(trimSelection)}
         </div>
-      )
+      );
     });
     return renderPackage;
   };
 
-
-  return <div className="trim-container-width">
-    {renderPackageLevel()}
-  </div>;
+  return <div className="trim-container-width">{renderPackageLevel()}</div>;
 };
 
 
@@ -74,9 +91,8 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
 const thisMapStateToProps = (state) => {
   return {
     data: state.carData,
-    currentSelection:state.userSelection
+    currentSelection: state.userSelection,
   };
 };
 
-
-export default connect(thisMapStateToProps,{userSelectedTrim})(Trim);
+export default connect(thisMapStateToProps, { userSelectedTrim })(Trim);
