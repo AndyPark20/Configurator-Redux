@@ -56,7 +56,6 @@ const Trim = ({ data, userSelectedTrim }) => {
 
 //React-Redux connect to retrieve packageSelection from the Redux Store
 const thisMapStateToProps = (state) => {
-  console.log(state.userSelection)
   return {
     data: state.carData,
   };

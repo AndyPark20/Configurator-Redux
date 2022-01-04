@@ -7,11 +7,13 @@ import './Exterior.css';
 //Import connect helper function
 import {connect} from 'react-redux';
 
+//Import Actions
+import {exteriorColorSelection} from '../../../../../Actions';
 
 
 
 
-const ExteriorSection = ({ exteriorColor, extColorSelection }) => {
+const ExteriorSection = ({ exteriorColor, exteriorColorSelection }) => {
   //Render available exterior colors for Audi Q4 e-tron
   const q4ExteriorColors = () => {
     const renderColor = exteriorColor.map((values, index) => {
@@ -22,7 +24,7 @@ const ExteriorSection = ({ exteriorColor, extColorSelection }) => {
             className="exterior-color-btn"
             alt={values.name}
             id={values.name}
-
+            onClick={()=>exteriorColorSelection(values.name)}
           />
         </div>
       );
@@ -40,4 +42,4 @@ const mapStateToProps=(state)=>{
 };
 
 
-export default connect(mapStateToProps)(ExteriorSection);
+export default connect(mapStateToProps, { exteriorColorSelection })(ExteriorSection);

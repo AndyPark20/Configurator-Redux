@@ -16,10 +16,9 @@ const MainLeft = (data) => {
   //For carData:
   const { acceleration, engine, hp, torque } = data.carData[level][trim].spec;
 
-    console.log(data.carData[level][trim].spec)
-
   //Gallery:
-  const galleryPictures = data.carData[level][trim].spec[wheelSelection][viewPosition][extColor]
+  const galleryPictures = data.carData[level][trim].spec[wheelSelection][viewPosition][extColor];
+  console.log(galleryPictures)
 
   //Specification Render for Trim Selected
   const specRender = () => {
@@ -55,6 +54,7 @@ const MainLeft = (data) => {
 };
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     carData: state.carData,
     currentSelection: state.userSelection

@@ -7,19 +7,19 @@ const carData = () => {
     extColorButtons: [
       {
         name: "Pebble Gray",
-        img: require("../img/premium/Q440e-tron/PebbleGray/Button-Pebble Gray.png")
+        img: require("../img/premium/Q440e-tron/PebbleGray/Button-Pebble Gray.png"),
       },
       {
         name: "White metallic",
-        img: require("../img/premium/Q440e-tron/Whitemetallic/Button-Glacier White metallic.png")
+        img: require("../img/premium/Q440e-tron/Whitemetallic/Button-Glacier White metallic.png"),
       },
       {
         name: "Mythos Black metallic",
-        img: require("../img/premium/Q440e-tron/MythosBlackmetallic/Button-Mythos Black metallic.png")
+        img: require("../img/premium/Q440e-tron/MythosBlackmetallic/Button-Mythos Black metallic.png"),
       },
       {
         name: "Navarra Blue metallic",
-        img: require("../img/premium/Q440e-tron/NavarraBluemetallic/Button-Navarra Blue metallic.png")
+        img: require("../img/premium/Q440e-tron/NavarraBluemetallic/Button-Navarra Blue metallic.png"),
       },
     ],
     //-->User Selection
@@ -111,13 +111,22 @@ const userSelectionDataObject = {
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
-  switch (action.type) {
-    case "TRIM_SELECTED":
+  let updatedSelection = {};
 
-      let updatedSelection = {
+  switch (action.type) {
+
+    case "TRIM_SELECTED":
+      updatedSelection = {
         ...userSelectionDataObject,
         level: action.payload.selection,
         trim: action.payload.trim,
+      };
+      return updatedSelection;
+
+    case "EXTERIOR_SELECTED":
+      updatedSelection = {
+        ...userSelectionDataObject,
+        extColor: action.payload,
       };
       return updatedSelection;
 
