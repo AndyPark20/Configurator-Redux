@@ -125,7 +125,9 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
     case "EXTERIOR_SELECTED":
       updatedSelection = {
         ...userSelectionDataObject,
-        extColor: action.payload,
+        level:action.payload.level,
+        trim:action.payload.trim,
+        extColor: action.payload.extColor
       };
       return updatedSelection;
 

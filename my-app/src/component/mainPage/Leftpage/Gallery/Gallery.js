@@ -37,17 +37,17 @@ export const Gallery = ({ carData, gallery}) => {
   }
 
   //Gallery render
-  const exterior =()=>{
+  const renderGallery =()=>{
     return(
       <div className="gallery-alignment">
-        <img src={gallery[extGalleryIndex]}alt="gallery-size" className="gallery-size"/>
+        <img src={gallery[extGalleryIndex]} alt="gallery-size" className="gallery-size"/>
       </div>
     )
   }
 
   return (
     <div className="gallery-container">
-      {exterior()}
+      {renderGallery()}
       <div className="arrows">
         <i className="fas fa-chevron-left" onClick={(e) => changePictures(e)}></i>
         1/8

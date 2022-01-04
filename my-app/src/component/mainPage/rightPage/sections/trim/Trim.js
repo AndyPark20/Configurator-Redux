@@ -23,7 +23,7 @@ const Trim = ({ data, userSelectedTrim }) => {
           <h4>{packageSelection}</h4>
           {trimLevelValueList.map((trim, index) => {
             return (
-              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(packageSelection,trim)}> {trim}</div>
+              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(packageSelection,trim)}>{trim}</div>
             )
           })}
         </div>
