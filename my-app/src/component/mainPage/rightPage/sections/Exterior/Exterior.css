@@ -1,0 +1,13 @@
+
+
+/**EXT Color Container**/
+.exterior-color-container{
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+
+.exterior-color-btn{
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+}

@@ -11,7 +11,6 @@ import {userSelectedTrim} from '../../../../../Actions';
 const Trim = ({ data, userSelectedTrim }) => {
 
 
-
   //Render Trim Level
   const renderTrimLevel = (packageSelection) => {
     //Array holding packageSelection of Audi trim based on package level (i.e. 'Premium', etc....)

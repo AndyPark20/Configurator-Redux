@@ -5,6 +5,7 @@ import './Rightpage.css';
 
 //Import Components
 import Trim from './Sections/Trim/Trim';
+import ExteriorSection from "./Sections/Exterior/Exterior";
 
 
 export const MainRight=()=>{
@@ -18,7 +19,8 @@ export const MainRight=()=>{
         <h4>PACKAGES</h4>
         <h4>SUMMARY</h4>
       </div>
-      <Trim/>
+      <Trim />
+      <ExteriorSection />
     </div>
   );
 }
