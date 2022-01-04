@@ -7,8 +7,7 @@ import './Exterior.css';
 //Import connect helper function
 import {connect} from 'react-redux';
 
-//Import Reducer
-import { extColorSelection } from "../../../../../Actions";
+
 
 
 
@@ -23,7 +22,7 @@ const ExteriorSection = ({ exteriorColor, extColorSelection }) => {
             className="exterior-color-btn"
             alt={values.name}
             id={values.name}
-            onClick={() => extColorSelection(values.name)}
+
           />
         </div>
       );
@@ -41,4 +40,4 @@ const mapStateToProps=(state)=>{
 };
 
 
-export default connect(mapStateToProps, { extColorSelection })(ExteriorSection);
+export default connect(mapStateToProps)(ExteriorSection);

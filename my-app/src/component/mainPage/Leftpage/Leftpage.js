@@ -9,11 +9,14 @@ import {Gallery} from './Gallery/Gallery.js';
 
 
 const MainLeft = (data) => {
+
   //Destructre data
   //For Current User Selection:
   const { level, trim, wheelSelection, extColor,viewPosition} = data.currentSelection;
   //For carData:
   const { acceleration, engine, hp, torque } = data.carData[level][trim].spec;
+
+    console.log(data.carData[level][trim].spec)
 
   //Gallery:
   const galleryPictures = data.carData[level][trim].spec[wheelSelection][viewPosition][extColor]
