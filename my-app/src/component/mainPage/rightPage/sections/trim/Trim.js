@@ -17,18 +17,25 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
           <span className="reg-mark">®</span>
         </span>
       );
-    }
+    };
     return <span className="model-title-style">{model}</span>;
   };
 
   //Render Engine Layout (ie. Quattro, Rear-wheel-drive)
-  const renderEngineLayout = (model,trimSelection) => {
-
+  const renderEngineLayout = (model, trimSelection) => {
     const engineLayout = data[trimSelection][model].spec;
     // return engineLayout;
-    if(engineLayout){
+    if (engineLayout) {
+      if (engineLayout.layout.includes("quattro")) {
+        return (
+          <span>
+            {engineLayout.layout}
+            <span className="reg-mark">®</span>
+          </span>
+        );
+      };
       return engineLayout.layout;
-    }
+    };
   };
 
   //Render List of trim and Models
@@ -58,7 +65,9 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
               >
                 <div className="model-engine-layout-title-style">
                   <h3>{renderModelRegMark(model)}</h3>
-                  <p className="engine-layout-title">{renderEngineLayout(model, trimSelection)}</p>
+                  <p className="engine-layout-title">
+                    {renderEngineLayout(model, trimSelection)}
+                  </p>
                 </div>
               </div>
             );
@@ -85,7 +94,6 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
 
   return <div className="trim-container-width">{renderPackageLevel()}</div>;
 };
-
 
 //React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {

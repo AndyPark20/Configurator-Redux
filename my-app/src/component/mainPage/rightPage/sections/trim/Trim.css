@@ -16,11 +16,11 @@
   display:flex;
   align-items: center;
   justify-content: center;
-  height:100px;
+  height:75px;
   border:1px solid #808080;
   background:white;
   border-radius: 25px;
-  margin:2% 30%;
+  margin:2% 8%;
 }
 
 /****Model title styling****/
@@ -40,4 +40,7 @@
 
 .engine-layout-title{
   padding-left:10px;
+  font-size:1.2rem;
+  font-weight:600;
+  color:#505050;
 }
