@@ -8,8 +8,7 @@ import './Trim.css';
 import {userSelectedTrim} from '../../../../../Actions';
 
 
-const Trim = ({ data, userSelectedTrim }) => {
-
+const Trim = ({ data, currentSelection, userSelectedTrim }) => {
 
   //Render Trim Level
   const renderTrimLevel = (packageSelection) => {
@@ -23,7 +22,7 @@ const Trim = ({ data, userSelectedTrim }) => {
           <h4>{packageSelection}</h4>
           {trimLevelValueList.map((trim, index) => {
             return (
-              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(packageSelection,trim)}>{trim}</div>
+              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(packageSelection,trim, currentSelection.extColor)}>{trim}</div>
             )
           })}
         </div>
@@ -58,6 +57,7 @@ const Trim = ({ data, userSelectedTrim }) => {
 const thisMapStateToProps = (state) => {
   return {
     data: state.carData,
+    currentSelection:state.userSelection
   };
 };
 

@@ -1,10 +1,10 @@
 
 
 //Trim Selection
-export const userSelectedTrim = (trimSelection, model) => {
+export const userSelectedTrim = (trimSelection, model, exteriorColor) => {
     return {
       type: "TRIM_SELECTED",
-      payload: { trimSelection, model }
+      payload: { trimSelection, model,exteriorColor }
     };
 };
 

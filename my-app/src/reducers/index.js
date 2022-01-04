@@ -90,6 +90,13 @@ const carData = () => {
                 require("../img/premium/Q450e-tron/NavarraBluemetallic/4-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
                 require("../img/premium/Q450e-tron/NavarraBluemetallic/5-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
               ],
+              "Pebble Gray": [
+                require("../img/premium/Q450e-tron/PebbleGray/1-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q450e-tron/PebbleGray/2-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q450e-tron/PebbleGray/3-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q450e-tron/PebbleGray/4-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q450e-tron/PebbleGray/5-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+              ],
             },
           },
         },
@@ -119,6 +126,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         ...userSelectionDataObject,
         level: action.payload.trimSelection,
         trim: action.payload.model,
+        extColor:action.payload.exteriorColor,
       };
       return updatedSelection;
 
@@ -137,5 +145,6 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
 };
 
 export default combineReducers({
+  carData,
   userSelection: userSelectedValues,
 });
