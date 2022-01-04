@@ -11,18 +11,18 @@ import {userSelectedTrim} from '../../../../../Actions';
 const Trim = ({ data, currentSelection, userSelectedTrim }) => {
 
   //Render Trim Level
-  const renderTrimLevel = (packageSelection) => {
-    //Array holding packageSelection of Audi trim based on package level (i.e. 'Premium', etc....)
-    const trimLevelValueList = Object.keys(data[packageSelection]);
+  const renderTrimLevel = (trimSelection) => {
+    //Array holding trimSelection of Audi trim based on package level (i.e. 'Premium', etc....)
+    const trimLevelValueList = Object.keys(data[trimSelection]);
 
     //Omit Exterior Color buttons
-    if (data.hasOwnProperty(packageSelection) && packageSelection !=='extColorButtons') {
+    if (data.hasOwnProperty(trimSelection) && trimSelection !=='extColorButtons') {
       return (
         <div className="trim-level-container">
-          <h4>{packageSelection}</h4>
-          {trimLevelValueList.map((trim, index) => {
+          <h4>{trimSelection}</h4>
+          {trimLevelValueList.map((model, index) => {
             return (
-              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(packageSelection,trim, currentSelection.extColor)}>{trim}</div>
+              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(trimSelection,model, currentSelection.extColor)}>{model}</div>
             )
           })}
         </div>
@@ -36,10 +36,10 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
     //Get package level from data object
     const packageLevel = Object.keys(data);
     //loop thru the package list array and pass the value as an agument to renderTrimLevel function
-    const renderPackage = packageLevel.map((packageSelection, index) => {
+    const renderPackage = packageLevel.map((trimSelection, index) => {
       return (
         <div className="trim-option-width" key={index}>
-          {renderTrimLevel(packageSelection)}
+          {renderTrimLevel(trimSelection)}
         </div>
       )
     });
@@ -53,7 +53,7 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
 };
 
 
-//React-Redux connect to retrieve packageSelection from the Redux Store
+//React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {
   return {
     data: state.carData,

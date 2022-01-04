@@ -12,12 +12,13 @@ const MainLeft = (data) => {
 
   //Destructre data
   //For Current User Selection:
-  const { level, trim, wheelSelection, extColor,viewPosition} = data.currentSelection;
+  const {trim,model, wheelSelection, extColor,viewPosition} = data.currentSelection;
   //For carData:
-  const { acceleration, engine, hp, torque } = data.carData[level][trim].spec;
+  const { acceleration, engine, hp, torque } = data.carData[trim][model].spec;
 
   //Gallery:
-  const galleryPictures = data.carData[level][trim].spec[wheelSelection][viewPosition][extColor];
+  const galleryPictures = data.carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+  console.log(galleryPictures)
 
 
   //Specification Render for Trim Selected

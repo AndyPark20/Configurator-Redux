@@ -110,8 +110,8 @@ const carData = () => {
 };
 
 const userSelectionDataObject = {
-  level: "Premium",
-  trim: "Q4 40 e-tron",
+  trim: "Premium",
+  model: "Q4 40 e-tron",
   wheelSelection: "standard_wheel_one",
   extColor: "Navarra Blue metallic",
   viewPosition: "extImage",
@@ -121,21 +121,12 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
   let updatedSelection = {};
   switch (action.type) {
 
-    case "TRIM_SELECTED":
+    case "USER_SELECTION":
       updatedSelection = {
         ...userSelectionDataObject,
-        level: action.payload.trimSelection,
-        trim: action.payload.model,
+        trim: action.payload.trimSelection,
+        model: action.payload.model,
         extColor:action.payload.exteriorColor,
-      };
-      return updatedSelection;
-
-    case "EXTERIOR_SELECTED":
-      updatedSelection = {
-        ...userSelectionDataObject,
-        level: action.payload.trimSelection,
-        trim: action.payload.model,
-        extColor: action.payload.exteriorColor,
       };
       return updatedSelection;
 

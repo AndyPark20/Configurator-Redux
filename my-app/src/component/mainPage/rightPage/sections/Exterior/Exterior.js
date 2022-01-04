@@ -8,12 +8,12 @@ import './Exterior.css';
 import {connect} from 'react-redux';
 
 //Import Actions
-import {exteriorColorSelection} from '../../../../../Actions';
+import { userSelectedTrim } from "../../../../../Actions";
 
 
 
 
-const ExteriorSection = ({trimLevel,model,exteriorColor, exteriorColorSelection }) => {
+const ExteriorSection = ({trimLevel,model,exteriorColor, userSelectedTrim }) => {
   //Render available exterior colors for Audi Q4 e-tron
   const q4ExteriorColors = () => {
     const renderColor = exteriorColor.map((values, index) => {
@@ -24,7 +24,7 @@ const ExteriorSection = ({trimLevel,model,exteriorColor, exteriorColorSelection 
             className="exterior-color-btn"
             alt={values.name}
             id={values.name}
-            onClick={()=>exteriorColorSelection(trimLevel,model,values.name)}
+            onClick={() => userSelectedTrim(trimLevel, model, values.name)}
           />
         </div>
       );
@@ -36,12 +36,13 @@ const ExteriorSection = ({trimLevel,model,exteriorColor, exteriorColorSelection 
 };
 
 const mapStateToProps=(state)=>{
+  console.log(state.userSelection)
   return{
-    trimLevel:state.userSelection.level,
-    model:state.userSelection.trim,
+    trimLevel:state.userSelection.trim,
+    model:state.userSelection.model,
     exteriorColor:state.carData.extColorButtons
   };
 };
 
 
-export default connect(mapStateToProps, { exteriorColorSelection })(ExteriorSection);
+export default connect(mapStateToProps, { userSelectedTrim })(ExteriorSection);

@@ -10,9 +10,6 @@ export const Gallery = ({ carData, gallery}) => {
   //state track from local component for Exterior gallery index position
   let [extGalleryIndex,updateExtGalleryIndex] = useState(0);
 
-  //De-strcuture for current user selection
-  const { level, trim, wheelSelection, extColor } = carData;
-
 
 
   //Function for changing gallery when user clicks left or right arrow
