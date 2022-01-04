@@ -19,6 +19,11 @@
   height:50px;
   border:1px solid #808080;
   background:white;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   margin:2% 15%;
+}
+
+/****Model title styling****/
+.model-title-style{
+  font-size:1.5rem;
 }

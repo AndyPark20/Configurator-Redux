@@ -37,7 +37,7 @@ body{
 
 /*****Model, year, and spec of the car ****/
 .reg-mark{
-  font-size:1rem;
+  font-size:.75rem;
   vertical-align: super;
 }
 

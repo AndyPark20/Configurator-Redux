@@ -42,11 +42,12 @@ const MainLeft = (data) => {
             <h1 className="audi-model">
               <span className="model">Q4</span>
               <span className="current-trim-level">
-                Premium 40 e-tron<span className="reg-mark"></span>
+                Premium 40 e-tron
+                <span className="reg-mark">®</span>
               </span>
             </h1>
           </div>
-          <Gallery carData={data.currentSelection} gallery={galleryPictures}/>
+          <Gallery carData={data.currentSelection} gallery={galleryPictures} />
         </div>
         {specRender()}
       </div>

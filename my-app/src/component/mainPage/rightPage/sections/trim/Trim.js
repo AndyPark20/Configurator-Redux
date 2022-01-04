@@ -10,7 +10,22 @@ import {userSelectedTrim} from '../../../../../Actions';
 
 const Trim = ({ data, currentSelection, userSelectedTrim }) => {
 
-  //Render Trim Level
+  //Check model to render Register mark
+  const modelRegMark =(model)=>{
+    if(model.includes('e-tron')){
+      return (
+        <span className="model-title-style">
+          {model}
+          <span className="reg-mark">®</span>
+        </span>
+      );
+    }
+    return <span className="model-title-style">{model}</span>
+  }
+
+
+
+  //Render List of trim and Models
   const renderTrimLevel = (trimSelection) => {
     //Array holding trimSelection of Audi trim based on package level (i.e. 'Premium', etc....)
     const trimLevelValueList = Object.keys(data[trimSelection]);
@@ -22,7 +37,9 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
           <h4>{trimSelection}</h4>
           {trimLevelValueList.map((model, index) => {
             return (
-              <div key={index} className="trim-border-style" onClick={(e) => userSelectedTrim(trimSelection,model, currentSelection.extColor)}>{model}</div>
+              <div key={index}>
+                 <div className="trim-border-style" onClick={(e) => userSelectedTrim(trimSelection,model, currentSelection.extColor)}>{modelRegMark(model)}</div>
+                </div>
             )
           })}
         </div>

@@ -13,7 +13,7 @@ import { userSelectedTrim } from "../../../../../Actions";
 
 
 
-const ExteriorSection = ({trimLevel,model,exteriorColor, userSelectedTrim }) => {
+const ExteriorSection = ({trim,model,exteriorColor, userSelectedTrim }) => {
   //Render available exterior colors for Audi Q4 e-tron
   const q4ExteriorColors = () => {
     const renderColor = exteriorColor.map((values, index) => {
@@ -24,7 +24,7 @@ const ExteriorSection = ({trimLevel,model,exteriorColor, userSelectedTrim }) => 
             className="exterior-color-btn"
             alt={values.name}
             id={values.name}
-            onClick={() => userSelectedTrim(trimLevel, model, values.name)}
+            onClick={() => userSelectedTrim(trim, model, values.name)}
           />
         </div>
       );
@@ -36,9 +36,8 @@ const ExteriorSection = ({trimLevel,model,exteriorColor, userSelectedTrim }) => 
 };
 
 const mapStateToProps=(state)=>{
-  console.log(state.userSelection)
   return{
-    trimLevel:state.userSelection.trim,
+    trim:state.userSelection.trim,
     model:state.userSelection.model,
     exteriorColor:state.carData.extColorButtons
   };

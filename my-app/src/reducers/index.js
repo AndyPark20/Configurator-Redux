@@ -26,10 +26,11 @@ const carData = () => {
     Premium: {
       "Q4 40 e-tron": {
         spec: {
-          engine: "Asynchronous electric motor",
+          engine: "Asynchronous electric motor®",
           hp: "201",
           torque: "N/A",
           acceleration: "7.9",
+          layout: "rear-wheel drive",
           wheels: {
             wheelImage: [
               //--> user Selection
@@ -78,6 +79,7 @@ const carData = () => {
           hp: "295",
           torque: "N/A",
           acceleration: "5.8",
+          layout: "quattro",
           wheels: {
             wheelImage: [],
           },
