@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 //Master Car Data
 const carData = () => {
   return {
-    //--> EXT Colors
+    //--> EXTERIOR Colors
     extColorButtons: [
       {
         name: "Pebble Gray",
