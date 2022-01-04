@@ -36,7 +36,6 @@ const ExteriorSection = ({trimLevel,model,exteriorColor, exteriorColorSelection 
 };
 
 const mapStateToProps=(state)=>{
-  console.log(state.userSelection.level)
   return{
     trimLevel:state.userSelection.level,
     model:state.userSelection.trim,

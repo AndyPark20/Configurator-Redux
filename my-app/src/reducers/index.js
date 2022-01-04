@@ -117,17 +117,17 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
     case "TRIM_SELECTED":
       updatedSelection = {
         ...userSelectionDataObject,
-        level: action.payload.selection,
-        trim: action.payload.trim,
+        level: action.payload.trimSelection,
+        trim: action.payload.model,
       };
       return updatedSelection;
 
     case "EXTERIOR_SELECTED":
       updatedSelection = {
         ...userSelectionDataObject,
-        level:action.payload.level,
-        trim:action.payload.trim,
-        extColor: action.payload.extColor
+        level: action.payload.trimSelection,
+        trim: action.payload.model,
+        extColor: action.payload.exteriorColor,
       };
       return updatedSelection;
 
@@ -137,6 +137,5 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
 };
 
 export default combineReducers({
-  carData,
   userSelection: userSelectedValues,
 });

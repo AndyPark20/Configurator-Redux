@@ -13,12 +13,11 @@ const MainLeft = (data) => {
   //Destructre data
   //For Current User Selection:
   const { level, trim, wheelSelection, extColor,viewPosition} = data.currentSelection;
-  //For carData:
-  const { acceleration, engine, hp, torque } = data.carData[level][trim].spec;
+  //For currentSelection:
+  const { acceleration, engine, hp, torque } = data.currentSelection[level][trim].spec;
 
   //Gallery:
-  const galleryPictures = data.carData[level][trim].spec[wheelSelection][viewPosition][extColor];
-  console.log(galleryPictures)
+  const galleryPictures = data.currentSelection[level][trim].spec[wheelSelection][viewPosition][extColor];
 
   //Specification Render for Trim Selected
   const specRender = () => {
@@ -45,7 +44,7 @@ const MainLeft = (data) => {
               </span>
             </h1>
           </div>
-          <Gallery carData={data.currentSelection} gallery={galleryPictures}/>
+          <Gallery currentSelection={data.currentSelection} gallery={galleryPictures}/>
         </div>
         {specRender()}
       </div>
@@ -54,9 +53,8 @@ const MainLeft = (data) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.userSelection);
+  console.log('leftPage',state.userSelection);
   return {
-    carData: state.carData,
     currentSelection: state.userSelection
   }
 };
