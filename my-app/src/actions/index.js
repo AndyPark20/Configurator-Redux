@@ -13,6 +13,6 @@ export const userSelectedTrim = (selection, trim) => {
 export const exteriorColorSelection =(selection)=>{
   return{
     type:"EXTERIOR_SELECTED",
-    payload:{selection}
+    payload:selection
   };
 };

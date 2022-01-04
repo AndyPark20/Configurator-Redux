@@ -112,7 +112,6 @@ const userSelectionDataObject = {
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
   let updatedSelection = {};
-
   switch (action.type) {
 
     case "TRIM_SELECTED":

@@ -54,7 +54,7 @@ const MainLeft = (data) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  console.log(state.userSelection);
   return {
     carData: state.carData,
     currentSelection: state.userSelection
