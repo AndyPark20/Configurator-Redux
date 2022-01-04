@@ -37,8 +37,8 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
           <h4>{trimSelection}</h4>
           {trimLevelValueList.map((model, index) => {
             return (
-              <div key={index}>
-                 <div className="trim-border-style" onClick={(e) => userSelectedTrim(trimSelection,model, currentSelection.extColor)}>{modelRegMark(model)}</div>
+              <div  className="trim-border-style" key={index} onClick={(e) => userSelectedTrim(trimSelection,model, currentSelection.extColor)}>
+                 <h3>{modelRegMark(model)}</h3>
                 </div>
             )
           })}
