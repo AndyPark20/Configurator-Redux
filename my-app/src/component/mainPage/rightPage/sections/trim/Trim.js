@@ -16,7 +16,9 @@ const Trim = ({ data, userSelectedTrim }) => {
   const renderTrimLevel = (packageSelection) => {
     //Array holding packageSelection of Audi trim based on package level (i.e. 'Premium', etc....)
     const trimLevelValueList = Object.keys(data[packageSelection]);
-    if (data.hasOwnProperty(packageSelection)) {
+
+    //Omit Exterior Color buttons
+    if (data.hasOwnProperty(packageSelection) && packageSelection !=='extColorButtons') {
       return (
         <div className="trim-level-container">
           <h4>{packageSelection}</h4>
