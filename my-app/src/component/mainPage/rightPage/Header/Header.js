@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export const RightSideHeader=()=>{
   return (
     <div className="sections">
-      <Link to="/Trim">
+      <Link to="/">
         <h4>TRIM</h4>
       </Link>
       <Link to="/Exterior">

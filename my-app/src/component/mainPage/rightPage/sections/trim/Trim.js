@@ -51,7 +51,7 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
     ) {
       return (
         <div className="trim-level-container">
-          <h4>{trimSelection}</h4>
+          <h4 className="trim-title">{trimSelection}</h4>
           {trimLevelValueList.map((model, index) => {
             return (
               <div

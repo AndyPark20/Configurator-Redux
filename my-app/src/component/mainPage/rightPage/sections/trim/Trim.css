@@ -10,6 +10,14 @@
   text-align:center;
 }
 
+/****Trim title***/
+.trim-title{
+  margin:1% 0% 3% 0%;
+  font-size:1.3rem;
+  text-align: start;
+  margin-left:10%;
+}
+
 
 /****Trim Border styling ****/
 .trim-border-style{

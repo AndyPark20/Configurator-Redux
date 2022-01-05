@@ -32,10 +32,16 @@ const carData = () => {
           acceleration: "7.9",
           layout: "rear-wheel drive",
           wheels: {
-            wheelImage: [
-              //--> user Selection
-              //Need standard_one two, etc or premium key value pair
-            ],
+            wheelImage: {
+              standard:[
+                {'19" 5-W-spoke Aero design, graphite gray wheels': {
+                  wheelType:'standard_wheel_one',
+                  img: require("../img/premium/Q440e-tron/Wheels/Standard/2022-Q4-40-e-tron-premium-standard-wheels.png"),
+                  //Need standard_one two, etc or premium key value pair
+                },
+              },
+              ],
+            },
           },
           //--> User Selection
           standard_wheel_one: {
@@ -121,7 +127,7 @@ const carData = () => {
         },
       },
       "Q4 50 e-tron": {
-           spec: {
+        spec: {
           engine:
             "Rear Permanently excited synchronous motor and front asynchronous motor",
           hp: "295",
@@ -141,6 +147,8 @@ const userSelectionDataObject = {
   trim: "Premium",
   model: "Q4 40 e-tron",
   wheelSelection: "standard_wheel_one",
+  wheelType:'standard',
+  wheelName:'19" 5-W-spoke Aero design, graphite gray wheels',
   extColor: "Navarra Blue metallic",
   viewPosition: "extImage",
 };

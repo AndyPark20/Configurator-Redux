@@ -17,7 +17,7 @@ export const MainRight = () => {
       <BrowserRouter>
         <RightSideHeader />
         <Routes>
-          <Route path="/Trim"  element={<Trim/>} />
+          <Route path="/"  element={<Trim/>} />
           <Route path="/Exterior" element={<ExteriorSection/>} />
         </Routes>
       </BrowserRouter>
