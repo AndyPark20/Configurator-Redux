@@ -1,33 +1,26 @@
-import React from 'react';
+import React from "react";
 
 //CSS style
-import './Rightpage.css';
+import "./Rightpage.css";
 
 //Import Browser Router functionality
-import { BrowserRouter,Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //Import Components
-import Trim from './Sections/Trim/Trim';
+import Trim from "./Sections/Trim/Trim";
 import ExteriorSection from "./Sections/Exterior/Exterior";
+import { RightSideHeader } from "../RightPage/Header/Header.js";
 
-
-export const MainRight=()=>{
+export const MainRight = () => {
   return (
     <div className="audi-container-right right-side-background">
-      <div className="sections">
-        <h4>TRIM</h4>
-        <h4>EXTERIOR</h4>
-        <h4>INTERIOR</h4>
-        <h4>OPTIONS</h4>
-        <h4>PACKAGES</h4>
-        <h4>SUMMARY</h4>
-      </div>
       <BrowserRouter>
-
-
+        <RightSideHeader />
+        <Routes>
+          <Route path="/Trim"  element={<Trim/>} />
+          <Route path="/Exterior" element={<ExteriorSection/>} />
+        </Routes>
       </BrowserRouter>
-      <Trim />
-      <ExteriorSection />
     </div>
   );
-}
+};
