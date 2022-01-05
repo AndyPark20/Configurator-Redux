@@ -2,12 +2,16 @@
 
 /**EXT Color Container**/
 .exterior-color-container{
-  width:100%;
+  width:80%;
   display:flex;
   justify-content: center;
 }
 
 .exterior-color-btn{
+  width:100%;
 clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
 
+.exterior-individiual-color-button-container{
+  width:25%;
 }

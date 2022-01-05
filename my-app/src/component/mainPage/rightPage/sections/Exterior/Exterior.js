@@ -18,7 +18,7 @@ const ExteriorSection = ({trim,model,exteriorColor, userSelectedTrim }) => {
   const q4ExteriorColors = () => {
     const renderColor = exteriorColor.map((values, index) => {
       return (
-        <div key={index}>
+        <div key={index} className="exterior-individiual-color-button-container">
           <img
             src={values.img}
             className="exterior-color-btn"

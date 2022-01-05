@@ -21,6 +21,8 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
     return <span className="model-title-style">{model}</span>;
   };
 
+
+
   //Render Engine Layout (ie. Quattro, Rear-wheel-drive)
   const renderEngineLayout = (model, trimSelection) => {
     const engineLayout = data[trimSelection][model].spec;

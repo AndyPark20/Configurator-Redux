@@ -105,8 +105,34 @@ const carData = () => {
       },
     },
     "Premium Plus": {
-      "Q4 40 e-tron": {},
-      "Q4 50 e-tron": {},
+      "Q4 40 e-tron": {
+        spec: {
+          engine: "Asynchronous electric motor®",
+          hp: "201",
+          torque: "N/A",
+          acceleration: "7.9",
+          layout: "rear-wheel drive",
+          wheels: {
+            wheelImage: [
+              //--> user Selection
+              //Need standard_one two, etc or premium key value pair
+            ],
+          },
+        },
+      },
+      "Q4 50 e-tron": {
+           spec: {
+          engine:
+            "Rear Permanently excited synchronous motor and front asynchronous motor",
+          hp: "295",
+          torque: "N/A",
+          acceleration: "5.8",
+          layout: "quattro",
+          wheels: {
+            wheelImage: [],
+          },
+        },
+      },
     },
   };
 };
@@ -122,13 +148,12 @@ const userSelectionDataObject = {
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
   let updatedSelection = {};
   switch (action.type) {
-
     case "USER_SELECTION":
       updatedSelection = {
         ...userSelectionDataObject,
         trim: action.payload.trimSelection,
         model: action.payload.model,
-        extColor:action.payload.exteriorColor,
+        extColor: action.payload.exteriorColor,
       };
       return updatedSelection;
 

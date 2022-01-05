@@ -25,14 +25,14 @@
 
 /****Model title styling****/
 .model-title-style{
-  font-size:1.5rem;
+  font-size:1.3rem;
   border-right:1px solid black;
   padding-right:10px;
 }
 
 /****Model Trim and Engine Layout alignment****/
 .model-engine-layout-title-style{
-  margin-left:25%;
+  margin-left:16%;
   width:100%;
   display:flex;
   align-items: center;
@@ -40,7 +40,7 @@
 
 .engine-layout-title{
   padding-left:10px;
-  font-size:1.2rem;
+  font-size:.95rem;
   font-weight:600;
   color:#505050;
 }

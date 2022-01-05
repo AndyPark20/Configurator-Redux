@@ -1,7 +1,14 @@
 
+
+/***Master Font Style***/
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 /****Split Page Between Left and Right Styling****/
 .page-split{
   display:flex;
 align-items:flex-start;
-
 }
