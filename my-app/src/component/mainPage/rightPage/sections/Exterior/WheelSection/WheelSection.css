@@ -1,3 +1,15 @@
+
+
+/***Wheel Image Size***/
 .wheel-image-size{
   width:25%;
+}
+
+/***Wheel list alignment***/
+.wheel-selection-alignment{
+  display:flex;
+}
+
+.wheel-img-div-width{
+  width:100%;
 }

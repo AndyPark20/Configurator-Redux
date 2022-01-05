@@ -32,18 +32,15 @@ const carData = () => {
           acceleration: "7.9",
           layout: "rear-wheel drive",
           wheels: {
-            wheelImage: {
-              standard: [
-                {
-                  'standard_wheel_one': {
-                    wheelName:
-                      '19" 5-W-spoke Aero design, graphite gray wheels',
-                    img: require("../img/premium/Q440e-tron/Wheels/Standard/2022-Q4-40-e-tron-premium-standard-wheels.png"),
-                    //Need standard_one two, etc or premium key value pair
-                  },
+            wheelImage: [
+              {
+                standard_wheel_one: {
+                  wheelName: '19" 5-W-spoke Aero design, graphite gray wheels',
+                  img: require("../img/premium/Q440e-tron/Wheels/Standard/2022-Q4-40-e-tron-premium-standard-wheels.png"),
+                  //Need standard_one two, etc or premium key value pair
                 },
-              ],
-            },
+              },
+            ],
           },
           //--> User Selection
           standard_wheel_one: {
@@ -89,7 +86,22 @@ const carData = () => {
           acceleration: "5.8",
           layout: "quattro",
           wheels: {
-            wheelImage: [],
+            wheelImage: [
+              {
+                standard_wheel_one: {
+                  wheelName: "19 5-arm design wheels",
+                  img: require("../img/premium/Q450e-tron/Wheels/Standard/19 5-arm design wheels.png"),
+                  //Need standard_one two, etc or premium key value pair
+                },
+              },
+              {
+                premium_wheel_one: {
+                  wheelName: '20" 5-Y-spoke design, graphite gray wheels',
+                  img: require("../img/premium/Q450e-tron/Wheels/Premium/20 5-Y-spoke design, graphite gray wheels.png"),
+                  //Need standard_one two, etc or premium key value pair
+                },
+              },
+            ],
           },
           standard_wheel_one: {
             extImage: {
@@ -149,7 +161,6 @@ const userSelectionDataObject = {
   trim: "Premium",
   model: "Q4 40 e-tron",
   wheelSelection: "standard_wheel_one",
-  wheelType:'standard',
   wheelName:'19" 5-W-spoke Aero design, graphite gray wheels',
   extColor: "Navarra Blue metallic",
   viewPosition: "extImage",
