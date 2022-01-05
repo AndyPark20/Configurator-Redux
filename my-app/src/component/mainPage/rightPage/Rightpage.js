@@ -3,6 +3,9 @@ import React from 'react';
 //CSS style
 import './Rightpage.css';
 
+//Import Browser Router functionality
+import { BrowserRouter,Route } from 'react-router-dom';
+
 //Import Components
 import Trim from './Sections/Trim/Trim';
 import ExteriorSection from "./Sections/Exterior/Exterior";
@@ -19,6 +22,10 @@ export const MainRight=()=>{
         <h4>PACKAGES</h4>
         <h4>SUMMARY</h4>
       </div>
+      <BrowserRouter>
+
+
+      </BrowserRouter>
       <Trim />
       <ExteriorSection />
     </div>
