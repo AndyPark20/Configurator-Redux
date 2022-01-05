@@ -33,13 +33,15 @@ const carData = () => {
           layout: "rear-wheel drive",
           wheels: {
             wheelImage: {
-              standard:[
-                {'19" 5-W-spoke Aero design, graphite gray wheels': {
-                  wheelType:'standard_wheel_one',
-                  img: require("../img/premium/Q440e-tron/Wheels/Standard/2022-Q4-40-e-tron-premium-standard-wheels.png"),
-                  //Need standard_one two, etc or premium key value pair
+              standard: [
+                {
+                  'standard_wheel_one': {
+                    wheelName:
+                      '19" 5-W-spoke Aero design, graphite gray wheels',
+                    img: require("../img/premium/Q440e-tron/Wheels/Standard/2022-Q4-40-e-tron-premium-standard-wheels.png"),
+                    //Need standard_one two, etc or premium key value pair
+                  },
                 },
-              },
               ],
             },
           },

@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import './WheelSection.css'
+
 
 
 const WheelSection =({userSelection,carData})=>{
@@ -17,7 +19,13 @@ const WheelSection =({userSelection,carData})=>{
     const wheelArray = wheelList.map((value,index)=>{
       return(
         <div key={index}>
-          <img
+          {Object.values(value).map((imgSrc,imgIndex)=>{
+            return(
+              <div key={imgIndex}>
+                <img src={imgSrc.img} alt={imgSrc.wheelName} className="wheel-image-size"/>
+              </div>
+            )
+            })}
         </div>
       )
     })
