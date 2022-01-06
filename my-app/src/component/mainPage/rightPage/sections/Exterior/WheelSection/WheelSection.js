@@ -18,6 +18,7 @@ const WheelSection =({userSelection,carData,userSelectedTrim})=>{
   //For Current User Selection:
   const { trim, model,extColor } =userSelection;
 
+
   //For Wheel Selection:
   const wheelList =carData[trim][model].spec.wheels.wheelImage;
 
@@ -48,7 +49,6 @@ const WheelSection =({userSelection,carData,userSelectedTrim})=>{
 };
 
 const mapStateToProps=(state)=>{
-  console.log(state)
   return {
     userSelection:state.userSelection,
     carData:state.carData
