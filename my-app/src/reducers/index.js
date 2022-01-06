@@ -144,6 +144,13 @@ const carData = () => {
                 require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/4-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
                 require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/5-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
               ],
+              "Pebble Gray": [
+                require("../img/premium/Q450e-tron/PremiumWheels/PebbleGray/1-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/PebbleGray/2-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/PebbleGray/3-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/PebbleGray/4-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/PebbleGray/5-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+              ],
             },
           },
         },
