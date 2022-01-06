@@ -144,6 +144,13 @@ const carData = () => {
                 require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/4-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
                 require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/5-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
               ],
+              "Mythos Black metallic": [
+                require("../img/premium/Q450e-tron/PremiumWheels/MythosBlackmetallic/1-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/MythosBlackmetallic/2-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/MythosBlackmetallic/3-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/MythosBlackmetallic/4-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/MythosBlackmetallic/5-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+              ],
               "Pebble Gray": [
                 require("../img/premium/Q450e-tron/PremiumWheels/PebbleGray/1-Audi-Q4-50-e-tron-Pebble-Gray.png"),
                 require("../img/premium/Q450e-tron/PremiumWheels/PebbleGray/2-Audi-Q4-50-e-tron-Pebble-Gray.png"),
@@ -164,6 +171,68 @@ const carData = () => {
       },
     },
     "Premium Plus": {
+      "Q4 40 e-tron": {
+        spec: {
+          engine: "Asynchronous electric motor®",
+          hp: "201",
+          torque: "N/A",
+          acceleration: "7.9",
+          layout: "rear-wheel drive",
+          wheels: {
+            wheelImage: [
+              //--> user Selection
+              //Need standard_one two, etc or premium key value pair
+            ],
+          },
+          standard_wheel_one: {
+            extImage: {
+              "Navarra Blue metallic": [
+                require("../img/premium/Q440e-tron/NavarraBluemetallic/1-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q440e-tron/NavarraBluemetallic/2-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q440e-tron/NavarraBluemetallic/3-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q440e-tron/NavarraBluemetallic/4-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q440e-tron/NavarraBluemetallic/5-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+              ],
+              "Mythos Black metallic": [
+                require("../img/premium/Q440e-tron/MythosBlackmetallic/1-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/premium/Q440e-tron/MythosBlackmetallic/2-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/premium/Q440e-tron/MythosBlackmetallic/3-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/premium/Q440e-tron/MythosBlackmetallic/4-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/premium/Q440e-tron/MythosBlackmetallic/5-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+              ],
+              "Pebble Gray": [
+                require("../img/premium/Q440e-tron/PebbleGray/1-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q440e-tron/PebbleGray/2-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q440e-tron/PebbleGray/3-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q440e-tron/PebbleGray/4-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/premium/Q440e-tron/PebbleGray/5-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+              ],
+              "Glacier White metallic": [
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/1-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/2-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/3-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/4-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/5-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+              ],
+            },
+          },
+        },
+      },
+      "Q4 50 e-tron": {
+        spec: {
+          engine:
+            "Rear Permanently excited synchronous motor and front asynchronous motor",
+          hp: "295",
+          torque: "N/A",
+          acceleration: "5.8",
+          layout: "quattro",
+          wheels: {
+            wheelImage: [],
+          },
+        },
+      },
+    },
+    Prestige: {
       "Q4 40 e-tron": {
         spec: {
           engine: "Asynchronous electric motor®",
