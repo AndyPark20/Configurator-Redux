@@ -1,11 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+
+//Import Actions
+import{userSelectedTrim} from "../../../../../../Actions";
+
+
+//Import CSS
 import './WheelSection.css';
 
 
 
-const WheelSection =({userSelection,carData})=>{
+const WheelSection =({userSelection,carData,userSelectedTrim})=>{
 
 
   //Destructre data
@@ -19,15 +25,16 @@ const WheelSection =({userSelection,carData})=>{
   const renderWheelList =()=>{
     const wheelArray = wheelList.map((value,index)=>{
       return (
-        <span key={index} className="wheel-picture-spacing">
+        <span key={index} className="wheel-picture-spacing" onClick={()=>userSelectedTrim(trim,model,extColor,(Object.keys(value).toString()))}>
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
-              <img
-                key={imgIndex}
-                src={imgSrc.img}
-                alt={imgSrc.wheelName}
-                className="wheel-image-size"
-              />
+                <img
+                  key={imgIndex}
+                  src={imgSrc.img}
+                  alt={imgSrc.wheelName}
+                  className="wheel-image-size"
+                />
+
             );
           })}
         </span>
@@ -41,6 +48,7 @@ const WheelSection =({userSelection,carData})=>{
 };
 
 const mapStateToProps=(state)=>{
+  console.log(state)
   return {
     userSelection:state.userSelection,
     carData:state.carData
@@ -48,4 +56,4 @@ const mapStateToProps=(state)=>{
 };
 
 
-export default connect(mapStateToProps)(WheelSection)
+export default connect(mapStateToProps,{userSelectedTrim})(WheelSection)
