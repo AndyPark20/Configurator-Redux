@@ -17,6 +17,16 @@ const Trim = ({
   userSelectedTrim,
 }) => {
   //Check model to render Register mark
+
+  const test =(e)=>{
+    console.log(e.currentTarget.id)
+    let checkedWheelSelection = wheelSelection;
+
+    return checkedWheelSelection;
+  }
+
+
+
   const renderModelRegMark = (model) => {
     if (model.includes("e-tron")) {
       return (
@@ -63,6 +73,7 @@ const Trim = ({
           {trimLevelValueList.map((model, index) => {
             return (
               <div
+                id={model}
                 className="trim-border-style"
                 key={index}
                 onClick={(e) =>
@@ -70,7 +81,7 @@ const Trim = ({
                     trimSelection,
                     model,
                     extColor,
-                    wheelSelection
+                    (wheelSelection = test(e))
                   )
                 }
               >

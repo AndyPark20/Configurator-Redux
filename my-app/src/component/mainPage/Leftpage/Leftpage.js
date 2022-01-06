@@ -25,15 +25,11 @@ const MainLeft = ({
   //CHECKPOINT-Default back to original standard wheel IF premium wheel is not avialble after user selects premium wheel on higher trim models.
 
 
-  let checkedWheelSelection = wheelSelection;
-  useEffect(()=>{
-  if (!carData[trim][model].spec[wheelSelection]) {
-    checkedWheelSelection = "standard_wheel_one";
-    userSelectedTrim(trim, model, extColor, checkedWheelSelection);
-  }
-  })
-
-
+  // let checkedWheelSelection = wheelSelection;
+  // if (!carData[trim][model].spec[wheelSelection]) {
+  //   checkedWheelSelection = "standard_wheel_one";
+  //   userSelectedTrim(trim, model, extColor, checkedWheelSelection);
+  // }
   let galleryPictures =
     carData[trim][model].spec[wheelSelection][viewPosition][extColor];
 
