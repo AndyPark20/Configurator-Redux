@@ -192,7 +192,6 @@ const userSelectionDataObject = {
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
-  console.log(action.payload)
   let updatedSelection = {};
   switch (action.type) {
     case "USER_SELECTION":

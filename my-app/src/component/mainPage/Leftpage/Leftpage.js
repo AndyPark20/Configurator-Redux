@@ -8,18 +8,29 @@ import {Gallery} from './Gallery/Gallery.js';
 
 
 
-const MainLeft = (data) => {
+
+const MainLeft = ({carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition}) => {
 
   //Destructre data
-  //For Current User Selection:
-  const {trim,model, wheelSelection, extColor,viewPosition} = data.currentSelection;
-  //For carData:
-  const { acceleration, engine, hp, torque } = data.carData[trim][model].spec;
-  console.log(data.carData[trim][model].spec[wheelSelection][viewPosition]);
-  //Gallery:
-  const galleryPictures = data.carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+  const { acceleration, engine, hp, torque } = carData[trim][model].spec;
 
+   console.log("trim", trim);
+   console.log("model", model);
+   console.log("wheelSelection", wheelSelection);
 
+  const galleryPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+  console.log('render gallery',galleryPictures)
+
+    //Default back to original standard wheel IF premium wheel is not avialble
+  const defaultWheels = () => {
+
+    if(wheelSelection){
+      if(carData[trim][model].spec[wheelSelection][viewPosition][extColor]){
+        return wheelSelection;
+      }
+    }
+    return "standard_wheel_one";
+  };
 
 
   //Specification Render for Trim Selected
@@ -48,7 +59,7 @@ const MainLeft = (data) => {
               </span>
             </h1>
           </div>
-          <Gallery carData={data.currentSelection} gallery={galleryPictures} />
+          <Gallery carData={currentSelection} gallery={galleryPictures} />
         </div>
         {specRender()}
       </div>
@@ -56,10 +67,18 @@ const MainLeft = (data) => {
   );
 };
 
+
+
 const mapStateToProps = (state) => {
   return {
+
     carData: state.carData,
-    currentSelection: state.userSelection
+    currentSelection:state.userSelection,
+    trim:state.userSelection.trim,
+    model:state.userSelection.model,
+    wheelSelection:state.userSelection.wheelSelection,
+    extColor:state.userSelection.extColor,
+    viewPosition:state.userSelection.viewPosition
   }
 };
 
