@@ -7,9 +7,15 @@ import "./Trim.css";
 //Import Reducers
 import { userSelectedTrim } from "../../../../../Actions";
 
-const Trim = ({ data,trim,model,extColor, wheelSelection,viewPosition, userSelectedTrim }) => {
-
-
+const Trim = ({
+  data,
+  trim,
+  model,
+  extColor,
+  wheelSelection,
+  viewPosition,
+  userSelectedTrim,
+}) => {
   //Check model to render Register mark
   const renderModelRegMark = (model) => {
     if (model.includes("e-tron")) {
@@ -39,6 +45,7 @@ const Trim = ({ data,trim,model,extColor, wheelSelection,viewPosition, userSelec
       return engineLayout.layout;
     }
   };
+
 
 
   //Render List of trim and Models
@@ -103,11 +110,11 @@ const Trim = ({ data,trim,model,extColor, wheelSelection,viewPosition, userSelec
 const thisMapStateToProps = (state) => {
   return {
     data: state.carData,
-    trim:state.userSelection.trim,
-    model:state.userSelection.model,
-    extColor:state.userSelection.extColor,
+    trim: state.userSelection.trim,
+    model: state.userSelection.model,
+    extColor: state.userSelection.extColor,
     wheelSelection: state.userSelection.wheelSelection,
-    viewPosition:state.userSelection.viewPosition
+    viewPosition: state.userSelection.viewPosition,
   };
 };
 
