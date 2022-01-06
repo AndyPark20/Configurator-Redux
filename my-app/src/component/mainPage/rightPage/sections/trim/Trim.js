@@ -7,7 +7,15 @@ import "./Trim.css";
 //Import Reducers
 import { userSelectedTrim } from "../../../../../Actions";
 
-const Trim = ({ data, currentSelection, userSelectedTrim, wheelSelection }) => {
+const Trim = ({ data,trim,model, wheelSelection, extColor, userSelectedTrim }) => {
+  //Destructre data
+  //For Current User Selection:
+  // const { trim, model, viewPosition } = data.currentSelection;
+
+  // //Gallery:
+  // const galleryPictures =
+  //   data.carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+
   //Check model to render Register mark
   const renderModelRegMark = (model) => {
     if (model.includes("e-tron")) {
@@ -38,6 +46,9 @@ const Trim = ({ data, currentSelection, userSelectedTrim, wheelSelection }) => {
     }
   };
 
+  //Default back to original standard wheel IF premium wheel is not avialble
+  const defaultWheels = () => {};
+
   //Render List of trim and Models
   const renderTrimLevel = (trimSelection) => {
     //Array holding trimSelection of Audi trim based on package level (i.e. 'Premium', etc....)
@@ -59,8 +70,8 @@ const Trim = ({ data, currentSelection, userSelectedTrim, wheelSelection }) => {
                   userSelectedTrim(
                     trimSelection,
                     model,
-                    currentSelection.extColor,
-                    wheelSelection
+                    extColor,
+                    (wheelSelection = "standard_wheel_one")
                   )
                 }
               >
@@ -98,9 +109,12 @@ const Trim = ({ data, currentSelection, userSelectedTrim, wheelSelection }) => {
 
 //React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {
+  console.log('here',state.userSelection)
   return {
     data: state.carData,
-    currentSelection: state.userSelection,
+    trim:state.userSelection.trim,
+    model:state.userSelection.model,
+    extColor:state.userSelection.extColor,
     wheelSelection: state.userSelection.wheelSelection,
   };
 };

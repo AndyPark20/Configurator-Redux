@@ -16,7 +16,7 @@ const WheelSection =({userSelection,carData,userSelectedTrim})=>{
 
   //Destructre data
   //For Current User Selection:
-  const { trim, model, wheelSelection, wheelName, extColor, viewPosition, wheelType } =userSelection;
+  const { trim, model,extColor } =userSelection;
 
   //For Wheel Selection:
   const wheelList =carData[trim][model].spec.wheels.wheelImage;
