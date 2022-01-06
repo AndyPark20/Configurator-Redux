@@ -136,7 +136,15 @@ const carData = () => {
             },
           },
           premium_wheel_one: {
-
+            extImg: {
+              "Navarra Blue metallic": [
+                require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/1-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/2-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/3-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/4-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/5-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+              ],
+            },
           },
         },
       },
