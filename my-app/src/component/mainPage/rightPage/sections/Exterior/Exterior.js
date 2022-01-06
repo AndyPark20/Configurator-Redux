@@ -15,7 +15,7 @@ import  WheelSection  from "./WheelSection/WheelSection.js";
 
 
 
-const ExteriorSection = ({ trim, model, exteriorColor, userSelectedTrim }) => {
+const ExteriorSection = ({ trim, model, exteriorColor, userSelectedTrim,wheelSelection }) => {
   //Render available exterior colors for Audi Q4 e-tron
   const q4ExteriorColors = () => {
     const renderColor = exteriorColor.map((values, index) => {
@@ -29,7 +29,9 @@ const ExteriorSection = ({ trim, model, exteriorColor, userSelectedTrim }) => {
             className="exterior-color-btn"
             alt={values.name}
             id={values.name}
-            onClick={() => userSelectedTrim(trim, model, values.name)}
+            onClick={() =>
+              userSelectedTrim(trim, model, values.name, wheelSelection)
+            }
           />
         </div>
       );
@@ -58,6 +60,7 @@ const mapStateToProps = (state) => {
     trim: state.userSelection.trim,
     model: state.userSelection.model,
     exteriorColor: state.carData.extColorButtons,
+    wheelSelection:state.userSelection.wheelSelection
   };
 };
 

@@ -7,7 +7,7 @@ import "./Trim.css";
 //Import Reducers
 import { userSelectedTrim } from "../../../../../Actions";
 
-const Trim = ({ data, currentSelection, userSelectedTrim }) => {
+const Trim = ({ data, currentSelection, userSelectedTrim, wheelSelection }) => {
   //Check model to render Register mark
   const renderModelRegMark = (model) => {
     if (model.includes("e-tron")) {
@@ -17,11 +17,9 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
           <span className="reg-mark">®</span>
         </span>
       );
-    };
+    }
     return <span className="model-title-style">{model}</span>;
   };
-
-
 
   //Render Engine Layout (ie. Quattro, Rear-wheel-drive)
   const renderEngineLayout = (model, trimSelection) => {
@@ -35,9 +33,9 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
             <span className="reg-mark">®</span>
           </span>
         );
-      };
+      }
       return engineLayout.layout;
-    };
+    }
   };
 
   //Render List of trim and Models
@@ -61,7 +59,8 @@ const Trim = ({ data, currentSelection, userSelectedTrim }) => {
                   userSelectedTrim(
                     trimSelection,
                     model,
-                    currentSelection.extColor
+                    currentSelection.extColor,
+                    wheelSelection
                   )
                 }
               >
@@ -102,6 +101,7 @@ const thisMapStateToProps = (state) => {
   return {
     data: state.carData,
     currentSelection: state.userSelection,
+    wheelSelection: state.userSelection.wheelSelection,
   };
 };
 

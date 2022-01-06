@@ -15,9 +15,10 @@ const MainLeft = (data) => {
   const {trim,model, wheelSelection, extColor,viewPosition} = data.currentSelection;
   //For carData:
   const { acceleration, engine, hp, torque } = data.carData[trim][model].spec;
-
+  console.log(data.carData[trim][model].spec[wheelSelection][viewPosition]);
   //Gallery:
   const galleryPictures = data.carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+
 
 
 
@@ -56,7 +57,6 @@ const MainLeft = (data) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.userSelection);
   return {
     carData: state.carData,
     currentSelection: state.userSelection

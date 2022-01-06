@@ -136,7 +136,7 @@ const carData = () => {
             },
           },
           premium_wheel_one: {
-            extImg: {
+            extImage: {
               "Navarra Blue metallic": [
                 require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/1-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
                 require("../img/premium/Q450e-tron/PremiumWheels/NavarraBluemetallic/2-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
@@ -192,6 +192,7 @@ const userSelectionDataObject = {
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
+  console.log(action.payload)
   let updatedSelection = {};
   switch (action.type) {
     case "USER_SELECTION":
@@ -200,6 +201,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         trim: action.payload.trimSelection,
         model: action.payload.model,
         extColor: action.payload.exteriorColor,
+        wheelSelection:action.payload.wheelSelection
       };
       return updatedSelection;
 
