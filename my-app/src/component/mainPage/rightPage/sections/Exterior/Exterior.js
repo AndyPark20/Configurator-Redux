@@ -45,7 +45,9 @@ const ExteriorSection = ({ trim, model, exteriorColor, userSelectedTrim }) => {
       </div>
       <div>
         <h3 className="exterior-color-title">Wheels:</h3>
-        <WheelSection/>
+        <div className="wheel-selection-master-container">
+          <WheelSection />
+        </div>
       </div>
     </div>
   );

@@ -24,3 +24,8 @@ clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   display:flex;
   flex-direction:column;
 }
+
+/****Wheel render list alignement****/
+.wheel-selection-master-container{
+  width:100%;
+}

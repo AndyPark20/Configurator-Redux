@@ -10,8 +10,8 @@ const carData = () => {
         img: require("../img/premium/Q440e-tron/PebbleGray/Button-Pebble Gray.png"),
       },
       {
-        name: "White metallic",
-        img: require("../img/premium/Q440e-tron/Whitemetallic/Button-Glacier White metallic.png"),
+        name: "Glacier White metallic",
+        img: require("../img/premium/Q440e-tron/GlacierWhitemetallic/Button-Glacier White metallic.png"),
       },
       {
         name: "Mythos Black metallic",
@@ -66,12 +66,12 @@ const carData = () => {
                 require("../img/premium/Q440e-tron/PebbleGray/4-Standard Audi Q4 40 e-tron Pebble Gray.png"),
                 require("../img/premium/Q440e-tron/PebbleGray/5-Standard Audi Q4 40 e-tron Pebble Gray.png"),
               ],
-              "White metallic": [
-                require("../img/premium/Q440e-tron/Whitemetallic/1-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/Whitemetallic/2-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/Whitemetallic/3-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/Whitemetallic/4-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/Whitemetallic/5-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+              "Glacier White metallic": [
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/1-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/2-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/3-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/4-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/premium/Q440e-tron/GlacierWhitemetallic/5-standard Audi Q4 40 e-tron Glacier White metallic.png"),
               ],
             },
           },
@@ -118,6 +118,13 @@ const carData = () => {
                 require("../img/premium/Q450e-tron/PebbleGray/3-Standard Audi Q4 40 e-tron Pebble Gray.png"),
                 require("../img/premium/Q450e-tron/PebbleGray/4-Standard Audi Q4 40 e-tron Pebble Gray.png"),
                 require("../img/premium/Q450e-tron/PebbleGray/5-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+              ],
+              "Glacier White metallic": [
+                require("../img/premium/Q450e-tron/GlacierWhitemetallic/1-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+                require("../img/premium/Q450e-tron/GlacierWhitemetallic/2-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+                require("../img/premium/Q450e-tron/GlacierWhitemetallic/3-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+                require("../img/premium/Q450e-tron/GlacierWhitemetallic/4-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+                require("../img/premium/Q450e-tron/GlacierWhitemetallic/5-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
               ],
             },
           },

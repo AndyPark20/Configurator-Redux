@@ -14,12 +14,12 @@ const WheelSection =({userSelection,carData})=>{
 
   //For Wheel Selection:
   const wheelList =carData[trim][model].spec.wheels.wheelImage;
-  console.log(wheelList)
+
 
   const renderWheelList =()=>{
     const wheelArray = wheelList.map((value,index)=>{
       return (
-        <div key={index} className="wheel-img-div-width">
+        <span key={index} className="wheel-picture-spacing">
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
               <img
@@ -30,7 +30,7 @@ const WheelSection =({userSelection,carData})=>{
               />
             );
           })}
-        </div>
+        </span>
       );
     })
     return wheelArray;
@@ -41,7 +41,6 @@ const WheelSection =({userSelection,carData})=>{
 };
 
 const mapStateToProps=(state)=>{
-  console.log('wheel',state)
   return {
     userSelection:state.userSelection,
     carData:state.carData
