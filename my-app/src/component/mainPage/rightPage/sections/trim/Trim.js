@@ -18,14 +18,17 @@ const Trim = ({
 }) => {
   //Check model to render Register mark
 
-  const test =(e)=>{
-    console.log(e.currentTarget.id)
+  //CHECKPOINT-Default back to original standard wheel IF premium wheel is not avialble after user selects premium wheel on higher trim models.
+  const checkAvailableWheels = (e) => {
+    const clickedModel = e.currentTarget.id;
     let checkedWheelSelection = wheelSelection;
+    if (!data[trim][clickedModel].spec[wheelSelection]) {
+      checkedWheelSelection = "standard_wheel_one";
+      userSelectedTrim(trim, model, extColor, checkedWheelSelection);
+    }
 
     return checkedWheelSelection;
-  }
-
-
+  };
 
   const renderModelRegMark = (model) => {
     if (model.includes("e-tron")) {
@@ -56,8 +59,6 @@ const Trim = ({
     }
   };
 
-
-
   //Render List of trim and Models
   const renderTrimLevel = (trimSelection) => {
     //Array holding trimSelection of Audi trim based on package level (i.e. 'Premium', etc....)
@@ -81,7 +82,7 @@ const Trim = ({
                     trimSelection,
                     model,
                     extColor,
-                    (wheelSelection = test(e))
+                    (wheelSelection = checkAvailableWheels(e))
                   )
                 }
               >
@@ -119,6 +120,7 @@ const Trim = ({
 
 //React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {
+  console.log(state.userSelection)
   return {
     data: state.carData,
     trim: state.userSelection.trim,
