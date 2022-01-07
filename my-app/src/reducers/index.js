@@ -182,37 +182,44 @@ const carData = () => {
             wheelImage: [
               //--> user Selection
               //Need standard_one two, etc or premium key value pair
+              {
+                standard_wheel_one: {
+                  wheelName: '19" 5-W-spoke Aero design, graphite gray wheels',
+                  img: require("../img/PremiumPlus/Q440e-tron/Wheels/Standard/2022-Q4-40-e-tron-premium-standard-wheels.png"),
+                  //Need standard_one two, etc or premium key value pair
+                },
+              },
             ],
           },
           standard_wheel_one: {
             extImage: {
               "Navarra Blue metallic": [
-                require("../img/premium/Q440e-tron/NavarraBluemetallic/1-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
-                require("../img/premium/Q440e-tron/NavarraBluemetallic/2-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
-                require("../img/premium/Q440e-tron/NavarraBluemetallic/3-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
-                require("../img/premium/Q440e-tron/NavarraBluemetallic/4-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
-                require("../img/premium/Q440e-tron/NavarraBluemetallic/5-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/NavarraBluemetallic/1-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/NavarraBluemetallic/2-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/NavarraBluemetallic/3-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/NavarraBluemetallic/4-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/NavarraBluemetallic/5-Audi-Q4-40-e-tron-Navarra-Blue-metallic.png"),
               ],
               "Mythos Black metallic": [
-                require("../img/premium/Q440e-tron/MythosBlackmetallic/1-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
-                require("../img/premium/Q440e-tron/MythosBlackmetallic/2-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
-                require("../img/premium/Q440e-tron/MythosBlackmetallic/3-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
-                require("../img/premium/Q440e-tron/MythosBlackmetallic/4-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
-                require("../img/premium/Q440e-tron/MythosBlackmetallic/5-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/MythosBlackmetallic/1-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/MythosBlackmetallic/2-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/MythosBlackmetallic/3-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/MythosBlackmetallic/4-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/MythosBlackmetallic/5-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
               ],
               "Pebble Gray": [
-                require("../img/premium/Q440e-tron/PebbleGray/1-Standard Audi Q4 40 e-tron Pebble Gray.png"),
-                require("../img/premium/Q440e-tron/PebbleGray/2-Standard Audi Q4 40 e-tron Pebble Gray.png"),
-                require("../img/premium/Q440e-tron/PebbleGray/3-Standard Audi Q4 40 e-tron Pebble Gray.png"),
-                require("../img/premium/Q440e-tron/PebbleGray/4-Standard Audi Q4 40 e-tron Pebble Gray.png"),
-                require("../img/premium/Q440e-tron/PebbleGray/5-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/PremiumPlus/Q440e-tron/PebbleGray/1-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/PremiumPlus/Q440e-tron/PebbleGray/2-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/PremiumPlus/Q440e-tron/PebbleGray/3-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/PremiumPlus/Q440e-tron/PebbleGray/4-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+                require("../img/PremiumPlus/Q440e-tron/PebbleGray/5-Standard Audi Q4 40 e-tron Pebble Gray.png"),
               ],
               "Glacier White metallic": [
-                require("../img/premium/Q440e-tron/GlacierWhitemetallic/1-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/GlacierWhitemetallic/2-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/GlacierWhitemetallic/3-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/GlacierWhitemetallic/4-standard Audi Q4 40 e-tron Glacier White metallic.png"),
-                require("../img/premium/Q440e-tron/GlacierWhitemetallic/5-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/GlacierWhitemetallic/1-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/GlacierWhitemetallic/2-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/GlacierWhitemetallic/3-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/GlacierWhitemetallic/4-standard Audi Q4 40 e-tron Glacier White metallic.png"),
+                require("../img/PremiumPlus/Q440e-tron/GlacierWhitemetallic/5-standard Audi Q4 40 e-tron Glacier White metallic.png"),
               ],
             },
           },
