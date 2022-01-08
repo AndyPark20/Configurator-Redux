@@ -120,7 +120,6 @@ const Trim = ({
 
 //React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {
-  console.log(state.userSelection)
   return {
     data: state.carData,
     trim: state.userSelection.trim,
