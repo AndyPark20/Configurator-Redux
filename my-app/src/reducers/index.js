@@ -331,6 +331,38 @@ const carData = () => {
             wheelImage: [],
           },
         },
+        standard_wheel_one: {
+          extImage: {
+            "Navarra Blue metallic": [
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/1-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/2-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/3-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/4-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/5-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+            ],
+            "Mythos Black metallic": [
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/MythosBlackmetallic/1-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/MythosBlackmetallic/2-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/MythosBlackmetallic/3-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/MythosBlackmetallic/4-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/MythosBlackmetallic/5-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
+            ],
+            "Pebble Gray": [
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/PebbleGray/1-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/PebbleGray/2-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/PebbleGray/3-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/PebbleGray/4-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/PebbleGray/5-Standard Audi Q4 40 e-tron Pebble Gray.png"),
+            ],
+            "Glacier White metallic": [
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/GlacierWhitemetallic/1-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/GlacierWhitemetallic/2-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/GlacierWhitemetallic/3-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/GlacierWhitemetallic/4-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+              require("../img/PremiumPlus/Q450e-tron/StandardWheels/GlacierWhitemetallic/5-standard-One-wheel-Audi-Q4-50-e-tron-glacier-white-metallic.png"),
+            ],
+          },
+        },
       },
     },
   };
