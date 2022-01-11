@@ -334,11 +334,11 @@ const carData = () => {
         standard_wheel_one: {
           extImage: {
             "Navarra Blue metallic": [
-              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/1-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/2-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/3-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/4-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-              require("../img/PremiumPlus/Q450e-tron/StandardWheels/NavarraBluemetallic/5-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Prestige/Q450e-tron/StandardWheels/NavarraBluemetallic/1-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Prestige/Q450e-tron/StandardWheels/NavarraBluemetallic/2-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Prestige/Q450e-tron/StandardWheels/NavarraBluemetallic/3-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Prestige/Q450e-tron/StandardWheels/NavarraBluemetallic/4-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
+              require("../img/Prestige/Q450e-tron/StandardWheels/NavarraBluemetallic/5-standard-One-wheel-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
             ],
             "Mythos Black metallic": [
               require("../img/PremiumPlus/Q450e-tron/StandardWheels/MythosBlackmetallic/1-standard Audi Q4 40 e-tron Mythos Black metallic.png"),
