@@ -9,7 +9,7 @@ import { userSelectedTrim } from "../../../../../Actions";
 
 const Trim = ({
   data,
-  trim,
+  trimSelection,
   model,
   extColor,
   wheelSelection,
@@ -20,14 +20,12 @@ const Trim = ({
 
   //CHECKPOINT-Default back to original standard wheel IF premium wheel is not avialble after user selects premium wheel on higher trim models.
   const checkAvailableWheels = (e) => {
+      console.log(trimSelection);
     const clickedModel = e.currentTarget.id;
     let checkedWheelSelection = wheelSelection;
-    console.log('checkedmodel', clickedModel);
-    console.log('clickedModel', clickedModel)
-    console.log("wheelSelection", data[trim][clickedModel]);
-    if (!data[trim][clickedModel].spec[wheelSelection]) {
+    if (!data[trimSelection][clickedModel].spec[wheelSelection]) {
       checkedWheelSelection = "standard_wheel_one";
-      userSelectedTrim(trim, model, extColor, checkedWheelSelection);
+      userSelectedTrim(trimSelection, model, extColor, checkedWheelSelection);
     }
 
     return checkedWheelSelection;
@@ -123,9 +121,10 @@ const Trim = ({
 
 //React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {
+  console.log('state',state.userSelection.trim)
   return {
     data: state.carData,
-    trim: state.userSelection.trim,
+    trimSelection: state.userSelection.trim,
     model: state.userSelection.model,
     extColor: state.userSelection.extColor,
     wheelSelection: state.userSelection.wheelSelection,
