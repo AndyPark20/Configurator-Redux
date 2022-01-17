@@ -22,7 +22,6 @@ const MainLeft = ({
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
 
-  console.log(wheelSelection);
   let galleryPictures =
     carData[trim][model].spec[wheelSelection][viewPosition][extColor];
 

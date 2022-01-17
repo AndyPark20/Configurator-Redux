@@ -22,6 +22,9 @@ const Trim = ({
   const checkAvailableWheels = (e) => {
     const clickedModel = e.currentTarget.id;
     let checkedWheelSelection = wheelSelection;
+    console.log('checkedmodel', clickedModel);
+    console.log('clickedModel', clickedModel)
+    console.log("wheelSelection", data[trim][clickedModel]);
     if (!data[trim][clickedModel].spec[wheelSelection]) {
       checkedWheelSelection = "standard_wheel_one";
       userSelectedTrim(trim, model, extColor, checkedWheelSelection);
