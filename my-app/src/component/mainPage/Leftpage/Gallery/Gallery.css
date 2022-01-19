@@ -9,10 +9,20 @@
 
 /****Align and Style Arrows (Font-Awesome)***/
 .arrows{
+  /* font-size:2.0rem; */
   text-align:center;
 }
 
 /*****image width control****/
 .gallery-size{
   width:75%;
+}
+
+
+.galleryLength{
+  font-size:1.8em;
+}
+
+.currentIndex{
+    font-size:1.8rem;
 }

@@ -47,7 +47,7 @@ export const Gallery = ({ carData, gallery}) => {
       {renderGallery()}
       <div className="arrows">
         <i className="fas fa-chevron-left" onClick={(e) => changePictures(e)}></i>
-        {extGalleryIndex+1}/{gallery.length}
+        <span className="currentIndex">{extGalleryIndex+1}</span>/<span className="galleryLength">{gallery.length}</span>
         <i className="fas fa-chevron-right" onClick={(e) => changePictures(e)}></i>
       </div>
     </div>
