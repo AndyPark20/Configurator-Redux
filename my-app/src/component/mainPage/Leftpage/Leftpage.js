@@ -49,6 +49,12 @@ const MainLeft = ({
     );
   };
 
+  //Render Model name EXCEPT Q4 keyword phrase
+  const ModelNameRender=()=>{
+    const q4Index =model.replace('Q4 ','');
+    return `${trim} ${q4Index}`;
+  }
+
   return (
     <div className="audi-container-left">
       <div className="row-section">
@@ -58,7 +64,8 @@ const MainLeft = ({
             <h1 className="audi-model">
               <span className="model">Q4</span>
               <span className="current-trim-level">
-                Premium 40 e-tron
+                {ModelNameRender()
+                }
                 <span className="reg-mark">®</span>
               </span>
             </h1>
