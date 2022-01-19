@@ -1,8 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
+
 //Import CSS
 import "./Trim.css";
+
+import {Link} from 'react-router-dom';
 
 //Import Reducers
 import { userSelectedTrim } from "../../../../../Actions";
