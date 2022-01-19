@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 
-
 //Import CSS
 import "./Trim.css";
 
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 //Import Reducers
 import { userSelectedTrim } from "../../../../../Actions";
@@ -22,7 +21,7 @@ const Trim = ({
   //Check model to render Register mark
 
   //CHECKPOINT-Default back to original standard wheel IF premium wheel is not avialble after user selects premium wheel on higher trim models.
-  const checkAvailableWheels = (e,trimSelection) => {
+  const checkAvailableWheels = (e, trimSelection) => {
     const clickedModel = e.currentTarget.id;
     let checkedWheelSelection = wheelSelection;
     if (!data[trimSelection][clickedModel].spec[wheelSelection]) {
@@ -76,26 +75,28 @@ const Trim = ({
           <h4 className="trim-title">{trimSelection}</h4>
           {trimLevelValueList.map((model, index) => {
             return (
-              <div
-                id={model}
-                className="trim-border-style"
-                key={index}
-                onClick={(e) =>
-                  userSelectedTrim(
-                    trimSelection,
-                    model,
-                    extColor,
-                    (wheelSelection = checkAvailableWheels(e,trimSelection))
-                  )
-                }
-              >
-                <div className="model-engine-layout-title-style">
-                  <h3>{renderModelRegMark(model)}</h3>
-                  <p className="engine-layout-title">
-                    {renderEngineLayout(model, trimSelection)}
-                  </p>
+              <Link to="/Exterior">
+                <div
+                  id={model}
+                  className="trim-border-style"
+                  key={index}
+                  onClick={(e) =>
+                    userSelectedTrim(
+                      trimSelection,
+                      model,
+                      extColor,
+                      (wheelSelection = checkAvailableWheels(e, trimSelection))
+                    )
+                  }
+                >
+                  <div className="model-engine-layout-title-style">
+                    <h3>{renderModelRegMark(model)}</h3>
+                    <p className="engine-layout-title">
+                      {renderEngineLayout(model, trimSelection)}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
