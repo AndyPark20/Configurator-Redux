@@ -52,7 +52,7 @@ const MainLeft = ({
   //Render Model name EXCEPT Q4 keyword phrase
   const ModelNameRender=()=>{
     const q4Index =model.replace('Q4 ','');
-    return `${trim} ${q4Index}`;
+    return `${q4Index} ${trim}`;
   }
 
   return (
@@ -62,7 +62,7 @@ const MainLeft = ({
           <div className="description">
             <h2 className="year-model">2022</h2>
             <h1 className="audi-model">
-              <span className="model">Q4</span>
+              <span className="model">Q4 </span>
               <span className="current-trim-level">
                 {ModelNameRender()
                 }
