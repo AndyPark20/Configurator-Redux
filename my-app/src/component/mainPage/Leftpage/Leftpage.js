@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect, useState } from "react";
 //Connect functionality from React-Redux;
 import { connect } from "react-redux";
 //CSS Styling
@@ -7,7 +7,7 @@ import "./Leftpage.css";
 import { Gallery } from "./Gallery/Gallery.js";
 
 //import Action
-import {userSelectedTrim} from '../../../Actions/';
+import { userSelectedTrim } from "../../../Actions/";
 
 const MainLeft = ({
   carData,
@@ -17,13 +17,21 @@ const MainLeft = ({
   wheelSelection,
   extColor,
   viewPosition,
-  userSelectedTrim
+  userSelectedTrim,
+  sectionView,
 }) => {
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
 
   let galleryPictures =
     carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+
+  const toggleImageSection = () => {
+   if(sectionView){
+   return galleryPictures;
+   }
+
+  };
 
   //Specification Render for Trim Selected
   const specRender = () => {
@@ -50,10 +58,10 @@ const MainLeft = ({
   };
 
   //Render Model name EXCEPT Q4 keyword phrase
-  const ModelNameRender=()=>{
-    const q4Index =model.replace('Q4 ','');
+  const ModelNameRender = () => {
+    const q4Index = model.replace("Q4 ", "");
     return `${q4Index} ${trim}`;
-  }
+  };
 
   return (
     <div className="audi-container-left">
@@ -64,13 +72,12 @@ const MainLeft = ({
             <h1 className="audi-model">
               <span className="model">Q4 </span>
               <span className="current-trim-level">
-                {ModelNameRender()
-                }
+                {ModelNameRender()}
                 <span className="reg-mark">®</span>
               </span>
             </h1>
           </div>
-          <Gallery carData={currentSelection} gallery={galleryPictures} />
+          <Gallery carData={currentSelection} gallery={toggleImageSection()} />
         </div>
         {specRender()}
       </div>
@@ -87,7 +94,8 @@ const mapStateToProps = (state) => {
     wheelSelection: state.userSelection.wheelSelection,
     extColor: state.userSelection.extColor,
     viewPosition: state.userSelection.viewPosition,
+    sectionView: state.userSelection.sectionView,
   };
 };
 
-export default connect(mapStateToProps,{userSelectedTrim})(MainLeft);
+export default connect(mapStateToProps, { userSelectedTrim })(MainLeft);
