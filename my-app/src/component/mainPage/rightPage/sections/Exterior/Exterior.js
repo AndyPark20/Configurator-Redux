@@ -61,6 +61,7 @@ const mapStateToProps = (state) => {
     model: state.userSelection.model,
     exteriorColor: state.carData.extColorButtons,
     wheelSelection:state.userSelection.wheelSelection
+
   };
 };
 
