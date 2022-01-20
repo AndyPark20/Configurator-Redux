@@ -447,9 +447,10 @@ const userSelectionDataObject = {
   trim: "Premium",
   model: "Q4 40 e-tron",
   wheelSelection: "standard_wheel_one",
-  wheelName:'19" 5-W-spoke Aero design, graphite gray wheels',
+  wheelName: '19" 5-W-spoke Aero design, graphite gray wheels',
   extColor: "Navarra Blue metallic",
   viewPosition: "extImage",
+  intcolor: "Santos Brown with Steel Gray stitching"
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {

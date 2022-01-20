@@ -10,15 +10,25 @@ const InteriorSection = ({ data, trim, model, extColor }) => {
 
     const renderInteriorBtn = interiorColorButton.map((values, index) => {
       return (
-        <div key={index}>
-          <img src={values.url} alt={values.name} />
+        <div
+          key={index}
+          className="interior-individiual-color-button-container"
+        >
+          <img
+            src={values.url}
+            alt={values.name}
+            className="interior-color-btn"
+          />
         </div>
       );
     });
     return renderInteriorBtn;
   };
 
-  return <div>{interiorButton()}</div>;
+  return <div>
+     <h3 className="exterior-color-title">Exterior Color:</h3>
+     <div className="interior-color-container">{interiorButton()}</div>
+    </div>
 };
 
 const mapStateToProps = (state) => {

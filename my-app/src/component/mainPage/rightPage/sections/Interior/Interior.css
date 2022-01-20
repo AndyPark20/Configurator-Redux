@@ -1,0 +1,18 @@
+
+/***INTERIOR BUTTON LAYOUT***/
+.interior-color-container{
+    margin-left: 5%;
+    width: 60%;
+    display: flex;
+}
+
+/***Interior Button styling***/
+.interior-color-btn{
+ width:100%;
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.interior-individiual-color-button-container{
+  display:flex;
+  flex-direction:column;
+}
