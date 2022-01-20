@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 //Import Components
 import Trim from "./Sections/Trim/Trim";
 import ExteriorSection from "./Sections/Exterior/Exterior";
+import InteriorSection from './Sections/Interior/Interior';
 import { RightSideHeader } from "../RightPage/Header/Header.js";
 
 export const MainRight = () => {
@@ -19,6 +20,7 @@ export const MainRight = () => {
         <Routes>
           <Route path="/"  element={<Trim/>} />
           <Route path="/Exterior" element={<ExteriorSection/>} />
+          <Route path="/Interior" element={<InteriorSection/>} />
         </Routes>
       </BrowserRouter>
     </div>
