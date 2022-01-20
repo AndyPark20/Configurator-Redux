@@ -1,24 +1,32 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { connect } from 'react-redux';
 
 import './Interior.css'
 
 
 
-const InteriorSection =()=>{
+const InteriorSection =({data,trim,model,extColor})=>{
+
+
+  //Render Interior Button
+  const InteriorButton =()=>{
+    conso
+  }
 
 
   return(
     <div>
-      Hello from Interior Section
+     {/* {console.log(data)} */}
     </div>
   )
 }
 
 const mapStateToProps =(state)=>{
-  console.log('interior',state)
   return{
-    test:1
+    data:state.carData,
+    trim:state.userSelection.trim,
+    model:state.userSelection.model,
+    extColor:state.userSelection.extColor
   };
 };
 
