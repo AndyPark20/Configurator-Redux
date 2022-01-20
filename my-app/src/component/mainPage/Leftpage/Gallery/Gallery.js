@@ -9,7 +9,12 @@ export const Gallery = ({ carData, gallery}) => {
 
   //state track from local component for Exterior gallery index position
   let [extGalleryIndex,updateExtGalleryIndex] = useState(0);
+  let [imageSection,updateImageSection] = useState(false);
 
+
+  const toggleExtIntImage=()=>{
+    console.log(gallery)
+  }
 
 
   //Function for changing gallery when user clicks left or right arrow
@@ -37,7 +42,8 @@ export const Gallery = ({ carData, gallery}) => {
   const renderGallery =()=>{
     return(
       <div className="gallery-alignment">
-        <img src={gallery[extGalleryIndex]} alt="gallery-size" className="gallery-size"/>
+        {/* <img src={gallery[extGalleryIndex]} alt="gallery-size" className="gallery-size"/> */}
+        {toggleExtIntImage()}
       </div>
     )
   }

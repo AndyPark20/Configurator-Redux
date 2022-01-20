@@ -462,7 +462,8 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         trim: action.payload.trimSelection,
         model: action.payload.model,
         extColor: action.payload.exteriorColor,
-        wheelSelection:action.payload.wheelSelection
+        wheelSelection: action.payload.wheelSelection,
+        intcolor: action.payload.interiorColor,
       };
       return updatedSelection;
 
