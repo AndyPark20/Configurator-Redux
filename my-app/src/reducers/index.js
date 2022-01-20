@@ -75,6 +75,11 @@ const carData = () => {
               ],
             },
           },
+          interior:{
+            "Santos Brown with Steel Gray stitching":{
+               "Navarra Blue metallic"
+            }
+          }
         },
       },
       "Q4 50 e-tron": {
