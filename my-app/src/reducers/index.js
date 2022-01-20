@@ -450,7 +450,8 @@ const userSelectionDataObject = {
   wheelName: '19" 5-W-spoke Aero design, graphite gray wheels',
   extColor: "Navarra Blue metallic",
   viewPosition: "extImage",
-  intcolor: "Santos Brown with Steel Gray stitching"
+  intcolor: "Santos Brown with Steel Gray stitching",
+  sectionView:true
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
@@ -464,6 +465,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         extColor: action.payload.exteriorColor,
         wheelSelection: action.payload.wheelSelection,
         intcolor: action.payload.interiorColor,
+        sectionView:action.payload.sectionView
       };
       return updatedSelection;
 

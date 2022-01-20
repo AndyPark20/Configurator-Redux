@@ -11,7 +11,8 @@ const InteriorSection = ({
   model,
   extColor,
   wheelSelection,
-  intColor
+  intColor,
+  sectionView,
 }) => {
   //Render Interior Button
   const interiorButton = () => {
@@ -22,7 +23,7 @@ const InteriorSection = ({
         <div
           key={index}
           onClick={() =>
-            userSelectedTrim(trim, model, extColor, wheelSelection, values.name)
+            userSelectedTrim(trim, model, extColor, wheelSelection, values.name, false)
           }
           className="interior-individiual-color-button-container"
         >
@@ -51,9 +52,9 @@ const mapStateToProps = (state) => {
     trim: state.userSelection.trim,
     model: state.userSelection.model,
     extColor: state.userSelection.extColor,
-    wheelSelection:state.userSelection.wheelSelection,
-    intColor:state.userSelection.intcolor
-
+    wheelSelection: state.userSelection.wheelSelection,
+    intColor: state.userSelection.intcolor,
+    sectionView: state.userSelection.sectionView
   };
 };
 
