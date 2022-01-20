@@ -9,14 +9,23 @@ const InteriorSection =({data,trim,model,extColor})=>{
 
 
   //Render Interior Button
-  const InteriorButton =()=>{
-    conso
+  const interiorButton =()=>{
+   const interiorColorButton =data[trim][model].spec.interior.intColorImage;
+
+   const renderInteriorBtn = interiorColorButton.map((values,index)=>{
+      return(
+        <div key={index}>
+          <img src={values.url} alt={values.name}/>
+        </div>
+      )
+   })
+  return renderInteriorBtn;
   }
 
 
   return(
     <div>
-     {/* {console.log(data)} */}
+     {interiorButton()}
     </div>
   )
 }
