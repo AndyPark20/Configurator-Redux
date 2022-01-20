@@ -75,11 +75,34 @@ const carData = () => {
               ],
             },
           },
-          interior:{
-            "Santos Brown with Steel Gray stitching":{
-               "Navarra Blue metallic"
-            }
-          }
+          interior: {
+            intColorImage: [
+              {
+                name: "Santos Brown with Steel Gray stitching",
+                url: require("../img/Interior/InteriorButton/Santos Brown with Steel Gray stitching.png"),
+              },
+              {
+                name: "Parchment Beige with steel gray stitching",
+                url: require("../img/Interior/InteriorButton/Parchment Beige with steel gray stitching.png"),
+              },
+              {
+                name: "Black with Rock Gray stitching",
+                url: require("../img/Interior/InteriorButton/Black with Rock Gray stitching.png"),
+              },
+            ],
+            intImage: {
+              "Santos Brown with Steel Gray stitching": {
+                "Navarra Blue metallic": [
+                  require("../img/Interior/Navarra Blue metallic/Santos Brown with Steel Gray stitching/1-Santos-Brown-with-steel-Gray-stitching--Navarra Blue metallic.png"),
+                  require("../img/Interior/Navarra Blue metallic/Santos Brown with Steel Gray stitching/2-Santos-Brown-with-steel-Gray-stitching--Navarra Blue metallic.png"),
+                ],
+                "Mythos Black metallic": [
+                  require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/1-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
+                  require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/2-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
+                ],
+              },
+            },
+          },
         },
       },
       "Q4 50 e-tron": {
