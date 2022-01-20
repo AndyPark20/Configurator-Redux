@@ -30,7 +30,7 @@ const MainLeft = ({
    if(sectionView){
    return galleryPictures;
    }
-
+   return 'hello'
   };
 
   //Specification Render for Trim Selected
