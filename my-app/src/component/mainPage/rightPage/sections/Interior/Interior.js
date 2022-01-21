@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { connect } from "react-redux";
 
 import "./Interior.css";
@@ -6,9 +7,16 @@ import "./Interior.css";
 //Import Actions
 import { userSelectedTrim } from "../../../../../Actions";
 
-const InteriorSection = ({data,trim,model,extColor,wheelSelection,intColor,sectionView,}) => {
-
-
+const InteriorSection = ({
+  data,
+  trim,
+  model,
+  extColor,
+  wheelSelection,
+  intColor,
+  sectionView,
+  userSelectedTrim,
+}) => {
   //Render Interior Button
   const interiorButton = () => {
     const interiorColorButton = data[trim][model].spec.interior.intColorImage;
@@ -17,15 +25,28 @@ const InteriorSection = ({data,trim,model,extColor,wheelSelection,intColor,secti
       return (
         <div
           key={index}
-          onClick={() =>userSelectedTrim(trim, model, extColor, wheelSelection, values.name, false)}
-          className="interior-individiual-color-button-container">
-          <img src={values.url} alt={values.name} className="interior-color-btn"/>
+          onClick={() =>
+            userSelectedTrim(
+              trim,
+              model,
+              extColor,
+              wheelSelection,
+              values.name,
+              false
+            )
+          }
+          className="interior-individiual-color-button-container"
+        >
+          <img
+            src={values.url}
+            alt={values.name}
+            className="interior-color-btn"
+          />
         </div>
       );
     });
     return renderInteriorBtn;
   };
-
 
   return (
     <div>
@@ -48,4 +69,5 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps,{userSelectedTrim})(InteriorSection);
+
+export default connect(mapStateToProps, { userSelectedTrim })(InteriorSection);
