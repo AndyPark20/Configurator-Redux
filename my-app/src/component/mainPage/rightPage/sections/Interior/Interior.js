@@ -57,7 +57,7 @@ const InteriorSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log(state)
+
   return {
     data: state.carData,
     trim: state.userSelection.trim,
