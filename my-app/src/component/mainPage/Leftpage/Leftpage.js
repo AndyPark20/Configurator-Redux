@@ -23,11 +23,11 @@ const MainLeft = ({
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
 
-  let galleryPictures =
-    carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+
 
   const toggleImageSection = () => {
-    console.log('sectionView',sectionView)
+
+      let galleryPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
    if(sectionView){
    return galleryPictures;
    }
