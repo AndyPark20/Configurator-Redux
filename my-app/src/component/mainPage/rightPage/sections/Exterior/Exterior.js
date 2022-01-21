@@ -56,7 +56,6 @@ const ExteriorSection = ({ trim, model, exteriorColor, userSelectedTrim,wheelSel
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.userSelection.sectionView)
   return {
     trim: state.userSelection.trim,
     model: state.userSelection.model,
