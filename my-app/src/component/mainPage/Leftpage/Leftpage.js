@@ -27,6 +27,7 @@ const MainLeft = ({
     carData[trim][model].spec[wheelSelection][viewPosition][extColor];
 
   const toggleImageSection = () => {
+    console.log('sectionView',sectionView)
    if(sectionView){
    return galleryPictures;
    }

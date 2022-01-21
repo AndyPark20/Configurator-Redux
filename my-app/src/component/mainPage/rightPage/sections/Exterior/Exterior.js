@@ -30,7 +30,7 @@ const ExteriorSection = ({ trim, model, exteriorColor, userSelectedTrim,wheelSel
             alt={values.name}
             id={values.name}
             onClick={() =>
-              userSelectedTrim(trim, model, values.name, wheelSelection,intColor,sectionView)
+              userSelectedTrim(trim, model, values.name, wheelSelection,intColor,true)
             }
           />
         </div>

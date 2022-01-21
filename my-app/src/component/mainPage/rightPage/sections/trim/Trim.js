@@ -15,8 +15,9 @@ const Trim = ({
   model,
   extColor,
   wheelSelection,
-  viewPosition,
   userSelectedTrim,
+  intcolor,
+  sectionView
 }) => {
   //Check model to render Register mark
 
@@ -85,7 +86,9 @@ const Trim = ({
                       trimSelection,
                       model,
                       extColor,
-                      (wheelSelection = checkAvailableWheels(e, trimSelection))
+                      (wheelSelection = checkAvailableWheels(e, trimSelection)),
+                      intcolor,
+                      sectionView
                     )
                   }
                 >
@@ -130,7 +133,8 @@ const thisMapStateToProps = (state) => {
     model: state.userSelection.model,
     extColor: state.userSelection.extColor,
     wheelSelection: state.userSelection.wheelSelection,
-    viewPosition: state.userSelection.viewPosition,
+    intColor: state.userSelection.intcolor,
+    sectionView: state.userSelection.sectionView,
   };
 };
 
