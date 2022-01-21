@@ -19,6 +19,7 @@ const MainLeft = ({
   viewPosition,
   userSelectedTrim,
   sectionView,
+  intColor
 }) => {
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
@@ -26,8 +27,8 @@ const MainLeft = ({
 
 
   const toggleImageSection = () => {
-
-      let galleryPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+  let galleryPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+  console.log("galleryPictures", carData[trim][model].spec.interior.intImage[]);
    if(sectionView){
    return galleryPictures;
    }
@@ -95,6 +96,7 @@ const mapStateToProps = (state) => {
     wheelSelection: state.userSelection.wheelSelection,
     extColor: state.userSelection.extColor,
     viewPosition: state.userSelection.viewPosition,
+    intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
   };
 };
