@@ -27,12 +27,13 @@ const MainLeft = ({
 
 
   const toggleImageSection = () => {
-  let galleryPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
-  console.log("galleryPictures", carData[trim][model].spec.interior.intImage[]);
+  let exteriorPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+
    if(sectionView){
-   return galleryPictures;
+   return exteriorPictures;
    }
-   return 'hello'
+   let interiorPictures=carData[trim][model].spec.interior.intImage[intColor][extColor]
+   return interiorPictures;
   };
 
   //Specification Render for Trim Selected
