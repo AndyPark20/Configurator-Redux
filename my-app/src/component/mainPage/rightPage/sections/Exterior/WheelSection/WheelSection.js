@@ -11,39 +11,52 @@ import './WheelSection.css';
 
 
 
-const WheelSection =({userSelection,carData,userSelectedTrim})=>{
-
-
+const WheelSection = ({
+  userSelection,
+  carData,
+  userSelectedTrim,
+  intColor,
+  sectionView,
+}) => {
   //Destructre data
   //For Current User Selection:
-  const { trim, model,extColor } =userSelection;
-
+  const { trim, model, extColor } = userSelection;
 
   //For Wheel Selection:
-  const wheelList =carData[trim][model].spec.wheels.wheelImage;
+  const wheelList = carData[trim][model].spec.wheels.wheelImage;
 
-
-  const renderWheelList =()=>{
-    const wheelArray = wheelList.map((value,index)=>{
+  const renderWheelList = () => {
+    const wheelArray = wheelList.map((value, index) => {
       return (
-        <span key={index} className="wheel-picture-spacing" onClick={()=>userSelectedTrim(trim,model,extColor,(Object.keys(value).toString()))}>
+        <span
+          key={index}
+          className="wheel-picture-spacing"
+          onClick={() =>
+            userSelectedTrim(
+              trim,
+              model,
+              extColor,
+              Object.keys(value).toString(),
+              intColor,
+              sectionView
+            )
+          }
+        >
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
-                <img
-                  key={imgIndex}
-                  src={imgSrc.img}
-                  alt={imgSrc.wheelName}
-                  className="wheel-image-size"
-                />
-
+              <img
+                key={imgIndex}
+                src={imgSrc.img}
+                alt={imgSrc.wheelName}
+                className="wheel-image-size"
+              />
             );
           })}
         </span>
       );
-    })
+    });
     return wheelArray;
-  }
-
+  };
 
   return renderWheelList();
 };
@@ -51,7 +64,9 @@ const WheelSection =({userSelection,carData,userSelectedTrim})=>{
 const mapStateToProps=(state)=>{
   return {
     userSelection:state.userSelection,
-    carData:state.carData
+    carData:state.carData,
+     intColor: state.userSelection.intcolor,
+    sectionView: state.userSelection.sectionView,
   };
 };
 
