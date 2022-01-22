@@ -16,9 +16,10 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
   const renderViewSection =(e)=>{
     if(sectionView){
       changeExteriorPictures(e);
+    }else{
+      changeInteriorPictures(e);
     }
   }
-
 
 
   //(EXTERIOR)Function for changing gallery when user clicks left or right arrow
@@ -41,25 +42,26 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
     }
   };
 
-  //(INTERIOR) Function for changing gallery when user clicks left or right arrow
+  //(INTERIOR)Function for changing gallery when user clicks left or right arrow
     const changeInteriorPictures = (e) => {
       const event = e.target.className;
-
       if (event === "fas fa-chevron-right") {
         if (extGalleryIndex !== gallery.length) {
-          updateExtGalleryIndex(extGalleryIndex++);
+          updateIntGalleryIndex(intGalleryIndex++);
         } else {
-          updateExtGalleryIndex(0);
+          updateIntGalleryIndex(0);
         }
         //User clicks LEFT arrow
       } else {
         if (extGalleryIndex !== -1) {
-          updateExtGalleryIndex(extGalleryIndex--);
+          updateIntGalleryIndex(intGalleryIndex--);
         } else {
-          updateExtGalleryIndex(gallery.length - 1);
+          updateIntGalleryIndex(gallery.length - 1);
         }
       }
     };
+
+  //Swap counter setting based on interior or Exterior view
 
   //Gallery render
   const renderGallery = () => {
