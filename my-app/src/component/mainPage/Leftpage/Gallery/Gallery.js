@@ -62,13 +62,19 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
     };
 
   //Swap counter setting based on interior or Exterior view
+  const renderPictureSection =()=>{
+    if(sectionView){
+      return gallery[extGalleryIndex];
+    }
+    return gallery[intGalleryIndex];
+  };
 
   //Gallery render
   const renderGallery = () => {
     return (
       <div className="gallery-alignment">
         <img
-          src={gallery[extGalleryIndex]}
+          src={renderPictureSection()}
           alt="gallery-size"
           className="gallery-size"
         />
