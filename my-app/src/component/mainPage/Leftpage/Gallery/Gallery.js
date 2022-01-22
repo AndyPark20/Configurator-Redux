@@ -57,6 +57,7 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
           updateIntGalleryIndex(intGalleryIndex--);
         } else {
           updateIntGalleryIndex(gallery.length - 1);
+          console.log(intGalleryIndex)
         }
       }
     };
