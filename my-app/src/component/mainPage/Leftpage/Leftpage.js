@@ -80,7 +80,11 @@ const MainLeft = ({
               </span>
             </h1>
           </div>
-          <Gallery carData={currentSelection} gallery={toggleImageSection()} />
+          <Gallery
+            carData={currentSelection}
+            gallery={toggleImageSection()}
+            sectionView={sectionView}
+          />
         </div>
         {specRender()}
       </div>
