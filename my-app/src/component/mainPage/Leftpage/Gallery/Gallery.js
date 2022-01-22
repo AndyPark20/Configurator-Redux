@@ -46,18 +46,18 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
     const changeInteriorPictures = (e) => {
       const event = e.target.className;
       if (event === "fas fa-chevron-right") {
-        if (extGalleryIndex !== gallery.length) {
+        if (intGalleryIndex !== gallery.length) {
           updateIntGalleryIndex(intGalleryIndex++);
         } else {
           updateIntGalleryIndex(0);
         }
         //User clicks LEFT arrow
       } else {
-        if (extGalleryIndex !== -1) {
+        if (intGalleryIndex !== -1) {
           updateIntGalleryIndex(intGalleryIndex--);
         } else {
+          console.log("rewind");
           updateIntGalleryIndex(gallery.length - 1);
-          console.log(intGalleryIndex)
         }
       }
     };
