@@ -28,7 +28,6 @@ const MainLeft = ({
 
   const toggleImageSection = () => {
   let exteriorPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
-
    if(sectionView){
    return exteriorPictures;
    }
