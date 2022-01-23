@@ -101,6 +101,12 @@ const carData = () => {
                   require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/2-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
                 ],
               },
+              "Parchment Beige with steel gray stitching": {
+                "Mythos Black metallic": [
+                  require("../img/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
+                  require("../img/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
+                ],
+              },
             },
           },
         },
