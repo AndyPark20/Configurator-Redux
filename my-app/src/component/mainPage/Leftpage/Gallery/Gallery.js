@@ -62,6 +62,25 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
       }
     };
 
+
+  //SWAP Current image number
+  const imageIndexGallery=()=>{
+    if(sectionView){
+      return (
+        <div>
+          <span>{extGalleryIndex + 1}/</span>
+          <span>{gallery.length}</span>
+        </div>
+      );
+    }
+    return (
+      <div>
+        <span>{intGalleryIndex + 1}/</span>
+        <span>{gallery.length}</span>
+      </div>
+    );
+  }
+
   //Swap counter setting based on interior or Exterior view
   const renderPictureSection =()=>{
     if(sectionView){
@@ -91,8 +110,7 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
           className="fas fa-chevron-left"
           onClick={(e) => renderViewSection(e)}
         ></i>
-        <span></span>
-        {extGalleryIndex + 1}/<span>{gallery.length}</span>
+        {imageIndexGallery()}
         <i
           className="fas fa-chevron-right"
           onClick={(e) => renderViewSection(e)}
