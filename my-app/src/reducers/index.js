@@ -101,6 +101,7 @@ const carData = () => {
                   require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/2-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
                 ],
               },
+
               "Parchment Beige with steel gray stitching": {
                 "Navarra Blue metallic": [
                   require("../img/Interior/Navarra Blue metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
@@ -111,10 +112,15 @@ const carData = () => {
                   require("../img/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
                 ],
               },
+
               "Black with Rock Gray stitching": {
                 "Navarra Blue metallic": [
                   require("../img/Interior/Navarra Blue metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
                   require("../img/Interior/Navarra Blue metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
+                ],
+                "Mythos Black metallic": [
+                  require("../img/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
+                  require("../img/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
               },
             },
@@ -467,7 +473,7 @@ const userSelectionDataObject = {
   extColor: "Navarra Blue metallic",
   viewPosition: "extImage",
   intcolor: "Santos Brown with Steel Gray stitching",
-  sectionView:true
+  sectionView: true,
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
@@ -481,7 +487,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         extColor: action.payload.exteriorColor,
         wheelSelection: action.payload.wheelSelection,
         intcolor: action.payload.interiorColor,
-        sectionView:action.payload.sectionView
+        sectionView: action.payload.sectionView,
       };
       return updatedSelection;
 
