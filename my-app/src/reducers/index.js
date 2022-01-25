@@ -106,6 +106,10 @@ const carData = () => {
                   require("../img/Interior/Navarra Blue metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
                   require("../img/Interior/Navarra Blue metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
                 ],
+                "Mythos Black metallic": [
+                  require("../img/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
+                  require("../img/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
+                ],
               },
               "Black with Rock Gray stitching": {
                 "Navarra Blue metallic": [
