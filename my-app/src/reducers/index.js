@@ -122,6 +122,10 @@ const carData = () => {
                   require("../img/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
                   require("../img/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
+                "Glacier White metallic": [
+                  require("../img/Interior/Glacier White metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
+                  require("../img/Interior/Glacier White metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
+                ],
               },
             },
           },
