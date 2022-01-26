@@ -104,6 +104,10 @@ const carData = () => {
                   require("../img/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
                   require("../img/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
                 ],
+                "Pebble Gray": [
+                  require("../img/Interior/Pebble Gray/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
+                  require("../img/Interior/Pebble Gray/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
+                ],
               },
 
               "Parchment Beige with steel gray stitching": {
