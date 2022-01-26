@@ -100,6 +100,10 @@ const carData = () => {
                   require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/1-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
                   require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/2-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
                 ],
+                "Glacier White metallic": [
+                  require("../img/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
+                  require("../img/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
+                ],
               },
 
               "Parchment Beige with steel gray stitching": {
@@ -110,6 +114,10 @@ const carData = () => {
                 "Mythos Black metallic": [
                   require("../img/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
                   require("../img/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
+                ],
+                "Glacier White metallic": [
+                  require("../img/Interior/Glacier White metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
+                  require("../img/Interior/Glacier White metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
                 ],
               },
 
