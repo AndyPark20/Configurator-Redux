@@ -119,6 +119,10 @@ const carData = () => {
                   require("../img/Interior/Glacier White metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
                   require("../img/Interior/Glacier White metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
                 ],
+                "Pebble Gray": [
+                  require("../img/Interior/Pebble Gray/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
+                  require("../img/Interior/Pebble Gray/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
+                ],
               },
 
               "Black with Rock Gray stitching": {
