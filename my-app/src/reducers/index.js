@@ -427,8 +427,8 @@ const carData = () => {
 
               "Black with Rock Gray stitching": {
                 "Navarra Blue metallic": [
-                  require("../img/Interior/Navarra Blue metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
-                  require("../img/Interior/Navarra Blue metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Navarra Blue metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Navarra Blue metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
                 "Mythos Black metallic": [
                   require("../img/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
