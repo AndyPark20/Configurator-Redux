@@ -435,8 +435,8 @@ const carData = () => {
                   require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
                 "Glacier White metallic": [
-                  require("../img/Interior/Glacier White metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
-                  require("../img/Interior/Glacier White metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/GlacierWhitemetallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/GlacierWhitemetallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
                 "Pebble Gray": [
                   require("../img/Interior/Pebble Gray/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
