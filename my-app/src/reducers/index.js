@@ -79,15 +79,15 @@ const carData = () => {
             intColorImage: [
               {
                 name: "Santos Brown with Steel Gray stitching",
-                url: require("../img/Interior/No options/InteriorButton/Santos Brown with Steel Gray stitching.png"),
+                url: require("../img/premium/Q440e-tron/Interior/InteriorButton/Santos Brown with Steel Gray stitching.png"),
               },
               {
                 name: "Parchment Beige with steel gray stitching",
-                url: require("../img/No options/Interior/InteriorButton/Parchment Beige with steel gray stitching.png"),
+                url: require("../img/premium/Q440e-tron/Interior/InteriorButton/Parchment Beige with steel gray stitching.png"),
               },
               {
                 name: "Black with Rock Gray stitching",
-                url: require("../img/Interior/No options/InteriorButton/Black with Rock Gray stitching.png"),
+                url: require("../img/premium/Q440e-tron/Interior/InteriorButton/Black with Rock Gray stitching.png"),
               },
             ],
             intImage: {
