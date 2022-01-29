@@ -397,8 +397,8 @@ const carData = () => {
                   require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
                 ],
                 "Glacier White metallic": [
-                  require("../img/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
-                  require("../img/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
                 ],
                 "Pebble Gray": [
                   require("../img/Interior/Pebble Gray/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
@@ -416,8 +416,8 @@ const carData = () => {
                   require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
                 ],
                 "Glacier White metallic": [
-                  require("../img/PremiumPlus/Q440e-tron/Interior/GlacierWhitemetallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
-                  require("../img/PremiumPlus/Q440e-tron/Interior/GlacierWhitemetallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Glacier White metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Glacier White metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-2.png"),
                 ],
                 "Pebble Gray": [
                   require("../img/Interior/Pebble Gray/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
@@ -435,8 +435,8 @@ const carData = () => {
                   require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
                 "Glacier White metallic": [
-                  require("../img/PremiumPlus/Q440e-tron/Interior/GlacierWhitemetallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
-                  require("../img/PremiumPlus/Q440e-tron/Interior/GlacierWhitemetallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Glacier White metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Glacier White metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
                 "Pebble Gray": [
                   require("../img/Interior/Pebble Gray/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
