@@ -431,8 +431,8 @@ const carData = () => {
                   require("../img/PremiumPlus/Q440e-tron/Interior/Navarra Blue metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
                 "Mythos Black metallic": [
-                  require("../img/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
-                  require("../img/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-2.png"),
                 ],
                 "Glacier White metallic": [
                   require("../img/Interior/Glacier White metallic/Black with Rock Gray stitching/Black with Rock Gray stitching-1.png"),
@@ -535,68 +535,6 @@ const carData = () => {
                 require("../img/PremiumPlus/Q450e-tron/PremiumWheels/GlacierWhitemetallic/4-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
                 require("../img/PremiumPlus/Q450e-tron/PremiumWheels/GlacierWhitemetallic/5-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
               ],
-            },
-          },
-          interior: {
-            intColorImage: [
-              {
-                name: "Santos Brown with Steel Gray stitching",
-                url: require("../img/Interior/InteriorButton/Santos Brown with Steel Gray stitching.png"),
-              },
-              {
-                name: "Parchment Beige with steel gray stitching",
-                url: require("../img/Interior/InteriorButton/Parchment Beige with steel gray stitching.png"),
-              },
-              {
-                name: "Black with Rock Gray stitching",
-                url: require("../img/Interior/InteriorButton/Black with Rock Gray stitching.png"),
-              },
-            ],
-            intImage: {
-              "Santos Brown with Steel Gray stitching": {
-                "Navarra Blue metallic": [
-
-                ],
-                "Mythos Black metallic": [
-
-                ],
-                "Glacier White metallic": [
-
-                ],
-                "Pebble Gray": [
-
-                ],
-              },
-
-              "Parchment Beige with steel gray stitching": {
-                "Navarra Blue metallic": [
-
-                ],
-                "Mythos Black metallic": [
-
-                ],
-                "Glacier White metallic": [
-
-                ],
-                "Pebble Gray": [
-
-                ],
-              },
-
-              "Black with Rock Gray stitching": {
-                "Navarra Blue metallic": [
-
-                ],
-                "Mythos Black metallic": [
-
-                ],
-                "Glacier White metallic": [
-
-                ],
-                "Pebble Gray": [
-
-                ],
-              },
             },
           },
         },
