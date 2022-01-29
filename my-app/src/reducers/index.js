@@ -537,6 +537,68 @@ const carData = () => {
               ],
             },
           },
+          interior: {
+            intColorImage: [
+              {
+                name: "Santos Brown with Steel Gray stitching",
+                url: require("../img/Interior/InteriorButton/Santos Brown with Steel Gray stitching.png"),
+              },
+              {
+                name: "Parchment Beige with steel gray stitching",
+                url: require("../img/Interior/InteriorButton/Parchment Beige with steel gray stitching.png"),
+              },
+              {
+                name: "Black with Rock Gray stitching",
+                url: require("../img/Interior/InteriorButton/Black with Rock Gray stitching.png"),
+              },
+            ],
+            intImage: {
+              "Santos Brown with Steel Gray stitching": {
+                "Navarra Blue metallic": [
+
+                ],
+                "Mythos Black metallic": [
+
+                ],
+                "Glacier White metallic": [
+
+                ],
+                "Pebble Gray": [
+
+                ],
+              },
+
+              "Parchment Beige with steel gray stitching": {
+                "Navarra Blue metallic": [
+
+                ],
+                "Mythos Black metallic": [
+
+                ],
+                "Glacier White metallic": [
+
+                ],
+                "Pebble Gray": [
+
+                ],
+              },
+
+              "Black with Rock Gray stitching": {
+                "Navarra Blue metallic": [
+
+                ],
+                "Mythos Black metallic": [
+
+                ],
+                "Glacier White metallic": [
+
+                ],
+                "Pebble Gray": [
+
+                ],
+              },
+            },
+          },
         },
       },
     },
