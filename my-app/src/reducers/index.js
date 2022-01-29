@@ -393,8 +393,8 @@ const carData = () => {
                   require("../img/PremiumPlus/Q440e-tron/Interior/Navarra Blue metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
                 ],
                 "Mythos Black metallic": [
-                  require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/1-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
-                  require("../img/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/2-Santos Brown with Steel Gray stitching-Mythos Black metallic.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q440e-tron/Interior/Mythos Black metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-2.png"),
                 ],
                 "Glacier White metallic": [
                   require("../img/Interior/Glacier White metallic/Santos Brown with Steel Gray stitching/Santos Brown with Steel Gray stitching-1.png"),
