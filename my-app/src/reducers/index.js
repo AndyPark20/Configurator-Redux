@@ -472,6 +472,14 @@ const carData = () => {
                   //Need standard_one two, etc or premium key value pair
                 },
               },
+              {
+                premium_wheel_two: {
+                  wheelName:
+                    '20" 10-spoke-star-aero design, black finish wheels',
+                  img: require("../img/PremiumPlus/Q450e-tron/Wheels/Premium/20 10-spoke-star-aero design, black finish wheels-1.png"),
+                  //Need standard_one two, etc or premium key value pair
+                },
+              },
             ],
           },
           standard_wheel_one: {
@@ -574,6 +582,12 @@ const carData = () => {
               },
 
               "Black with Rock Gray stitching": {
+                "Navarra Blue metallic": [],
+                "Mythos Black metallic": [],
+                "Glacier White metallic": [],
+                "Pebble Gray": [],
+              },
+              "Black with Rock Gray stitching S-Line®": {
                 "Navarra Blue metallic": [],
                 "Mythos Black metallic": [],
                 "Glacier White metallic": [],
