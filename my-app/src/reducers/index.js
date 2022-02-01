@@ -546,6 +546,38 @@ const carData = () => {
               ],
             },
           },
+          premium_wheel_two: {
+            extImage: {
+              "Navarra Blue metallic": [
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/1-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/2-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/3-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/4-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/5-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
+              ],
+              "Mythos Black metallic": [
+                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/1-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/2-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/3-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/4-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/5-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+              ],
+              "Pebble Gray": [
+                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/1-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/2-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/3-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/4-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/5-Audi-Q4-50-e-tron-Pebble-Gray.png"),
+              ],
+              "Glacier White metallic": [
+                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/1-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/2-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/3-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/4-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
+                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/5-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
+              ],
+            },
+          },
           interior: {
             intColorImage: [
               {
@@ -622,12 +654,6 @@ const carData = () => {
                   img: require("../img/PremiumPlus/Q450e-tron/Wheels/Premium/20 5-Y-spoke design, graphite gray wheels.png"),
                   //Need standard_one two, etc or premium key value pair
                 },
-                premium_wheel_two: {
-                  wheelName:
-                    '20" 10-spoke-star-aero design, black finish wheels',
-                  img: require("../img/PremiumPlus/Q450e-tron/Wheels/Premium/20 5-Y-spoke design, graphite gray wheels.png"),
-                  //Need standard_one two, etc or premium key value pair
-                },
               },
             ],
           },
@@ -671,38 +697,6 @@ const carData = () => {
                 require("../img/Prestige/Q450e-tron/PremiumWheels/NavarraBluemetallic/3-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
                 require("../img/Prestige/Q450e-tron/PremiumWheels/NavarraBluemetallic/4-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
                 require("../img/Prestige/Q450e-tron/PremiumWheels/NavarraBluemetallic/5-Audi-Q4-50-e-tron-Navarra-Blue-metallic.png"),
-              ],
-              "Mythos Black metallic": [
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/1-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/2-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/3-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/4-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/5-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-              ],
-              "Pebble Gray": [
-                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/1-Audi-Q4-50-e-tron-Pebble-Gray.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/2-Audi-Q4-50-e-tron-Pebble-Gray.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/3-Audi-Q4-50-e-tron-Pebble-Gray.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/4-Audi-Q4-50-e-tron-Pebble-Gray.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/5-Audi-Q4-50-e-tron-Pebble-Gray.png"),
-              ],
-              "Glacier White metallic": [
-                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/1-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/2-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/3-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/4-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/GlacierWhitemetallic/5-Audi-Q4-50-e-tron-Glacier-White-metallic.png"),
-              ],
-            },
-          },
-          premium_wheel_two: {
-            extImage: {
-              "Navarra Blue metallic": [
-                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/1-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
-                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/2-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
-                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/3-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
-                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/4-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
-                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/5-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
               ],
               "Mythos Black metallic": [
                 require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/1-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
