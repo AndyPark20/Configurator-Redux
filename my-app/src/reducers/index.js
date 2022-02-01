@@ -556,11 +556,11 @@ const carData = () => {
                 require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/NavarraBluemetallic/5-Audi-Q4-50-e-tron-Navarra Blue metallic.png"),
               ],
               "Mythos Black metallic": [
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/1-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/2-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/3-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/4-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
-                require("../img/Prestige/Q450e-tron/PremiumWheels/MythosBlackmetallic/5-Audi-Q4-50-e-tron-Mythos-Black-metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/MythosBlackmetallic/1-Audi-Q4-50-e-tron-Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/MythosBlackmetallic/2-Audi-Q4-50-e-tron-Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/MythosBlackmetallic/3-Audi-Q4-50-e-tron-Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/MythosBlackmetallic/4-Audi-Q4-50-e-tron-Mythos Black metallic.png"),
+                require("../img/PremiumPlus/Q450e-tron/PremiumWheelsTwo/MythosBlackmetallic/5-Audi-Q4-50-e-tron-Mythos Black metallic.png"),
               ],
               "Pebble Gray": [
                 require("../img/Prestige/Q450e-tron/PremiumWheels/PebbleGray/1-Audi-Q4-50-e-tron-Pebble-Gray.png"),
