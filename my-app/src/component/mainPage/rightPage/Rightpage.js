@@ -16,7 +16,7 @@ export const MainRight = () => {
   return (
     <div className="audi-container-right right-side-background">
       <BrowserRouter>
-        <RightSideHeader />
+        <RightSideHeader/>
         <Routes>
             <Route path="/" element={<Trim />} />
           <Route path="/Exterior" element={<ExteriorSection />} />

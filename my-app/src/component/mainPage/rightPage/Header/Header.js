@@ -12,7 +12,7 @@ export const RightSideHeader=()=>{
         <h4>TRIM</h4>
       </Link>
       <Link to="/Exterior">
-        <h4>EXTERIOR</h4>
+        <h4 onClick={()=>console.log('hello')}>EXTERIOR</h4>
       </Link>
       <Link to="/Interior">
         <h4>INTERIOR</h4>
