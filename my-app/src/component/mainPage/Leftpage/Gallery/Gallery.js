@@ -56,7 +56,6 @@ export const Gallery = ({ carData, gallery, sectionView }) => {
         if (intGalleryIndex !== -1) {
           updateIntGalleryIndex(intGalleryIndex--);
         } else {
-          console.log("rewind");
           updateIntGalleryIndex(gallery.length - 1);
         }
       }
