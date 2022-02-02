@@ -1,18 +1,33 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 
+import { userSelectedTrim } from "../../../../Actions";
 
 
 
-export const RightSideHeader=()=>{
+const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
   return (
     <div className="sections">
       <Link to="/">
         <h4>TRIM</h4>
       </Link>
       <Link to="/Exterior">
-        <h4 onClick={()=>console.log('hello')}>EXTERIOR</h4>
+        <h4
+          onClick={() =>
+            userSelectedTrim(
+              trim,
+              model,
+             extColor,
+              wheelSelection,
+              intColor,
+              true
+            )
+          }
+        >
+          EXTERIOR
+        </h4>
       </Link>
       <Link to="/Interior">
         <h4>INTERIOR</h4>
@@ -29,3 +44,19 @@ export const RightSideHeader=()=>{
     </div>
   );
 }
+
+const mapStateToProps =(state)=>{
+  return {
+    carData: state.carData,
+    currentSelection: state.userSelection,
+    trim: state.userSelection.trim,
+    model: state.userSelection.model,
+    wheelSelection: state.userSelection.wheelSelection,
+    extColor: state.userSelection.extColor,
+    viewPosition: state.userSelection.viewPosition,
+    intColor: state.userSelection.intcolor,
+    sectionView: state.userSelection.sectionView,
+  };
+}
+
+export default connect(mapStateToProps, {userSelectedTrim})(RightSideHeader)

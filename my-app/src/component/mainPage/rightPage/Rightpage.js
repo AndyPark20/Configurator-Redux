@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Trim from "./Sections/Trim/Trim";
 import ExteriorSection from "./Sections/Exterior/Exterior";
 import InteriorSection from './Sections/Interior/Interior';
-import { RightSideHeader } from "../RightPage/Header/Header.js";
+import RightSideHeader  from "../RightPage/Header/Header.js";
 
 export const MainRight = () => {
   return (
