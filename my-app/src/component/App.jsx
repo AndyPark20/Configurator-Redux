@@ -5,7 +5,7 @@ import './App.css';
 
 //Components
 import MainLeft from '../Component/MainPage/Leftpage/Leftpage';
-import MainRight from '../Component/MainPage/RightPage/Rightpage';
+import {MainRight} from '../Component/MainPage/RightPage/Rightpage';
 
 
 export const App =()=>{

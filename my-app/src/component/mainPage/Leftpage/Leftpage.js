@@ -25,7 +25,6 @@ const MainLeft = ({
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
 
 
-
   const toggleImageSection = () => {
   let exteriorPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
    if(sectionView){
