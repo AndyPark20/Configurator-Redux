@@ -16,7 +16,7 @@ const Trim = ({
   extColor,
   wheelSelection,
   userSelectedTrim,
-  intcolor,
+  intColor,
 }) => {
   //Check model to render Register mark
 
@@ -86,7 +86,7 @@ const Trim = ({
                       model,
                       extColor,
                       (wheelSelection = checkAvailableWheels(e, trimSelection)),
-                      intcolor,
+                      intColor,
                       true
                     )
                   }
@@ -126,7 +126,6 @@ const Trim = ({
 
 //React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {
-  console.log(state.userSelection.sectionView)
   return {
     data: state.carData,
     trim: state.userSelection.trim,

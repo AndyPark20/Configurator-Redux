@@ -30,7 +30,6 @@ const MainLeft = ({
    if(sectionView){
    return exteriorPictures;
    }
-
    let interiorPictures=carData[trim][model].spec.interior.intImage[intColor][extColor];
    return interiorPictures;
   };
