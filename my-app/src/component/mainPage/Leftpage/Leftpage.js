@@ -26,12 +26,21 @@ const MainLeft = ({
 
 
   const toggleImageSection = () => {
-  let exteriorPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
-   if(sectionView){
-   return exteriorPictures;
-   }
-   let interiorPictures=carData[trim][model].spec.interior.intImage[intColor][extColor];
-   return interiorPictures;
+    let exteriorPictures =
+      carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+    if (sectionView) {
+      return exteriorPictures;
+    }
+
+    //Check to see if the selected wheel is for S-Line, if so render out bucket black seat interior images
+    //premium_wheel_two --> S-Line only package
+    let interiorPictures =carData[trim][model].spec.interior.intImage[intColor][extColor];
+    if(wheelSelection !=='premium_wheel_two'){
+        return interiorPictures;
+    }else{
+      console.log(intColor)
+    }
+
   };
 
   //Specification Render for Trim Selected
