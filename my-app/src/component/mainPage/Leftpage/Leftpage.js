@@ -38,7 +38,8 @@ const MainLeft = ({
     if(wheelSelection !=='premium_wheel_two'){
         return interiorPictures;
     }else{
-      console.log(intColor)
+      let sLineInteriorPictures=carData[trim][model].spec.interior.intImage['Black with Rock Gray stitching S-Line®'][extColor];
+      return sLineInteriorPictures;
     }
 
   };
