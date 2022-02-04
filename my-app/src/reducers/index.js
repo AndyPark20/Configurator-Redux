@@ -625,7 +625,8 @@ const carData = () => {
                   require("../img/PremiumPlus/Q450e-tron/Interior/Sline/NavarraBluemetallic/2-Black with Rock Gray stitching.png"),
                 ],
                 "Mythos Black metallic": [
-
+                  require("../img/PremiumPlus/Q450e-tron/Interior/Sline/MythosBlackmetallic/1-Black with Rock Gray stitching.png"),
+                  require("../img/PremiumPlus/Q450e-tron/Interior/Sline/MythosBlackmetallic/2-Black with Rock Gray stitching.png"),
                 ],
                 "Glacier White metallic": [],
                 "Pebble Gray": [],
