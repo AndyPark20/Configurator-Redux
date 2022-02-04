@@ -628,8 +628,14 @@ const carData = () => {
                   require("../img/PremiumPlus/Q450e-tron/Interior/Sline/MythosBlackmetallic/1-Black with Rock Gray stitching.png"),
                   require("../img/PremiumPlus/Q450e-tron/Interior/Sline/MythosBlackmetallic/2-Black with Rock Gray stitching.png"),
                 ],
-                "Glacier White metallic": [],
-                "Pebble Gray": [],
+                "Glacier White metallic": [
+                  require("../img/PremiumPlus/Q450e-tron/Interior/Sline/GlacierWhitemetallic/1-Black with Rock Gray stitching.png"),
+                  require("../img/PremiumPlus/Q450e-tron/Interior/Sline/GlacierWhitemetallic/2-Black with Rock Gray stitching.png"),
+                ],
+                "Pebble Gray": [
+                  require("../img/PremiumPlus/Q450e-tron/Interior/Sline/PebbleGray/1-Black with Rock Gray stitching.png"),
+                  require("../img/PremiumPlus/Q450e-tron/Interior/Sline/PebbleGray/2-Black with Rock Gray stitching.png"),
+                ],
               },
             },
           },
