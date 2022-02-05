@@ -606,7 +606,10 @@ const carData = () => {
               },
 
               "Parchment Beige with steel gray stitching": {
-                "Navarra Blue metallic": [],
+                "Navarra Blue metallic": [
+                  require("../img/PremiumPlus/Q450e-tron/Interior/No options/Navarra Blue metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
+                  require("../img/PremiumPlus/Q450e-tron/Interior/No options/Navarra Blue metallic/Parchment Beige with steel gray stitching/Parchment Beige with steel gray stitching-1.png"),
+                ],
                 "Mythos Black metallic": [],
                 "Glacier White metallic": [],
 
