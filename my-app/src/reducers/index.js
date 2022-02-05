@@ -599,7 +599,10 @@ const carData = () => {
             ],
             intImage: {
               "Santos Brown with Steel Gray stitching": {
-                "Navarra Blue metallic": [],
+                "Navarra Blue metallic": [
+                  require("../img/PremiumPlus/Q450e-tron/Interior/No options/Navarra Blue metallic/Santos Brown with Steel Gray stitching/1-Santos Brown with Steel Gray stitching.png"),
+                  require("../img/PremiumPlus/Q450e-tron/Interior/No options/Navarra Blue metallic/Santos Brown with Steel Gray stitching/2-Santos Brown with Steel Gray stitching.png"),
+                ],
                 "Mythos Black metallic": [],
                 "Glacier White metallic": [],
                 "Pebble Gray": [],
