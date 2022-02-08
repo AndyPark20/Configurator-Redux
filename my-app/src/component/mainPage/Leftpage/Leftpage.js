@@ -36,8 +36,10 @@ const MainLeft = ({
     //premium_wheel_two --> S-Line only package
     let interiorPictures =carData[trim][model].spec.interior.intImage[intColor][extColor];
     if(wheelSelection !=='premium_wheel_two'){
+      console.log('non S-line')
         return interiorPictures;
     }else{
+      console.log('S-line')
       let sLineInteriorPictures=carData[trim][model].spec.interior.intImage['Black with Rock Gray stitching S-Line®'][extColor];
       return sLineInteriorPictures;
     }
