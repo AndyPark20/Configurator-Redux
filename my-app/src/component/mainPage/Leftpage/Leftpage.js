@@ -35,11 +35,11 @@ const MainLeft = ({
     //Check to see if the selected wheel is for S-Line, if so render out bucket black seat interior images
     //premium_wheel_two --> S-Line only package
     let interiorPictures =carData[trim][model].spec.interior.intImage[intColor][extColor];
-    if(wheelSelection !=='premium_wheel_two' || intColor!== 'Black with Rock Gray stitching S-Line®'){
-      console.log('non S-line')
+    if(wheelSelection !=='premium_wheel_two'){
+
         return interiorPictures;
     }else{
-      console.log('S-line')
+
       let sLineInteriorPictures=carData[trim][model].spec.interior.intImage['Black with Rock Gray stitching S-Line®'][extColor];
       return sLineInteriorPictures;
     }
