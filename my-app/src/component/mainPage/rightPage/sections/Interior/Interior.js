@@ -18,8 +18,7 @@ const InteriorSection = ({
   userSelectedTrim,
 }) => {
   // Interior Button function
-  const interiorButton = (values) => {
-
+  const interiorButton = (values,index) => {
     return (
       <div
         key={index}
@@ -50,9 +49,14 @@ const InteriorSection = ({
 
     const renderInteriorBtn = interiorColorButton.map((values, index) => {
       if (wheelSelection !== "premium_wheel_two" && values.name !== "Black with Rock Gray stitching S-Line®") {
+        console.log('non S')
         return interiorButton(values,index)
       }
-      return;
+      debugger;
+      console.log('S')
+        return interiorButton(values, index);
+
+
     });
     return renderInteriorBtn;
   };
