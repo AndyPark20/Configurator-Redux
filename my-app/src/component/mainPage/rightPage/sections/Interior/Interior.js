@@ -17,33 +17,42 @@ const InteriorSection = ({
   sectionView,
   userSelectedTrim,
 }) => {
+  // Interior Button function
+  const interiorButton = (values) => {
+
+    return (
+      <div
+        key={index}
+        onClick={() =>
+          userSelectedTrim(
+            trim,
+            model,
+            extColor,
+            wheelSelection,
+            values.name,
+            false
+          )
+        }
+        className="interior-individiual-color-button-container"
+      >
+        <img
+          src={values.url}
+          alt={values.name}
+          className="interior-color-btn"
+        />
+      </div>
+    );
+  };
+
   //Render Interior Button
-  const interiorButton = () => {
-    const interiorColorButton = data[trim][model].spec.interior.intColorImage;
+  const renderInteriorButton = () => {
+        const interiorColorButton =data[trim][model].spec.interior.intColorImage;
 
     const renderInteriorBtn = interiorColorButton.map((values, index) => {
-      return (
-        <div
-          key={index}
-          onClick={() =>
-            userSelectedTrim(
-              trim,
-              model,
-              extColor,
-              wheelSelection,
-              values.name,
-              false
-            )
-          }
-          className="interior-individiual-color-button-container"
-        >
-          <img
-            src={values.url}
-            alt={values.name}
-            className="interior-color-btn"
-          />
-        </div>
-      );
+      if (wheelSelection !== "premium_wheel_two" && values.name !== "Black with Rock Gray stitching S-Line®") {
+        return interiorButton(values,index)
+      }
+      return;
     });
     return renderInteriorBtn;
   };
@@ -51,13 +60,12 @@ const InteriorSection = ({
   return (
     <div>
       <h3 className="exterior-color-title">Interior Color:</h3>
-      <div className="interior-color-container">{interiorButton()}</div>
+      <div className="interior-color-container">{renderInteriorButton()}</div>
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-
   return {
     data: state.carData,
     trim: state.userSelection.trim,
@@ -65,9 +73,8 @@ const mapStateToProps = (state) => {
     extColor: state.userSelection.extColor,
     wheelSelection: state.userSelection.wheelSelection,
     intColor: state.userSelection.intcolor,
-    sectionView: state.userSelection.sectionView
+    sectionView: state.userSelection.sectionView,
   };
 };
-
 
 export default connect(mapStateToProps, { userSelectedTrim })(InteriorSection);
