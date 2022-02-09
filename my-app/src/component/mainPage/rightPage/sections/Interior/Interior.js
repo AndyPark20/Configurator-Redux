@@ -18,7 +18,7 @@ const InteriorSection = ({
   userSelectedTrim,
 }) => {
   // Interior Button function
-  const interiorButton = (values,index) => {
+  const interiorButton = (values, index) => {
     return (
       <div
         key={index}
@@ -45,18 +45,18 @@ const InteriorSection = ({
 
   //Render Interior Button
   const renderInteriorButton = () => {
-        const interiorColorButton =data[trim][model].spec.interior.intColorImage;
+    const interiorColorButton = data[trim][model].spec.interior.intColorImage;
 
     const renderInteriorBtn = interiorColorButton.map((values, index) => {
-      if (wheelSelection !== "premium_wheel_two" && values.name !== "Black with Rock Gray stitching S-Line®") {
-        console.log('non S')
-        return interiorButton(values,index)
-      }
-      debugger;
-      console.log('S')
+      if (
+        wheelSelection !== "premium_wheel_two" &&
+        values.name !== "Black with Rock Gray stitching S-Line®"
+      ) {
         return interiorButton(values, index);
-
-
+      }
+      if (wheelSelection === "premium_wheel_two") {
+        return interiorButton(values, index);
+      }
     });
     return renderInteriorBtn;
   };
