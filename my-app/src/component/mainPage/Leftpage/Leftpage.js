@@ -30,8 +30,19 @@ const MainLeft = ({
    if(sectionView){
    return exteriorPictures;
    }
-   let interiorPictures=carData[trim][model].spec.interior.intImage[intColor][extColor];
+
+
+   //Default Innterior to S-Line if user clicks on premium wheel two
+   if(!sectionView && wheelSelection ==='premium_wheel_two'){
+   let interiorPictures = carData[trim][model].spec.interior.intImage['Black with Rock Gray stitching S-Line®'][extColor];
    return interiorPictures;
+   }
+
+    if(!sectionView && wheelSelection !=='premium_wheel_two'){
+   let interiorPictures = carData[trim][model].spec.interior.intImage[intColor][extColor];
+   return interiorPictures;
+   }
+
   };
 
   //Specification Render for Trim Selected
