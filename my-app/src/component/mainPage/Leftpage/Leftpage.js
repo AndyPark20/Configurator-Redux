@@ -40,6 +40,7 @@ const MainLeft = ({
 
     if(!sectionView && wheelSelection !=='premium_wheel_two'){
    let interiorPictures = carData[trim][model].spec.interior.intImage[intColor][extColor];
+
    return interiorPictures;
    }
 
