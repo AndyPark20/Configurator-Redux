@@ -17,6 +17,7 @@ const WheelSection = ({
   userSelectedTrim,
   intColor,
   sectionView,
+  wheelSelection
 }) => {
   //Destructre data
   //For Current User Selection:
@@ -26,6 +27,17 @@ const WheelSection = ({
   const wheelList = carData[trim][model].spec.wheels.wheelImage;
 
   const renderWheelList = () => {
+
+
+    //function to check if user selected premium wheel two
+    const checksLineWheel=()=>{
+      if(wheelSelection ==='premium_wheel_two'){
+        return "Black with Rock Gray stitching S-Line®";
+      }
+      return intColor;
+    }
+
+
     const wheelArray = wheelList.map((value, index) => {
       return (
         <span
@@ -67,6 +79,7 @@ const mapStateToProps=(state)=>{
     carData:state.carData,
      intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
+     wheelSelection: state.userSelection.wheelSelection,
   };
 };
 
