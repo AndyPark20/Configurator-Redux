@@ -30,10 +30,12 @@ const WheelSection = ({
 
 
     //function to check if user selected premium wheel two
-    const checksLineWheel=()=>{
-      if(wheelSelection ==='premium_wheel_two'){
+    const checksLineWheel=(value)=>{
+      if (Object.keys(value) === "premium_wheel_two") {
+
         return "Black with Rock Gray stitching S-Line®";
       }
+      console.log(Object.keys(value))
       return intColor;
     }
 
@@ -49,7 +51,7 @@ const WheelSection = ({
               model,
               extColor,
               Object.keys(value).toString(),
-              intColor =checksLineWheel(),
+              intColor =checksLineWheel(value),
               sectionView
             )
           }
