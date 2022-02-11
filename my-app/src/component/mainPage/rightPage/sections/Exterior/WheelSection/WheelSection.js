@@ -49,7 +49,7 @@ const WheelSection = ({
               model,
               extColor,
               Object.keys(value).toString(),
-              intColor ='Black with Rock Gray stitching S-Line®',
+              intColor =checksLineWheel(),
               sectionView
             )
           }
