@@ -31,11 +31,10 @@ const WheelSection = ({
 
     //function to check if user selected premium wheel two
     const checksLineWheel=(value)=>{
-      if (Object.keys(value) === "premium_wheel_two") {
+      if (Object.keys(value).toString() === "premium_wheel_two") {
 
         return "Black with Rock Gray stitching S-Line®";
       }
-      console.log(Object.keys(value))
       return intColor;
     }
 
