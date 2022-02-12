@@ -33,7 +33,14 @@ clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 
 /****Selected Exterior color name****/
 .selected-exterior-color{
-  font-size:1.0rem;
+  font-size:.9rem;
   margin-left:2%;
+  font-weight: 600;
+}
+
+/*****Selected Wheel name****/
+.selected-wheel{
+  font-size:.9rem;
+   margin-left:2%;
   font-weight: 600;
 }
