@@ -64,6 +64,8 @@ const mapStateToProps = (state) => {
     wheelSelection: state.userSelection.wheelSelection,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
+    //User Selected Exterior color property:
+    userSelectedExtColor:state.userSelection.extColor
   };
 };
 
