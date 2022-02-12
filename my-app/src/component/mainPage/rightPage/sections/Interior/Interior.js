@@ -45,6 +45,7 @@ const InteriorSection = ({
 
   //Render Interior Button
   const renderInteriorButton = () => {
+
     const interiorColorButton = data[trim][model].spec.interior.intColorImage;
 
     const renderInteriorBtn = interiorColorButton.map((values, index) => {
