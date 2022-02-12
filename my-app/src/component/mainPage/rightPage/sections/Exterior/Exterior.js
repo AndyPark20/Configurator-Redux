@@ -43,7 +43,7 @@ const ExteriorSection = ({ trim, model, exteriorColor, userSelectedTrim,wheelSel
   return (
     <div className="">
       <div>
-        <h3 className="exterior-color-title">Exterior Color:</h3>
+        <h3 className="exterior-color-title">Exterior Color:{console.log(exteriorColor)}</h3>
         <div className="exterior-color-container">{q4ExteriorColors()}</div>
       </div>
       <div>
