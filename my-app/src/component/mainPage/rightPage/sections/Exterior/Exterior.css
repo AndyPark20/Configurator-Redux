@@ -29,3 +29,11 @@ clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 .wheel-selection-master-container{
   width:100%;
 }
+
+
+/****Selected Exterior color name****/
+.selected-exterior-color{
+  font-size:1.0rem;
+  margin-left:2%;
+  font-weight: 600;
+}
