@@ -64,7 +64,7 @@ const InteriorSection = ({
 
   return (
     <div>
-      <h3 className="exterior-color-title">Interior Color: <span>{intColor}</span></h3>
+      <h3 className="exterior-color-title">Interior Color: <span className="interior-color-name">{intColor}</span></h3>
       <div className="interior-color-container">{renderInteriorButton()}</div>
     </div>
   );

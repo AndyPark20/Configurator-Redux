@@ -16,3 +16,10 @@ clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   display:flex;
   flex-direction:column;
 }
+
+
+.interior-color-name{
+  font-size:.9rem;
+  margin-left:2%;
+  font-weight:600;
+}
