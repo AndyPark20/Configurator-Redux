@@ -2,7 +2,7 @@ import React from 'react';
 import './options.css';
 
 
-const OptionsSection =()=>{
+export const OptionsSection =()=>{
   return(
     <div>
       Options Section!

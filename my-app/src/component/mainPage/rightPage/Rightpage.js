@@ -11,6 +11,7 @@ import Trim from "./Sections/Trim/Trim";
 import ExteriorSection from "./Sections/Exterior/Exterior";
 import InteriorSection from './Sections/Interior/Interior';
 import RightSideHeader  from "../RightPage/Header/Header.js";
+import { OptionsSection } from "./Sections/Options/Options";
 
 export const MainRight = () => {
   return (
@@ -21,6 +22,7 @@ export const MainRight = () => {
             <Route path="/" element={<Trim />} />
           <Route path="/Exterior" element={<ExteriorSection />} />
           <Route path="/Interior" element={<InteriorSection />} />
+          <Route path="/Options" element={<OptionsSection />} />
         </Routes>
       </BrowserRouter>
     </div>
