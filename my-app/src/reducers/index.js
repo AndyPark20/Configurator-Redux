@@ -31,6 +31,13 @@ const carData = () => {
           torque: "N/A",
           acceleration: "7.9",
           layout: "rear-wheel drive",
+          optionsPackages:[
+            {
+              "Convenience Package":['Audi phone box light','Anti-theft alarm system','Acoustic front door windows','Logo projectors in exterior mirrors','Power front seats',
+            '4-way power lumbar for front seats','Power tailgate with hands-free opening','Audi advanced key (keyless engine start/stop & entry - doors and trunk)','Auto-dimming, power-folding exterior mirrors',
+          'Auto-dimming interior mirror with compass','Heated steering wheel','Memory for driver’s seat','SiriusXM® All Access service (w/ 3-month trial subscription)']
+            }
+          ],
           wheels: {
             wheelImage: [
               {
