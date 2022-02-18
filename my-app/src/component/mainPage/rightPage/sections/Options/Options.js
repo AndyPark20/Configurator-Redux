@@ -5,10 +5,21 @@ import { userSelectedTrim } from '../../../../../Actions';
 
  const OptionsSection =({carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
 
+  const options =()=>{
+    const optionList = carData[trim][model].spec.optionsPackages;
+    const renderOptionList = optionList.map((values,index)=>{
+      return(
+        <div>
+          {console.log(values)}
+        </div>
+      )
+    })
+  }
+
+
   return(
     <div>
-      {console.log(carData[trim][model])}
-      Options Section!
+      {options()}
     </div>
   )
 }
