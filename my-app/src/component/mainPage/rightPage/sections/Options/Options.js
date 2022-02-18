@@ -1,11 +1,14 @@
 import React from 'react';
 import './options.css';
+import {connect} from 'react-redux';
 
 
-export const OptionsSection =()=>{
+ const OptionsSection =()=>{
   return(
     <div>
       Options Section!
     </div>
   )
 }
+
+export default connect ()(OptionsSection)
