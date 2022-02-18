@@ -1,7 +1,7 @@
 import React from 'react';
 import './options.css';
 import {connect} from 'react-redux';
-
+import { userSelectedTrim } from '../../../../../Actions';
 
  const OptionsSection =()=>{
   return(
@@ -11,4 +11,10 @@ import {connect} from 'react-redux';
   )
 }
 
-export default connect ()(OptionsSection)
+const mapStateToProps =(state)=>{
+  return{
+    state,
+  }
+}
+
+export default connect (mapStateToProps,{userSelectedTrim})(OptionsSection)
