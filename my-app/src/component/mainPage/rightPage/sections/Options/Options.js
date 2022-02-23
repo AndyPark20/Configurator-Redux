@@ -9,13 +9,14 @@ import { userSelectedTrim } from '../../../../../Actions';
     const optionList = carData[trim][model].spec.optionsPackages;
     const renderOptionList = optionList.map((values,index)=>{
       return(
-        <div>
+        <div key={index}>
           <img src={values['Convenience Package'].image} />
           {/* {console.log(values['Convenience Package'].image)} */}
         </div>
-      )
-    })
-  }
+      );
+    });
+    return renderOptionList;
+  };
 
 
   return(
