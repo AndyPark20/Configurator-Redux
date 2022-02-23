@@ -5,6 +5,7 @@ import { userSelectedTrim } from '../../../../../Actions';
 
  const OptionsSection =({carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
 
+
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
   const renderEachOptions=(values)=>{
