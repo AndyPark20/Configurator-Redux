@@ -5,14 +5,24 @@ import { userSelectedTrim } from '../../../../../Actions';
 
  const OptionsSection =({carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
 
+  //Options in an array of objects, need to map thru the objects to get the property
+  //values are from mapping OptionList.
+  const renderEachOptions=(values)=>{
+      for(let keys in values){
+        return(
+          <div keys={keys}>
+            <img src={values[keys].image}  alt={values[keys].name}/>
+          </div>
+        );
+      };
+  };
+
   const options =()=>{
     const optionList = carData[trim][model].spec.optionsPackages;
     const renderOptionList = optionList.map((values,index)=>{
       return(
         <div key={index}>
-          {console.log(values)}
-          <img src={values['Convenience Package'].image}  alt={values['Convenience Package'].image}/>
-          {/* {console.log(values['Convenience Package'].image)} */}
+         {renderEachOptions(values)}
         </div>
       );
     });
