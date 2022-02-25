@@ -11,10 +11,12 @@ import { userSelectedTrim } from '../../../../../Actions';
   const renderEachOptions=(values)=>{
       for(let keys in values){
         return(
-          <div keys={keys}>
+          <div className="options-container" keys={keys}>
             {console.log(keys)}
             <img src={values[keys].image}  alt={values[keys].name} className="option-image-size"/>
+            <div>
             <p>{keys}</p>
+            </div>
           </div>
         );
       };
