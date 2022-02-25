@@ -12,8 +12,9 @@ import { userSelectedTrim } from '../../../../../Actions';
       for(let keys in values){
         return(
           <div keys={keys}>
-            {console.log(values)}
+            {console.log(keys)}
             <img src={values[keys].image}  alt={values[keys].name} className="option-image-size"/>
+            <p>{keys}</p>
           </div>
         );
       };
