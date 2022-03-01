@@ -16,6 +16,7 @@ import { userSelectedTrim } from '../../../../../Actions';
             <img src={values[keys].image}  alt={values[keys].name} className="option-image-size"/>
             <div>
             <p>{keys}</p>
+            <p></p>
             </div>
           </div>
         );
