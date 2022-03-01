@@ -7,6 +7,5 @@
 .options-container{
   border:1px solid black;
   display:flex;
-  justify-content: space-between;
-  width:90%;
+  flex-direction: column-reverse;
 }
