@@ -8,7 +8,14 @@ import { userSelectedTrim } from '../../../../../Actions';
 
   //Options checklist description are in an array, use the map method to render the list
 const renderOptionDescription =(keys,values)=>{
-  console.log(values[keys].description)
+  const optionDescriptionArray= values[keys].description.map((checkListvalues,index)=>{
+    return(
+      <div keys={index}>
+        <p>{checkListvalues}</p>
+      </div>
+    )
+  })
+  return optionDescriptionArray
 }
 
 
