@@ -6,16 +6,21 @@ import { userSelectedTrim } from '../../../../../Actions';
  const OptionsSection =({carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
 
 
+  //Options checklist description are in an array, use the map method to render the list
+const renderOptionDescription =(keys,values)=>{
+  console.log(values[keys].description)
+}
+
+
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
   const renderEachOptions=(values)=>{
       for(let keys in values){
         return(
           <div className="options-container" keys={keys}>
-            {console.log(keys)}
             <img src={values[keys].image}  alt={values[keys].name} className="option-image-size"/>
             <div>
-            <p>{keys}</p>
+            <p>{renderOptionDescription(keys,values)}</p>
             <p></p>
             </div>
           </div>
