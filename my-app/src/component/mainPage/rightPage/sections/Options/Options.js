@@ -1,61 +1,66 @@
-import React from 'react';
-import './options.css';
-import {connect} from 'react-redux';
-import { userSelectedTrim } from '../../../../../Actions';
+import React from "react";
+import "./options.css";
+import { connect } from "react-redux";
+import { userSelectedTrim } from "../../../../../Actions";
 
- const OptionsSection =({carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
-
-
+const OptionsSection = ({
+  carData,
+  currentSelection,
+  trim,
+  model,
+  wheelSelection,
+  extColor,
+  viewPosition,
+  intColor,
+  sectionView,
+}) => {
   //Options checklist description are in an array, use the map method to render the list
-const renderOptionDescription =(keys,values)=>{
-  const optionDescriptionArray= values[keys].description.map((checkListvalues,index)=>{
-    return(
-      <div keys={index}>
-        <p>{checkListvalues}</p>
-      </div>
-    )
-  })
-  return optionDescriptionArray
-}
-
+  const renderOptionDescription = (keys, values) => {
+    const optionDescriptionArray = values[keys].description.map(
+      (checkListvalues, index) => {
+        return (
+          <div keys={index}>
+            <p>{checkListvalues}</p>
+          </div>
+        );
+      }
+    );
+    return optionDescriptionArray;
+  };
 
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
-  const renderEachOptions=(values)=>{
-      for(let keys in values){
-        return(
-          <div className="options-container" keys={keys}>
-            <img src={values[keys].image}  alt={values[keys].name} className="option-image-size"/>
-            <div>
-            <p>{renderOptionDescription(keys,values)}</p>
+  const renderEachOptions = (values) => {
+    for (let keys in values) {
+      return (
+        <div className="options-container" keys={keys}>
+          <img
+            src={values[keys].image}
+            alt={keys}
+            className="option-image-size"
+          />
+          <div classname="options-detail">
+            <h3>{keys}</h3>
+            <p>{renderOptionDescription(keys, values)}</p>
             <p></p>
-            </div>
           </div>
-        );
-      };
-  };
-
-  const options =()=>{
-    const optionList = carData[trim][model].spec.optionsPackages;
-    const renderOptionList = optionList.map((values,index)=>{
-      return(
-        <div key={index}>
-         {renderEachOptions(values)}
         </div>
       );
+    }
+  };
+
+  const options = () => {
+    const optionList = carData[trim][model].spec.optionsPackages;
+    const renderOptionList = optionList.map((values, index) => {
+      return <div key={index}>{renderEachOptions(values)}</div>;
     });
     return renderOptionList;
   };
 
+  return <div>{options()}</div>;
+};
 
-  return(
-    <div>
-      {options()}
-    </div>
-  )
-}
-
-const mapStateToProps =(state)=>{
+const mapStateToProps = (state) => {
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -67,6 +72,6 @@ const mapStateToProps =(state)=>{
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
   };
-}
+};
 
-export default connect (mapStateToProps,{userSelectedTrim})(OptionsSection)
+export default connect(mapStateToProps, { userSelectedTrim })(OptionsSection);
