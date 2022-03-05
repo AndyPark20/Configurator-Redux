@@ -776,12 +776,11 @@ const userSelectionDataObject = {
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
-  let updatedSelection = {};
   switch (action.type) {
 
     case "USER_SELECTION":
-      updatedSelection = {
-        ...userSelectionDataObject,
+      userValue = {
+        ...userValue,
         trim: action.payload.trimSelection,
         model: action.payload.model,
         extColor: action.payload.exteriorColor,
@@ -789,14 +788,14 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         intcolor: action.payload.interiorColor,
         sectionView: action.payload.sectionView,
       };
-      return updatedSelection;
+      return userValue;
 
       case "USER_OPTIONS":
-        console.log(action.payload)
+
         // if(updatedSelection){
         //   updatedSelection={
         //     ...updatedSelection,
-        //     options: selectedOptions.push()
+        //     selectedOptions: selectedOptions.push()
         //   }
         // };
     default:
