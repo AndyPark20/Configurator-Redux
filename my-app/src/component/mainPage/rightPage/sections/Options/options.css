@@ -4,6 +4,11 @@
 }
 
 
-.options-container{
+.option-container{
+  display:flex;
+  align-items: center;
+}
 
+.options{
+  font-size:.85rem;
 }

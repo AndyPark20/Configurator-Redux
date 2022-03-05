@@ -19,8 +19,9 @@ const OptionsSection = ({
     const optionDescriptionArray = values[keys].description.map(
       (checkListvalues, index) => {
         return (
-          <div keys={index}>
-            <p>{checkListvalues}</p>
+          <div keys={index} className="option-container">
+            <i class="fa-solid fa-check"></i>
+            <p className="options">{checkListvalues}</p>
           </div>
         );
       }
@@ -42,7 +43,7 @@ const OptionsSection = ({
           <div classname="options-detail">
             <h3>{keys}</h3>
             <p>{renderOptionDescription(keys, values)}</p>
-            <p></p>
+            <button>ADD</button>
           </div>
         </div>
       );
