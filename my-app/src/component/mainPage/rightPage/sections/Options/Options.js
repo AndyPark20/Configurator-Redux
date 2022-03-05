@@ -1,7 +1,10 @@
 import React from "react";
 import "./options.css";
 import { connect } from "react-redux";
+
+//Import action creators
 import { userSelectedTrim } from "../../../../../Actions";
+import { userSelectedOptions } from "../../../../../Actions";
 
 const OptionsSection = ({
   carData,
@@ -43,7 +46,8 @@ const OptionsSection = ({
           <div classname="options-detail">
             <h3>{keys}</h3>
             <p>{renderOptionDescription(keys, values)}</p>
-            <button>ADD</button>
+            <button type="button" class="btn btn-dark" onClick={()=>userSelectedOptions(keys)}>Dark</button>
+
           </div>
         </div>
       );

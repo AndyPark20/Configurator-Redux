@@ -7,3 +7,12 @@ export const userSelectedTrim = (trimSelection, model, exteriorColor,wheelSelect
       payload: { trimSelection, model,exteriorColor,wheelSelection, interiorColor,sectionView }
     };
 };
+
+//Option Selection
+export const userSelectedOptions =(selectedOption)=>{
+  console.log('selectedOption', selectedOption)
+  return {
+    type:"USER_OPTIONS",
+    payload:{selectedOption}
+  }
+}

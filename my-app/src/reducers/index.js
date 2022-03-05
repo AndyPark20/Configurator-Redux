@@ -762,6 +762,7 @@ const carData = () => {
   };
 };
 
+
 const userSelectionDataObject = {
   trim: "Premium",
   model: "Q4 40 e-tron",
@@ -771,6 +772,7 @@ const userSelectionDataObject = {
   viewPosition: "extImage",
   intcolor: "Santos Brown with Steel Gray stitching",
   sectionView: true,
+  selectedOptions: []
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
@@ -787,6 +789,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         sectionView: action.payload.sectionView,
       };
       return updatedSelection;
+      case "USER_OPTIONS":
 
     default:
       return userValue;
