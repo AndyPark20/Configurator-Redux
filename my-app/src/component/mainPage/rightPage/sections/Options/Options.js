@@ -16,6 +16,7 @@ const OptionsSection = ({
   viewPosition,
   intColor,
   sectionView,
+  userSelectedOptions
 }) => {
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
@@ -46,8 +47,13 @@ const OptionsSection = ({
           <div classname="options-detail">
             <h3>{keys}</h3>
             <p>{renderOptionDescription(keys, values)}</p>
-            <button type="button" class="btn btn-dark" onClick={()=>userSelectedOptions(keys)}>Dark</button>
-
+            <button
+              type="button"
+              class="btn btn-dark"
+              onClick={() => userSelectedOptions(keys)}
+            >
+              Dark
+            </button>
           </div>
         </div>
       );
@@ -79,4 +85,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { userSelectedTrim })(OptionsSection);
+export default connect(mapStateToProps, { userSelectedTrim,userSelectedOptions })(OptionsSection);

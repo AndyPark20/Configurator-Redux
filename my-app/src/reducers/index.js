@@ -778,6 +778,7 @@ const userSelectionDataObject = {
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
   let updatedSelection = {};
   switch (action.type) {
+
     case "USER_SELECTION":
       updatedSelection = {
         ...userSelectionDataObject,
@@ -789,8 +790,15 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         sectionView: action.payload.sectionView,
       };
       return updatedSelection;
-      case "USER_OPTIONS":
 
+      case "USER_OPTIONS":
+        console.log(action.payload)
+        // if(updatedSelection){
+        //   updatedSelection={
+        //     ...updatedSelection,
+        //     options: selectedOptions.push()
+        //   }
+        // };
     default:
       return userValue;
   }
