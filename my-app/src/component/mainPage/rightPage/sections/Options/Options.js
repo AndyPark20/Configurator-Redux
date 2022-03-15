@@ -35,9 +35,12 @@ const OptionsSection = ({
     return optionDescriptionArray;
   };
 
+
   //A function that will check if the option has already been selected or not
-  const checkSelection =()=>{
-    console.log(selectedOptions)
+  const checkSelection =(keys)=>{
+    if(!currentSelection.selectedOptions.includes(keys)){
+     userSelectedOptions(keys);
+    }
   }
 
   //Options in an array of objects, need to map thru the objects to get the property
@@ -57,9 +60,9 @@ const OptionsSection = ({
             <button
               type="button"
               class="btn btn-dark"
-              onClick={() => userSelectedOptions(keys)}
+              onClick={() => checkSelection(keys)}
             >
-              {checkSelection()}
+
             </button>
           </div>
         </div>
