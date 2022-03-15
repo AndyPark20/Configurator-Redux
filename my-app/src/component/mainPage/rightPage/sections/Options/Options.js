@@ -16,8 +16,10 @@ const OptionsSection = ({
   viewPosition,
   intColor,
   sectionView,
-  userSelectedOptions
+  userSelectedOptions,
+  selectedOptions
 }) => {
+
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
     const optionDescriptionArray = values[keys].description.map(
@@ -32,6 +34,11 @@ const OptionsSection = ({
     );
     return optionDescriptionArray;
   };
+
+  //A function that will check if the option has already been selected or not
+  const checkSelection =()=>{
+    console.log(selectedOptions)
+  }
 
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
@@ -52,7 +59,7 @@ const OptionsSection = ({
               class="btn btn-dark"
               onClick={() => userSelectedOptions(keys)}
             >
-              Dark
+              {checkSelection()}
             </button>
           </div>
         </div>
@@ -84,6 +91,7 @@ const mapStateToProps = (state) => {
     viewPosition: state.userSelection.viewPosition,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
+    selectedOptions: state.userSelection.selectedOptions
   };
 };
 
