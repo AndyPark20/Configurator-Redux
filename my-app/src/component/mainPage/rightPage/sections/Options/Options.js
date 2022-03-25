@@ -17,9 +17,8 @@ const OptionsSection = ({
   intColor,
   sectionView,
   userSelectedOptions,
-  selectedOptions
+  selectedOptions,
 }) => {
-
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
     const optionDescriptionArray = values[keys].description.map(
@@ -35,25 +34,22 @@ const OptionsSection = ({
     return optionDescriptionArray;
   };
 
-
   //A function that will check if the option has already been selected or not
-  const checkSelection =(keys)=>{
-    if(!currentSelection.selectedOptions.includes(keys)){
-     userSelectedOptions(keys);
+  const checkSelection = (keys) => {
+    if (!currentSelection.selectedOptions.includes(keys)) {
+      userSelectedOptions(keys);
     }
-  }
+  };
 
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
   const renderEachOptions = (values) => {
     for (let keys in values) {
       return (
-        <div className="options-container" keys={keys}>
-          <img
-            src={values[keys].image}
-            alt={keys}
-            className="option-image-size"
-          />
+        <div className="options-container">
+          <div className="option-picture">
+            <img src={values[keys].image} alt={keys} className="option-image-size" />
+          </div>
           <div classname="options-detail">
             <h3>{keys}</h3>
             <p>{renderOptionDescription(keys, values)}</p>
@@ -61,9 +57,7 @@ const OptionsSection = ({
               type="button"
               class="btn btn-dark"
               onClick={() => checkSelection(keys)}
-            >
-
-            </button>
+            ></button>
           </div>
         </div>
       );
@@ -82,7 +76,7 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
-    console.log(state.userSelection);
+  console.log(state.userSelection);
 
   return {
     carData: state.carData,
@@ -94,8 +88,11 @@ const mapStateToProps = (state) => {
     viewPosition: state.userSelection.viewPosition,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
-    selectedOptions: state.userSelection.selectedOptions
+    selectedOptions: state.userSelection.selectedOptions,
   };
 };
 
-export default connect(mapStateToProps, { userSelectedTrim,userSelectedOptions })(OptionsSection);
+export default connect(mapStateToProps, {
+  userSelectedTrim,
+  userSelectedOptions,
+})(OptionsSection);
