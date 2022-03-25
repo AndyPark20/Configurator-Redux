@@ -87,7 +87,8 @@ const Trim = ({
                       extColor,
                       (wheelSelection = checkAvailableWheels(e, trimSelection)),
                       intColor,
-                      true
+                      true,
+                      data[trimSelection][model].spec.optionsPackages
                     )
                   }
                 >

@@ -811,6 +811,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         wheelSelection: action.payload.wheelSelection,
         intcolor: action.payload.interiorColor,
         sectionView: action.payload.sectionView,
+        selectedOptions:carData[action.payload.trimSelection]
       };
       return updatedSelection;
 
