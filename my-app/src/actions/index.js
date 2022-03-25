@@ -9,11 +9,17 @@ export const userSelectedTrim = (trimSelection, model, exteriorColor,wheelSelect
 };
 
 //Option Selection
-export const userSelectedOptions =(selectedOption)=>{
+export const userSelectedOptions =(selectedOption,clickStatus)=>{
   return {
     type:"USER_OPTIONS",
-    payload:{selectedOption}
+    payload:{selectedOption,clickStatus}
   }
 }
 
 //Update Button Text ADD or REMOVE
+export const removeOrAdd = (selection)=>{
+  return{
+    type:"ADD_REMOVE",
+    paylod:{selection}
+  }
+}

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./options.css";
 import { connect } from "react-redux";
 
 //Import action creators
-import { userSelectedTrim } from "../../../../../Actions";
-import { userSelectedOptions } from "../../../../../Actions";
+import { userSelectedTrim, userSelectedOptions,removeOrAdd } from "../../../../../Actions";
+
 
 const OptionsSection = ({
   carData,
@@ -18,6 +18,7 @@ const OptionsSection = ({
   sectionView,
   userSelectedOptions,
   selectedOptions,
+  removeOrAdd
 }) => {
 
   //Options checklist description are in an array, use the map method to render the list
@@ -36,14 +37,9 @@ const OptionsSection = ({
   };
 
   //A function that will check if the option has already been selected or not
-  const checkSelection = (keys, e) => {
-
+  const checkSelection = (keys,values) => {
     if (!currentSelection.selectedOptions.includes(keys)) {
-      userSelectedOptions(keys);
-    }
-
-    if(e.target.id ==="Convenience Package"){
-
+      userSelectedOptions(keys,true);
     }
   };
 
@@ -53,6 +49,7 @@ const OptionsSection = ({
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
   const renderEachOptions = (values) => {
+    console.log('values',values)
     for (let keys in values) {
       return (
         <div className="options-container">
@@ -71,7 +68,7 @@ const OptionsSection = ({
                 id={keys}
                 type="button"
                 className="btn btn-dark"
-                onClick={(e) => checkSelection(keys, e)}
+                onClick={(e) => checkSelection(keys,values)}
               >
                 {!values[keys].click ?"ADD" : "REMOVE"}
               </button>
@@ -94,6 +91,7 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
+  console.log(state.userSelection.selectedOptions)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -111,4 +109,5 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
   userSelectedTrim,
   userSelectedOptions,
+  removeOrAdd
 })(OptionsSection);

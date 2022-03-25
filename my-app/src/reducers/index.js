@@ -821,7 +821,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
 
         updatedSelection={
           ...userValue,
-          selectedOptions:[...userValue.selectedOptions, action.payload.selectedOption]
+          selectedOptions:[...userValue.selectedOptions, {option:action.payload.selectedOption,click:action.payload.clickStatus}]
         }
         return updatedSelection;
     default:
