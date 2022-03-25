@@ -19,8 +19,6 @@ const OptionsSection = ({
   userSelectedOptions,
   selectedOptions,
 }) => {
-  const [selectedOption, updateSelectedOption] = useState("");
-  const [test,updateTest] = useState(false);
 
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
@@ -39,8 +37,6 @@ const OptionsSection = ({
 
   //A function that will check if the option has already been selected or not
   const checkSelection = (keys, e) => {
-    updateSelectedOption(keys);
-
 
     if (!currentSelection.selectedOptions.includes(keys)) {
       userSelectedOptions(keys);
@@ -48,9 +44,9 @@ const OptionsSection = ({
 
     if(e.target.id ==="Convenience Package"){
 
-  updateTest(true);
     }
   };
+
 
 
 
@@ -77,7 +73,7 @@ const OptionsSection = ({
                 className="btn btn-dark"
                 onClick={(e) => checkSelection(keys, e)}
               >
-                {test ? "REMOVE" : "ADD"}
+                {!values[keys].click ?"ADD" : "REMOVE"}
               </button>
             </div>
           </div>
