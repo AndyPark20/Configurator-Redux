@@ -41,6 +41,21 @@ const OptionsSection = ({
     }
   };
 
+  // A function that will render REMOVE or ADD depending on if the option has been added
+  const addOrRemoveBtn = (keys) => {
+    if (selectedOptions.length === 0) {
+      return "ADD";
+    } else {
+      const check = selectedOptions.map((values, index) => {
+        if (values === keys) {
+          return "REMOVE";
+        }
+        return "ADD";
+      });
+      return check;
+    }
+  };
+
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
   const renderEachOptions = (values) => {
@@ -48,16 +63,24 @@ const OptionsSection = ({
       return (
         <div className="options-container">
           <div className="option-picture">
-            <img src={values[keys].image} alt={keys} className="option-image-size" />
+            <img
+              src={values[keys].image}
+              alt={keys}
+              className="option-image-size"
+            />
           </div>
           <div classname="options-detail">
             <h3>{keys}</h3>
             <p>{renderOptionDescription(keys, values)}</p>
-            <button
-              type="button"
-              class="btn btn-dark"
-              onClick={() => checkSelection(keys)}
-            ></button>
+            <div className="add-button">
+              <button
+                type="button"
+                class="btn btn-dark"
+                onClick={() => checkSelection(keys)}
+              >
+                {addOrRemoveBtn(keys)}
+              </button>
+            </div>
           </div>
         </div>
       );

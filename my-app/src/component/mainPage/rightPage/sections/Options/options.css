@@ -4,12 +4,27 @@
 }
 
 
-.options-container{
+.option-container{
   display:flex;
   align-items: center;
 }
 
 .options{
-  font-size:.85rem;
-  line-height:.8;
+
+  font-size:.78rem;
+  line-height:.5;
+}
+
+.options-container{
+  width:100%;
+}
+
+.add-button{
+  text-align:center;
+  width:100%;
+
+}
+
+.btn-custom{
+  width:80%;
 }
