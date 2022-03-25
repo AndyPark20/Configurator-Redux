@@ -50,18 +50,21 @@ const carData = () => {
                   "Memory for driver’s seat",
                   "SiriusXM® All Access service (w/ 3-month trial subscription)",
                 ],
+                click:false
               },
             },
             {
               "Garage door opener (Homelink®)": {
                 image: require("../img/premium/Q440e-tron/Options/Homelink.jpg"),
                 description: [],
+                click:false
               },
             },
             {
               "Trailer hitch": {
                 image: require("../img/premium/Q440e-tron/Options/Trailer-hitch.png"),
                 description: [],
+                click:false
               },
             },
           ],

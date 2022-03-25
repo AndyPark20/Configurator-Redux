@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./options.css";
 import { connect } from "react-redux";
 
@@ -19,9 +19,8 @@ const OptionsSection = ({
   userSelectedOptions,
   selectedOptions,
 }) => {
-
-  const [optionClicked,updateOption] = useState('')
-  const [btnControl,updateBtnControl] = useState('')
+  const [selectedOption, updateSelectedOption] = useState("");
+  const [test,updateTest] = useState(false);
 
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
@@ -39,28 +38,17 @@ const OptionsSection = ({
   };
 
   //A function that will check if the option has already been selected or not
-  const checkSelection = (keys,e) => {
+  const checkSelection = (keys, e) => {
+    updateSelectedOption(keys);
+
+
     if (!currentSelection.selectedOptions.includes(keys)) {
       userSelectedOptions(keys);
-      updateOption(keys)
-      updateBtnControl(e.target.id)
     }
-  };
 
-  // A function that will render REMOVE or ADD depending on if the option has been added
-  const addOrRemoveBtn = (keys) => {
-    if (selectedOptions.length === 0) {
-      return "ADD";
-    } else {
-      const check = selectedOptions.map((values, index) => {
-        console.log(optionClicked)
-        console.log(btnControl)
-        if (values === optionClicked && optionClicked === btnControl ) {
-          return "REMOVE";
-        }
-        return "ADD";
-      });
-      return check;
+    if(e.target.id ==="Convenience Package"){
+
+  updateTest(true);
     }
   };
 
@@ -87,9 +75,9 @@ const OptionsSection = ({
                 id={keys}
                 type="button"
                 className="btn btn-dark"
-                onClick={(e) => checkSelection(keys,e)}
+                onClick={(e) => checkSelection(keys, e)}
               >
-                {addOrRemoveBtn(keys)}
+                {test ? "REMOVE" : "ADD"}
               </button>
             </div>
           </div>
@@ -110,8 +98,6 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.userSelection);
-
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
