@@ -91,6 +91,7 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
+  console.log('options', state.userSelection)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -102,6 +103,7 @@ const mapStateToProps = (state) => {
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
     selectedOptions: state.userSelection.selectedOptions,
+
   };
 };
 
