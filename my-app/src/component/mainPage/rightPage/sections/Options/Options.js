@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./options.css";
 import { connect } from "react-redux";
 
@@ -19,6 +19,10 @@ const OptionsSection = ({
   userSelectedOptions,
   selectedOptions,
 }) => {
+
+  const [optionClicked,updateOption] = useState('')
+  const [btnControl,updateBtnControl] = useState('')
+
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
     const optionDescriptionArray = values[keys].description.map(
@@ -35,9 +39,11 @@ const OptionsSection = ({
   };
 
   //A function that will check if the option has already been selected or not
-  const checkSelection = (keys) => {
+  const checkSelection = (keys,e) => {
     if (!currentSelection.selectedOptions.includes(keys)) {
       userSelectedOptions(keys);
+      updateOption(keys)
+      updateBtnControl(e.target.id)
     }
   };
 
@@ -47,7 +53,9 @@ const OptionsSection = ({
       return "ADD";
     } else {
       const check = selectedOptions.map((values, index) => {
-        if (values === keys) {
+        console.log(optionClicked)
+        console.log(btnControl)
+        if (values === optionClicked && optionClicked === btnControl ) {
           return "REMOVE";
         }
         return "ADD";
@@ -55,6 +63,8 @@ const OptionsSection = ({
       return check;
     }
   };
+
+
 
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
@@ -74,9 +84,10 @@ const OptionsSection = ({
             <p>{renderOptionDescription(keys, values)}</p>
             <div className="add-button">
               <button
+                id={keys}
                 type="button"
-                class="btn btn-dark"
-                onClick={() => checkSelection(keys)}
+                className="btn btn-dark"
+                onClick={(e) => checkSelection(keys,e)}
               >
                 {addOrRemoveBtn(keys)}
               </button>
