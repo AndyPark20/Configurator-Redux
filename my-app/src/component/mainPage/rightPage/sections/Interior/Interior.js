@@ -30,7 +30,7 @@ const InteriorSection = ({
             wheelSelection,
             values.name,
             false,
-           'hello',
+            data[trim][model].spec.optionsPackages,
             false
           )
         }
