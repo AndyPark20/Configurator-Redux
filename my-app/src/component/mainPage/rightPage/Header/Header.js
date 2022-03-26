@@ -15,16 +15,16 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
       </Link>
       <Link to="/Exterior">
         <h4
-          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true)}
+          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages,false)}
         >
           EXTERIOR
         </h4>
       </Link>
       <Link to="/Interior">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false)}>INTERIOR</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,false)}>INTERIOR</h4>
       </Link>
       <Link to="/Options">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false)}>OPTIONS</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,false)}>OPTIONS</h4>
       </Link>
       <Link to="/Packages">
         <h4>PACKAGES</h4>

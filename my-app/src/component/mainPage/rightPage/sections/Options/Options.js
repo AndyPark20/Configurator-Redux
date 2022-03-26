@@ -27,7 +27,7 @@ const OptionsSection = ({
       (checkListvalues, index) => {
         return (
           <div keys={index} className="option-container">
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             <p className="options">{checkListvalues}</p>
           </div>
         );
@@ -49,7 +49,6 @@ const OptionsSection = ({
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
   const renderEachOptions = (values) => {
-    console.log('values',values)
     for (let keys in values) {
       return (
         <div className="options-container">

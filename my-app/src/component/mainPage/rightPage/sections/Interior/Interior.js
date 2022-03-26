@@ -29,6 +29,8 @@ const InteriorSection = ({
             extColor,
             wheelSelection,
             values.name,
+            false,
+           'hello',
             false
           )
         }
