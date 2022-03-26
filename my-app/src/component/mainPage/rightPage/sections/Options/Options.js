@@ -90,7 +90,7 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log('options', state.userSelection)
+  console.log('options', state.userSelection.selectedOptions)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
