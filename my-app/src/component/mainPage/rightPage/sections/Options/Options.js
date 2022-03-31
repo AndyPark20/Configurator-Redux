@@ -40,13 +40,13 @@ const OptionsSection = ({
 
   //A function that will check if the option has already been selected or not
   const checkSelection = (keys, values) => {
-    console.log(currentSelection.selectedOptions)
-   const changeStatus=currentSelection.selectedOptions.map((options,index)=>{
+
+   currentSelection.selectedOptions.forEach((options,index)=>{
       if(options[keys]){
-        const test ={...options,options[keys]:{...options[keys], click:true}}
+        options[keys].click =true;
+        console.log(currentSelection.selectedOptions)
       }
     })
-    return changeStatus
   };
 
   //Options in an array of objects, need to map thru the objects to get the property
