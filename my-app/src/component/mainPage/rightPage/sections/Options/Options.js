@@ -23,13 +23,9 @@ const OptionsSection = ({
   selectedOptions,
   removeOrAdd,
 }) => {
-
-
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
-    console.log(keys)
-    console.log(values.option[keys])
-    const optionDescriptionArray = values.option[keys].description.map(
+    const optionDescriptionArray = values[keys].description.map(
       (checkListvalues, index) => {
         return (
           <div keys={index} className="option-container">
@@ -48,42 +44,44 @@ const OptionsSection = ({
    currentSelection.selectedOptions.forEach((options,index)=>{
       if(options[keys]){
         options[keys].click =true;
-        console.log(currentSelection.selectedOptions)
+
       }
     })
   };
 
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
-  const renderEachOptions = (values) => {
-    for (let keys in values) {
-      return (
-        <div className="options-container">
-          <div className="option-picture">
-            <img
-              src={values[keys].image}
-              alt={keys}
-              className="option-image-size"
-            />
-          </div>
-          <div classname="options-detail">
-            <h3>{keys}</h3>
-            <p>{renderOptionDescription(keys, values)}</p>
-            <div className="add-button">
-              <button
-                id={keys}
-                type="button"
-                className="btn btn-dark"
-                onClick={(e) => checkSelection(keys, values)}
-              >
-                {!values[keys].click ? "ADD" : "REMOVE"}
-              </button>
+
+  const renderEachOptions =(values)=>{
+    console.log(values)
+    const renderOptions = values.option.map((values,index)=>{
+        return (
+          <div className="options-container">
+            <div className="option-picture">
+              <img
+
+                className="option-image-size"
+              />
+            </div>
+            <div classname="options-detail">
+              <h3></h3>
+              <p>{renderOptionDescription( values)}</p>
+              <div className="add-button">
+                <button
+
+                  type="button"
+                  className="btn btn-dark"
+                  onClick={(e) => checkSelection( values)}
+                >
+                  {/* {!values[keys].click ? "ADD" : "REMOVE"} */}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      );
-    }
-  };
+        );
+    })
+    return renderOptions;
+  }
 
 
 
