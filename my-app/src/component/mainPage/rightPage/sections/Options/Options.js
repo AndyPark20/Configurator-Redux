@@ -47,39 +47,43 @@ const OptionsSection = ({
 
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
-  const renderEachOptions = (values) => {
-    for (let keys in values) {
-      return (
-        <div className="options-container">
-          <div className="option-picture">
-            <img
-              src={values[keys].image}
-              alt={keys}
-              className="option-image-size"
-            />
-          </div>
-          <div classname="options-detail">
-            <h3>{keys}</h3>
-            <p>{renderOptionDescription(keys, values)}</p>
-            <div className="add-button">
-              <button
-                id={keys}
-                type="button"
-                className="btn btn-dark"
-                onClick={(e) => checkSelection(keys, values)}
-              >
-                {!values[keys].click ? "ADD" : "REMOVE"}
-              </button>
-            </div>
-          </div>
-        </div>
-      );
-    }
-  };
+  // const renderEachOptions = (values) => {
+  //   for (let keys in values) {
+  //     return (
+  //       <div className="options-container">
+  //         <div className="option-picture">
+  //           <img
+  //             src={values[keys].image}
+  //             alt={keys}
+  //             className="option-image-size"
+  //           />
+  //         </div>
+  //         <div classname="options-detail">
+  //           <h3>{keys}</h3>
+  //           <p>{renderOptionDescription(keys, values)}</p>
+  //           <div className="add-button">
+  //             <button
+  //               id={keys}
+  //               type="button"
+  //               className="btn btn-dark"
+  //               onClick={(e) => checkSelection(keys, values)}
+  //             >
+  //               {!values[keys].click ? "ADD" : "REMOVE"}
+  //             </button>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // };
+
+  const renderEachOptions =()=>{
+    // const renderOptions
+  }
 
   const options = () => {
-    const optionList = carData[trim][model].spec.optionsPackages;
-    const renderOptionList = optionList.map((values, index) => {
+
+    const renderOptionList = selectedOptions.map((values, index) => {
       return <div key={index}>{renderEachOptions(values)}</div>;
     });
     return renderOptionList;
@@ -89,7 +93,6 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log("options", state.userSelection.selectedOptions);
   return {
     carData: state.carData,
     currentSelection: state.userSelection,

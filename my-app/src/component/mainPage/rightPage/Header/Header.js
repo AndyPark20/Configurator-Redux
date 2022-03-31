@@ -8,6 +8,7 @@ import { userSelectedTrim } from "../../../../Actions";
 
 
 const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
+
   return (
     <div className="sections">
       <Link to="/">
@@ -15,16 +16,16 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
       </Link>
       <Link to="/Exterior">
         <h4
-          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages,false)}
+          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages)}
         >
           EXTERIOR
         </h4>
       </Link>
       <Link to="/Interior">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,false)}>INTERIOR</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>INTERIOR</h4>
       </Link>
       <Link to="/Options">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,false)}>OPTIONS</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>OPTIONS</h4>
       </Link>
       <Link to="/Packages">
         <h4>PACKAGES</h4>
