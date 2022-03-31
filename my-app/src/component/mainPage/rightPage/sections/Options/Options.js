@@ -43,9 +43,7 @@ const OptionsSection = ({
     console.log(currentSelection.selectedOptions)
    const changeStatus=currentSelection.selectedOptions.map((options,index)=>{
       if(options[keys]){
-
-         let test =JSON.stringify({...options, click:true})
-         console.log(JSON.parse(test))
+        const test ={...options,options[keys]:{...options[keys], click:true}}
       }
     })
     return changeStatus
