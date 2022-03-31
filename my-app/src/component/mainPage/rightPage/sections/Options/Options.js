@@ -23,9 +23,13 @@ const OptionsSection = ({
   selectedOptions,
   removeOrAdd,
 }) => {
+
+
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
-    const optionDescriptionArray = values[keys].description.map(
+    console.log(keys)
+    console.log(values.option[keys])
+    const optionDescriptionArray = values.option[keys].description.map(
       (checkListvalues, index) => {
         return (
           <div keys={index} className="option-container">
@@ -44,7 +48,7 @@ const OptionsSection = ({
    currentSelection.selectedOptions.forEach((options,index)=>{
       if(options[keys]){
         options[keys].click =true;
-        userSelectedOptions(currentSelection.selectedOptions);
+        console.log(currentSelection.selectedOptions)
       }
     })
   };

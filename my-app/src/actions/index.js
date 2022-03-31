@@ -10,7 +10,6 @@ export const userSelectedTrim = (trimSelection, model, exteriorColor,wheelSelect
 
 //Option Selection
 export const userSelectedOptions =(selectedOption)=>{
-  console.log(selectedOption)
   return {
     type:"USER_OPTIONS",
     payload:{selectedOption}

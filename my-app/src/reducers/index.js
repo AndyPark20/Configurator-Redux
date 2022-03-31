@@ -803,7 +803,6 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
   switch (action.type) {
 
     case "USER_SELECTION":
-
       updatedSelection = {
         ...userValue,
         trim: action.payload.trimSelection,
@@ -812,7 +811,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         wheelSelection: action.payload.wheelSelection,
         intcolor: action.payload.interiorColor,
         sectionView: action.payload.sectionView,
-        selectedOptions:action.payload.defaultOptions
+        selectedOptions:[{option:action.payload.defaultOptions,click:action.payload.selectedOptionCheck}]
       };
       return updatedSelection;
 
