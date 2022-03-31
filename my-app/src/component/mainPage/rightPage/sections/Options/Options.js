@@ -44,7 +44,7 @@ const OptionsSection = ({
    currentSelection.selectedOptions.forEach((options,index)=>{
       if(options[keys]){
         options[keys].click =true;
-        console.log(currentSelection.selectedOptions)
+        userSelectedOptions(currentSelection.selectedOptions);
       }
     })
   };
