@@ -3,8 +3,11 @@ import "./options.css";
 import { connect } from "react-redux";
 
 //Import action creators
-import { userSelectedTrim, userSelectedOptions,removeOrAdd } from "../../../../../Actions";
-
+import {
+  userSelectedTrim,
+  userSelectedOptions,
+  removeOrAdd,
+} from "../../../../../Actions";
 
 const OptionsSection = ({
   carData,
@@ -18,9 +21,8 @@ const OptionsSection = ({
   sectionView,
   userSelectedOptions,
   selectedOptions,
-  removeOrAdd
+  removeOrAdd,
 }) => {
-
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
     const optionDescriptionArray = values[keys].description.map(
@@ -37,14 +39,11 @@ const OptionsSection = ({
   };
 
   //A function that will check if the option has already been selected or not
-  const checkSelection = (keys,values) => {
+  const checkSelection = (keys, values) => {
     if (!currentSelection.selectedOptions.includes(keys)) {
-      userSelectedOptions(keys,true);
+      userSelectedOptions(keys, true);
     }
   };
-
-
-
 
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
@@ -67,9 +66,9 @@ const OptionsSection = ({
                 id={keys}
                 type="button"
                 className="btn btn-dark"
-                onClick={(e) => checkSelection(keys,values)}
+                onClick={(e) => checkSelection(keys, values)}
               >
-                {!values[keys].click ?"ADD" : "REMOVE"}
+                {!values[keys].click ? "ADD" : "REMOVE"}
               </button>
             </div>
           </div>
@@ -90,7 +89,7 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log('options', state.userSelection.selectedOptions)
+  console.log("options", state.userSelection.selectedOptions);
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -102,12 +101,11 @@ const mapStateToProps = (state) => {
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
     selectedOptions: state.userSelection.selectedOptions,
-
   };
 };
 
 export default connect(mapStateToProps, {
   userSelectedTrim,
   userSelectedOptions,
-  removeOrAdd
+  removeOrAdd,
 })(OptionsSection);
