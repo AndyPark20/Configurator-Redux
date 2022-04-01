@@ -9,10 +9,10 @@ export const userSelectedTrim = (trimSelection, model, exteriorColor,wheelSelect
 };
 
 //Option Selection
-export const userSelectedOptions =(selectedOption)=>{
+export const userSelectedOptions =(selectedOption,keys)=>{
   return {
     type:"USER_OPTIONS",
-    payload:{selectedOption}
+    payload:{selectedOption,keys}
   }
 }
 

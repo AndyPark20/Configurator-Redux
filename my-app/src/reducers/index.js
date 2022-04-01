@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import { userSelectedOptions } from "../Actions";
 
 //Master Car Data
 const carData = () => {
@@ -795,7 +796,8 @@ const userSelectionDataObject = {
   viewPosition: "extImage",
   intcolor: "Santos Brown with Steel Gray stitching",
   sectionView: true,
-  selectedOptions: []
+  selectedOptions: [],
+  userSelectedOptions:[]
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
@@ -822,7 +824,8 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
 
         updatedSelection={
           ...userValue,
-          selectedOptions:action.payload.selectedOption
+          selectedOptions:action.payload.selectedOption,
+          userSelectedOptions:[...userSelectedOptions,action.payload.keys]
         }
         return updatedSelection;
     default:
