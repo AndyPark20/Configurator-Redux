@@ -40,12 +40,16 @@ const OptionsSection = ({
 
   //A function that will check if the option has already been selected or not
   const checkSelection = (keys, values) => {
-    currentSelection.selectedOptions.forEach((options, index) => {
-      if (options[keys]) {
-        options[keys].click = true;
-        console.log(currentSelection);
-        userSelectedOptions(currentSelection);
-      }
+    let arrayToString = keys.toString();
+
+    currentSelection.selectedOptions.forEach((optionsArray, index) => {
+      optionsArray.option.forEach((eachOption, index) => {
+        if (eachOption[arrayToString]) {
+          eachOption[arrayToString].click = true;
+          console.log(currentSelection.selectedOptions);
+          userSelectedOptions(currentSelection.selectedOptions);
+        }
+      });
     });
   };
 
@@ -84,6 +88,7 @@ const OptionsSection = ({
   };
 
   const options = () => {
+    console.log(selectedOptions)
     const renderOptionList = selectedOptions.map((values, index) => {
       return <div key={index}>{renderEachOptions(values)}</div>;
     });
