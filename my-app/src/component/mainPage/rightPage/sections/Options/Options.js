@@ -40,12 +40,13 @@ const OptionsSection = ({
   };
 
   //A function that will check if the option has already been selected or not
-  const checkSelection = (keys, values) => {
+  const checkSelection = (keys, values,e) => {
 
     let arrayToString = keys.toString();
+
     currentSelection.selectedOptions.forEach((optionsArray, index) => {
       optionsArray.option.forEach((eachOption, index) => {
-        if (eachOption[arrayToString]) {
+        if (eachOption[arrayToString] && e.target.textContent ==='ADD') {
           eachOption[arrayToString].click = true;
           userSelectedOptions(currentSelection.selectedOptions, arrayToString);
         }
@@ -76,7 +77,7 @@ const OptionsSection = ({
               <button
                 type="button"
                 className="btn btn-dark"
-                onClick={(e) => checkSelection(Object.keys(values), values)}
+                onClick={(e) => checkSelection(Object.keys(values), values,e)}
               >
                 {!values[Object.keys(values)].click ? "ADD" : "REMOVE"}
               </button>
