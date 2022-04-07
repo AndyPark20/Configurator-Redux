@@ -7,6 +7,7 @@ import {
   userSelectedTrim,
   userSelectedOptions,
   removeOrAdd,
+  removeSelectedOptions
 } from "../../../../../Actions";
 
 const OptionsSection = ({
@@ -22,7 +23,7 @@ const OptionsSection = ({
   userSelectedOptions,
   selectedOptions,
   removeOrAdd,
-  userTrimSelectedOptions,
+  deleteOptions,
 }) => {
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
@@ -40,22 +41,23 @@ const OptionsSection = ({
   };
 
   //A function that will check if the option has already been selected or not
-  const checkSelection = (keys, values,e) => {
-
+  const checkSelection = (keys, values, e) => {
     let arrayToString = keys.toString();
 
     currentSelection.selectedOptions.forEach((optionsArray, index) => {
       optionsArray.option.forEach((eachOption, index) => {
-        if (eachOption[arrayToString] && e.target.textContent ==='ADD') {
+        if (eachOption[arrayToString] && e.target.textContent === "ADD") {
           eachOption[arrayToString].click = true;
           userSelectedOptions(currentSelection.selectedOptions, arrayToString);
-        } else if (eachOption[arrayToString] && e.target.textContent ==='REMOVE'){
+        } else if (
+          eachOption[arrayToString] &&
+          e.target.textContent === "REMOVE"
+        ) {
           eachOption[arrayToString].click = false;
-          userSelectedOptions(currentSelection.selectedOptions, arrayToString);
+          deleteOptions(arrayToString);
         }
       });
     });
-
   };
 
   //Options in an array of objects, need to map thru the objects to get the property
@@ -80,7 +82,7 @@ const OptionsSection = ({
               <button
                 type="button"
                 className="btn btn-dark"
-                onClick={(e) => checkSelection(Object.keys(values), values,e)}
+                onClick={(e) => checkSelection(Object.keys(values), values, e)}
               >
                 {!values[Object.keys(values)].click ? "ADD" : "REMOVE"}
               </button>
