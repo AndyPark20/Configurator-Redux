@@ -22,6 +22,7 @@ const OptionsSection = ({
   userSelectedOptions,
   selectedOptions,
   removeOrAdd,
+  userTrimSelectedOptions,
 }) => {
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
@@ -40,15 +41,17 @@ const OptionsSection = ({
 
   //A function that will check if the option has already been selected or not
   const checkSelection = (keys, values) => {
+
     let arrayToString = keys.toString();
     currentSelection.selectedOptions.forEach((optionsArray, index) => {
       optionsArray.option.forEach((eachOption, index) => {
         if (eachOption[arrayToString]) {
           eachOption[arrayToString].click = true;
-          userSelectedOptions(currentSelection.selectedOptions,arrayToString);
+          userSelectedOptions(currentSelection.selectedOptions, arrayToString);
         }
       });
     });
+
   };
 
   //Options in an array of objects, need to map thru the objects to get the property
@@ -86,7 +89,6 @@ const OptionsSection = ({
   };
 
   const options = () => {
-    console.log(selectedOptions)
     const renderOptionList = selectedOptions.map((values, index) => {
       return <div key={index}>{renderEachOptions(values)}</div>;
     });
