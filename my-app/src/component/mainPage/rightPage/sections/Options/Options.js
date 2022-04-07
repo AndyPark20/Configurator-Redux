@@ -107,9 +107,7 @@ const mapStateToProps = (state) => {
     viewPosition: state.userSelection.viewPosition,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
-
-
-
+    userTrimSelectedOptions: state.userSelection.userTrimSelectedOptions,
     selectedOptions: state.userSelection.selectedOptions,
     // userSelectedOptions:
   };
