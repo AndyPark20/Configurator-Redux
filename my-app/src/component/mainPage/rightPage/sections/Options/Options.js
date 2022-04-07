@@ -49,6 +49,9 @@ const OptionsSection = ({
         if (eachOption[arrayToString] && e.target.textContent ==='ADD') {
           eachOption[arrayToString].click = true;
           userSelectedOptions(currentSelection.selectedOptions, arrayToString);
+        } else if (eachOption[arrayToString] && e.target.textContent ==='REMOVE'){
+          eachOption[arrayToString].click = false;
+          userSelectedOptions(currentSelection.selectedOptions, arrayToString);
         }
       });
     });
