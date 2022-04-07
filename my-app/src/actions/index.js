@@ -23,3 +23,11 @@ export const removeOrAdd = (selection)=>{
     paylod:{selection}
   }
 }
+
+//Delete options that user wants to remove
+export const deleteOptions = (removeSelectedOptions)=>{
+  return{
+    type:"DELETE_OPTIONS",
+    payload:{removeSelectedOptions}
+  }
+}
