@@ -51,21 +51,21 @@ const carData = () => {
                   "Memory for driver’s seat",
                   "SiriusXM® All Access service (w/ 3-month trial subscription)",
                 ],
-                click:false
+                click: false,
               },
             },
             {
               "Garage door opener (Homelink®)": {
                 image: require("../img/premium/Q440e-tron/Options/Homelink.jpg"),
                 description: [],
-                click:false
+                click: false,
               },
             },
             {
               "Trailer hitch": {
                 image: require("../img/premium/Q440e-tron/Options/Trailer-hitch.png"),
                 description: [],
-                click:false
+                click: false,
               },
             },
           ],
@@ -786,7 +786,6 @@ const carData = () => {
   };
 };
 
-
 const userSelectionDataObject = {
   trim: "Premium",
   model: "Q4 40 e-tron",
@@ -797,13 +796,12 @@ const userSelectionDataObject = {
   intcolor: "Santos Brown with Steel Gray stitching",
   sectionView: true,
   selectedOptions: [],
-  userTrimSelectedOptions:[]
+  userTrimSelectedOptions: [],
 };
 
 const userSelectedValues = (userValue = userSelectionDataObject, action) => {
   let updatedSelection = {};
   switch (action.type) {
-
     case "USER_SELECTION":
       updatedSelection = {
         ...userValue,
@@ -813,21 +811,38 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         wheelSelection: action.payload.wheelSelection,
         intcolor: action.payload.interiorColor,
         sectionView: action.payload.sectionView,
-        selectedOptions:[{option:action.payload.defaultOptions,click:action.payload.selectedOptionCheck}]
+        selectedOptions: [
+          {
+            option: action.payload.defaultOptions,
+            click: action.payload.selectedOptionCheck,
+          },
+        ],
       };
       return updatedSelection;
 
-      case "USER_OPTIONS":
-        //push new selected optionn into the selected Options array.
+    case "USER_OPTIONS":
+      //push new selected optionn into the selected Options array.
+      updatedSelection = {
+        ...userValue,
+        selectedOptions: action.payload.selectedOption,
+        userTrimSelectedOptions: [
+          ...userValue.userTrimSelectedOptions,
+          action.payload.keys,
+        ],
+      };
+      return updatedSelection;
 
-        // updatedSelection.selectedOptions.push(action.payload.selectedOption)
+    case "DELETE_OPTIONS":
+      if(userValue.userTrimSelectedOptions.length !==0){
+        userValue.userTrimSelectedOptions.forEach(values =>{
+          if(values === action.payload.removeSelectedOptions){
+            console.log(values)
+          };
+        });
+      };
 
-        updatedSelection = {
-          ...userValue,
-          selectedOptions: action.payload.selectedOption,
-          userTrimSelectedOptions: [...userValue.userTrimSelectedOptions,action.payload.keys],
-        };
-        return updatedSelection;
+      return updatedSelection;
+
     default:
       return userValue;
   }
