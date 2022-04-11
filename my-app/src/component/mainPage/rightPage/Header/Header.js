@@ -27,9 +27,6 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
       <Link to="/Options">
         <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>OPTIONS</h4>
       </Link>
-      <Link to="/Packages">
-        <h4>PACKAGES</h4>
-      </Link>
       <Link to="/Summary">
         <h4>SUMMARY</h4>
       </Link>
