@@ -7,7 +7,7 @@ import {
   userSelectedTrim,
   userSelectedOptions,
   removeOrAdd,
- deleteOptions
+  deleteOptions,
 } from "../../../../../Actions";
 
 const OptionsSection = ({
@@ -54,7 +54,8 @@ const OptionsSection = ({
           e.target.textContent === "REMOVE"
         ) {
           eachOption[arrayToString].click = false;
-          deleteOptions(arrayToString);
+          userSelectedOptions(currentSelection.selectedOptions, arrayToString);
+          // deleteOptions(arrayToString);
         }
       });
     });
@@ -95,13 +96,10 @@ const OptionsSection = ({
   };
 
   const options = () => {
-    if(selectedOptions){
     const renderOptionList = selectedOptions.map((values, index) => {
       return <div key={index}>{renderEachOptions(values)}</div>;
     });
     return renderOptionList;
-    }
-
   };
   return <div>{options()}</div>;
 };
@@ -128,6 +126,5 @@ export default connect(mapStateToProps, {
   userSelectedTrim,
   userSelectedOptions,
   removeOrAdd,
-  deleteOptions
-
+  deleteOptions,
 })(OptionsSection);
