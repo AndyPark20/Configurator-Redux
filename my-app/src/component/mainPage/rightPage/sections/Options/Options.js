@@ -105,7 +105,7 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.userSelection.userTrimSelectedOptions);
+  console.log('selectedTrim',state.userSelection.userTrimSelectedOptions);
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
