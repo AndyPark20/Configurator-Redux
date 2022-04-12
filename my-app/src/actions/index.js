@@ -26,7 +26,6 @@ export const removeOrAdd = (selection)=>{
 
 //Delete options that user wants to remove
 export const deleteOptions = (removeSelectedOptions)=>{
-  console.log('sdf', removeSelectedOptions)
   return{
     type:"DELETE_OPTIONS",
     payload:{removeSelectedOptions}
