@@ -836,9 +836,11 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
       if(userValue.userTrimSelectedOptions.length !==0){
         userValue.userTrimSelectedOptions.forEach((values,index) =>{
           if(values === action.payload.removeSelectedOptions){
+            //Use Splice method to remove de-selected option from userTrimSelectedoptions array.
+             userValue.userTrimSelectedOptions.splice(index, 1);
                updatedSelection = {
                  ...userValue,
-                 userTrimSelectedOptions: userValue.userTrimSelectedOptions.splice(index,1)
+                 userTrimSelectedOptions: userValue.userTrimSelectedOptions
                };
           };
         });
