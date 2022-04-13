@@ -30,7 +30,7 @@ const OptionsSection = ({
     const optionDescriptionArray = values[keys].description.map(
       (checkListvalues, index) => {
         return (
-          <div keys={index} className="option-container">
+          <div key={index} className="option-container">
             <i className="fa-solid fa-check"></i>
             <p className="options">{checkListvalues}</p>
           </div>
@@ -67,7 +67,7 @@ const OptionsSection = ({
   const renderEachOptions = (values) => {
     const renderOptions = values.option.map((values, index) => {
       return (
-        <div className="options-container">
+        <div className="options-container" key={index}>
           <div className="option-picture">
             <img
               src={values[Object.keys(values)].image}
@@ -75,9 +75,9 @@ const OptionsSection = ({
               className="option-image-size"
             />
           </div>
-          <div classname="options-detail">
+          <div className="options-detail">
             <h3>{Object.keys(values)}</h3>
-            <p>{renderOptionDescription(Object.keys(values), values)}</p>
+            <span>{renderOptionDescription(Object.keys(values), values)}</span>
             <div className="add-button">
               <button
                 type="button"
@@ -104,7 +104,6 @@ const OptionsSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log('selectedTrim',state.userSelection.userTrimSelectedOptions);
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
