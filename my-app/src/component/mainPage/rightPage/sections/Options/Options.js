@@ -54,6 +54,8 @@ const OptionsSection = ({
           e.target.textContent === "REMOVE"
         ) {
           eachOption[arrayToString].click = false;
+          console.log(currentSelection.selectedOptions);
+          console.log(arrayToString)
           userSelectedOptions(currentSelection.selectedOptions, arrayToString);
           // deleteOptions(arrayToString);
         }

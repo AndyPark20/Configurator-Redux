@@ -834,7 +834,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
 
     case "DELETE_OPTIONS":
       if(userValue.userTrimSelectedOptions.length !==0){
-        userValue.userTrimSelectedOptions.forEach(values =>{
+        userValue.userTrimSelectedOptions.forEach((values,index) =>{
           if(values === action.payload.removeSelectedOptions){
 
           };
