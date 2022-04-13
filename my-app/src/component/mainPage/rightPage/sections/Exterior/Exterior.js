@@ -1,4 +1,3 @@
-
 import React from "react";
 
 //Import CSS
@@ -11,13 +10,20 @@ import { connect } from "react-redux";
 import { userSelectedTrim } from "../../../../../Actions";
 
 //Import Components
-import  WheelSection  from "./WheelSection/WheelSection.js";
+import WheelSection from "./WheelSection/WheelSection.js";
 
-
-
-const ExteriorSection = ({ data,trim, model, exteriorColor,userSelectedExtColor,userSelectedWheelName, userSelectedTrim,wheelSelection,intColor,sectionView }) => {
-
-
+const ExteriorSection = ({
+  data,
+  trim,
+  model,
+  exteriorColor,
+  userSelectedExtColor,
+  userSelectedWheelName,
+  userSelectedTrim,
+  wheelSelection,
+  intColor,
+  sectionView,
+}) => {
   //Render available exterior colors for Audi Q4 e-tron
   const q4ExteriorColors = () => {
     const renderColor = exteriorColor.map((values, index) => {
@@ -53,11 +59,18 @@ const ExteriorSection = ({ data,trim, model, exteriorColor,userSelectedExtColor,
   return (
     <div className="">
       <div>
-        <h3 className="exterior-color-title">Exterior Color:<span className="selected-exterior-color">{userSelectedExtColor}</span></h3>
+        <h3 className="exterior-color-title">
+          Exterior Color:
+          <span className="selected-exterior-color">
+            {userSelectedExtColor}
+          </span>
+        </h3>
         <div className="exterior-color-container">{q4ExteriorColors()}</div>
       </div>
       <div>
-        <h3 className="exterior-color-title">Wheels:<span className="selected-wheel">{userSelectedWheelName}</span></h3>
+        <h3 className="exterior-color-title">
+          Wheels:<span className="selected-wheel">{userSelectedWheelName}</span>
+        </h3>
         <div className="wheel-selection-master-container">
           <WheelSection />
         </div>
@@ -76,8 +89,8 @@ const mapStateToProps = (state) => {
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
     //User Selected Exterior color property:
-    userSelectedExtColor:state.userSelection.extColor,
-    userSelectedWheelName:state.userSelection.wheelName
+    userSelectedExtColor: state.userSelection.extColor,
+    userSelectedWheelName: state.userSelection.wheelName,
   };
 };
 
