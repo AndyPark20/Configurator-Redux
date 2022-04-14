@@ -197,6 +197,7 @@ const carData = () => {
           torque: "N/A",
           acceleration: "5.8",
           layout: "quattro",
+          price:49900,
           wheels: {
             wheelImage: [
               {
@@ -494,6 +495,7 @@ const carData = () => {
           torque: "N/A",
           acceleration: "5.8",
           layout: "quattro",
+          price:54000,
           wheels: {
             wheelImage: [
               {
@@ -698,6 +700,7 @@ const carData = () => {
           torque: "N/A",
           acceleration: "5.8",
           layout: "quattro",
+          price:57500,
           wheels: {
             wheelImage: [
               {
