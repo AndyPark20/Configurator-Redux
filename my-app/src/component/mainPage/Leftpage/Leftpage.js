@@ -80,6 +80,9 @@ const MainLeft = ({
                 <span className="reg-mark">®</span>
               </span>
             </h1>
+            <div>
+              <h4>$49,999</h4>
+            </div>
           </div>
           <Gallery
             carData={currentSelection}
@@ -89,7 +92,6 @@ const MainLeft = ({
         </div>
         {specRender()}
       </div>
-
     </div>
   );
 };
