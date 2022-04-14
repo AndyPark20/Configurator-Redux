@@ -79,3 +79,12 @@ body{
 .engine-type{
   font-size:.7rem;
 }
+
+
+.price-info{
+  display:flex;
+}
+
+.msrp{
+  margin-left:.1%;
+}

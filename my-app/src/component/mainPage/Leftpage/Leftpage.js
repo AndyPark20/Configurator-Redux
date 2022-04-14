@@ -80,8 +80,9 @@ const MainLeft = ({
                 <span className="reg-mark">®</span>
               </span>
             </h1>
-            <div>
-              <h4>$49,999</h4>
+            <div className="price-info">
+              <h4>Starting at:</h4>
+              <h3 className="msrp">$49,999</h3>
             </div>
           </div>
           <Gallery
