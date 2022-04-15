@@ -89,7 +89,8 @@ const Trim = ({
                       intColor,
                       true,
                       data[trimSelection][model].spec.optionsPackages,
-                      false
+                      false,
+                      data[trim][model].spec.price
                     )
                   }
                 >
@@ -128,7 +129,7 @@ const Trim = ({
 
 //React-Redux connect to retrieve trimSelection from the Redux Store
 const thisMapStateToProps = (state) => {
-  console.log(state.carData[state.userSelection.trim][state.userSelection.model].spec.price)
+
   return {
     data: state.carData,
     trim: state.userSelection.trim,
