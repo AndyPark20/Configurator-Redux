@@ -70,9 +70,10 @@ const MainLeft = ({
     //add comma into pricing if the length of the array is 5
     if(priceToStringArray.length === 5){
       priceToStringArray.splice(2,0,',')
-      console.log(priceToStringArray)
+      let finalPrice = priceToStringArray.join('');
+      return finalPrice
     }
-    console.log(priceToStringArray)
+
 
   }
 
@@ -97,7 +98,7 @@ const MainLeft = ({
             </h1>
             <div className="price-info">
               <h4>Starting at:</h4>
-              <h3 className="msrp">{pricing()}</h3>
+              <h3 className="msrp">${pricing()}</h3>
             </div>
           </div>
           <Gallery
