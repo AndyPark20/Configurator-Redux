@@ -64,6 +64,7 @@ const MainLeft = ({
   //Render Pricing from data
   const pricing =()=>{
 
+    console.log(carData[trim])
   }
 
   //Render Model name EXCEPT Q4 keyword phrase
@@ -87,7 +88,7 @@ const MainLeft = ({
             </h1>
             <div className="price-info">
               <h4>Starting at:</h4>
-              <h3 className="msrp">{pricing()}}</h3>
+              <h3 className="msrp">{pricing()}</h3>
             </div>
           </div>
           <Gallery
