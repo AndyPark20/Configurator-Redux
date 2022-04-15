@@ -797,6 +797,7 @@ const userSelectionDataObject = {
   extColor: "Navarra Blue metallic",
   viewPosition: "extImage",
   intcolor: "Santos Brown with Steel Gray stitching",
+  price:49999,
   sectionView: true,
   selectedOptions: [],
   userTrimSelectedOptions: [],

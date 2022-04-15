@@ -19,7 +19,8 @@ const MainLeft = ({
   viewPosition,
   userSelectedTrim,
   sectionView,
-  intColor
+  intColor,
+  price
 }) => {
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
@@ -63,8 +64,7 @@ const MainLeft = ({
 
   //Render Pricing from data
   const pricing =()=>{
-
-    console.log(carData[trim])
+    console.log(typeof price.toString())
   }
 
   //Render Model name EXCEPT Q4 keyword phrase
@@ -104,7 +104,7 @@ const MainLeft = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.userSelection.selectedOptions);
+
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -115,6 +115,7 @@ const mapStateToProps = (state) => {
     viewPosition: state.userSelection.viewPosition,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
+    price:state.userSelection.price
   };
 };
 
