@@ -69,7 +69,8 @@ const MainLeft = ({
 
     //add comma into pricing if the length of the array is 5
     if(priceToStringArray.length === 5){
-
+      priceToStringArray.splice(2,0,',')
+      console.log(priceToStringArray)
     }
     console.log(priceToStringArray)
 
