@@ -815,6 +815,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
         wheelSelection: action.payload.wheelSelection,
         intcolor: action.payload.interiorColor,
         sectionView: action.payload.sectionView,
+        price: action.payload.price,
         selectedOptions: [
           {
             option: action.payload.defaultOptions,
