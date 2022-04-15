@@ -64,7 +64,15 @@ const MainLeft = ({
 
   //Render Pricing from data
   const pricing =()=>{
-    console.log(typeof price.toString())
+    //convert Integer into string of array
+    let priceToStringArray = price.toString().split('');
+
+    //add comma into pricing if the length of the array is 5
+    if(priceToStringArray.length === 5){
+
+    }
+    console.log(priceToStringArray)
+
   }
 
   //Render Model name EXCEPT Q4 keyword phrase
