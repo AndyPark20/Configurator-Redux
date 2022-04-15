@@ -61,6 +61,11 @@ const MainLeft = ({
     );
   };
 
+  //Render Pricing from data
+  const pricing =()=>{
+
+  }
+
   //Render Model name EXCEPT Q4 keyword phrase
   const ModelNameRender = () => {
     const q4Index = model.replace("Q4 ", "");
@@ -82,7 +87,7 @@ const MainLeft = ({
             </h1>
             <div className="price-info">
               <h4>Starting at:</h4>
-              <h3 className="msrp">$49,999</h3>
+              <h3 className="msrp">{pricing()}}</h3>
             </div>
           </div>
           <Gallery
@@ -98,6 +103,7 @@ const MainLeft = ({
 };
 
 const mapStateToProps = (state) => {
+  console.log(state.userSelection.selectedOptions);
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
