@@ -63,6 +63,7 @@ const Trim = ({
 
   //Render List of trim and Models
   const renderTrimLevel = (trimSelection) => {
+
     //Array holding trimSelection of Audi trim based on package level (i.e. 'Premium', etc....)
     const trimLevelValueList = Object.keys(data[trimSelection]);
     //Omit Exterior Color buttons
