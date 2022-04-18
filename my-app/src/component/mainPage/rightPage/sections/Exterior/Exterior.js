@@ -80,7 +80,6 @@ const ExteriorSection = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log('price from exterior', state.userSelection.price)
   return {
     data: state.carData,
     trim: state.userSelection.trim,

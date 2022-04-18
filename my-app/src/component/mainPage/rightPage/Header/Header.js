@@ -16,16 +16,16 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
       </Link>
       <Link to="/Exterior">
         <h4
-          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages)}
+          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages,carData[trim][model].spec.price)}
         >
           EXTERIOR
         </h4>
       </Link>
       <Link to="/Interior">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>INTERIOR</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,carData[trim][model].spec.price)}>INTERIOR</h4>
       </Link>
       <Link to="/Options">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>OPTIONS</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,carData[trim][model].spec.price)}>OPTIONS</h4>
       </Link>
       <Link to="/Summary">
         <h4>SUMMARY</h4>
@@ -45,6 +45,7 @@ const mapStateToProps =(state)=>{
     viewPosition: state.userSelection.viewPosition,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
+    price: state.userSelection.price
   };
 }
 
