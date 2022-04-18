@@ -115,7 +115,7 @@ const MainLeft = ({
 };
 
 const mapStateToProps = (state) => {
-
+  console.log('price front page', state.userSelection.price)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
