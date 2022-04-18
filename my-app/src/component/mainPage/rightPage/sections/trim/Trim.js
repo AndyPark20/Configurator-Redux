@@ -22,6 +22,7 @@ const Trim = ({
 
   //CHECKPOINT-Default back to original standard wheel IF premium wheel is not avialble after user selects premium wheel on higher trim models.
   const checkAvailableWheels = (e, trimSelection) => {
+    console.log(data[trim][model].spec);
     const clickedModel = e.currentTarget.id;
     let checkedWheelSelection = wheelSelection;
     if (!data[trimSelection][clickedModel].spec[wheelSelection]) {
