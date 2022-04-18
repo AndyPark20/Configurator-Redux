@@ -85,6 +85,7 @@ const MainLeft = ({
 
   return (
     <div className="audi-container-left">
+      {console.log('frontpage')}
       <div className="row-section">
         <div className="col section-left">
           <div className="description">
