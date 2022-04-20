@@ -114,7 +114,6 @@ const Trim = ({
   const renderPackageLevel = () => {
     //Get package level from data object
     const packageLevel = Object.keys(data);
-    console.log(packageLevel)
     //loop thru the package list array and pass the value as an agument to renderTrimLevel function
     const renderPackage = packageLevel.map((trimSelection, index) => {
       return (
