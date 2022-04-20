@@ -20,22 +20,21 @@ const MainLeft = ({
   userSelectedTrim,
   sectionView,
   intColor,
-  price
+  price,
 }) => {
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
 
-
   const toggleImageSection = () => {
-  let exteriorPictures = carData[trim][model].spec[wheelSelection][viewPosition][extColor];
-   if(sectionView){
-   return exteriorPictures;
-   }
+    let exteriorPictures =
+      carData[trim][model].spec[wheelSelection][viewPosition][extColor];
+    if (sectionView) {
+      return exteriorPictures;
+    }
 
-   let interiorPictures = carData[trim][model].spec.interior.intImage[intColor][extColor];
-   return interiorPictures;
-
-
+    let interiorPictures =
+      carData[trim][model].spec.interior.intImage[intColor][extColor];
+    return interiorPictures;
   };
 
   //Specification Render for Trim Selected
@@ -63,19 +62,19 @@ const MainLeft = ({
   };
 
   //Render Pricing from data
-  const pricing =()=>{
+  const pricing = () => {
     //convert Integer into string of array
-    let priceToStringArray = price.toString().split('');
+    if (price) {
+      let priceToStringArray = price.toString().split("");
 
-    //add comma into pricing if the length of the array is 5
-    if(priceToStringArray.length === 5){
-      priceToStringArray.splice(2,0,',')
-      let finalPrice = priceToStringArray.join('');
-      return finalPrice
+      //add comma into pricing if the length of the array is 5
+      if (priceToStringArray.length === 5) {
+        priceToStringArray.splice(2, 0, ",");
+        let finalPrice = priceToStringArray.join("");
+        return finalPrice;
+      }
     }
-
-
-  }
+  };
 
   //Render Model name EXCEPT Q4 keyword phrase
   const ModelNameRender = () => {
@@ -85,7 +84,7 @@ const MainLeft = ({
 
   return (
     <div className="audi-container-left">
-      {console.log('frontpage')}
+      {console.log("frontpage")}
       <div className="row-section">
         <div className="col section-left">
           <div className="description">
@@ -115,7 +114,6 @@ const MainLeft = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log('price front page', state.userSelection.price)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -126,7 +124,7 @@ const mapStateToProps = (state) => {
     viewPosition: state.userSelection.viewPosition,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
-    price:state.userSelection.price
+    price: state.userSelection.price,
   };
 };
 

@@ -46,7 +46,8 @@ const ExteriorSection = ({
                 intColor,
                 true,
                 data[trim][model].spec.optionsPackages,
-                false
+                false,
+                data[trim][model].spec.price
               )
             }
           />
