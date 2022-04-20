@@ -35,6 +35,7 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
 }
 
 const mapStateToProps =(state)=>{
+  console.log('price from HEaer', state.userSelection.price)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
