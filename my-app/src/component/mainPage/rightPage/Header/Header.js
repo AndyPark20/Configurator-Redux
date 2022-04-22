@@ -7,10 +7,11 @@ import { userSelectedTrim } from "../../../../Actions";
 
 
 
-const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView})=>{
+const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView,userTrimSelectedOptions})=>{
 
   return (
     <div className="sections">
+      {console.log(carData[trim][model].spec)}
       <Link to="/">
         <h4>TRIM</h4>
       </Link>
@@ -35,7 +36,6 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
 }
 
 const mapStateToProps =(state)=>{
-  console.log('price from HEaer', state.userSelection.price)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -46,7 +46,8 @@ const mapStateToProps =(state)=>{
     viewPosition: state.userSelection.viewPosition,
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
-    price: state.userSelection.price
+    userTrimSelectedOptions: state.userSelection.userTrimSelectedOptions,
+    price: state.userSelection.price,
   };
 }
 

@@ -2,7 +2,6 @@
 
 //Trim Selection
 export const userSelectedTrim = (trimSelection, model, exteriorColor,wheelSelection,interiorColor,sectionView, defaultOptions,selectedOptionCheck, trimBasePrice) => {
-  console.log('hello')
     return {
       type: "USER_SELECTION",
       payload: { trimSelection, model,exteriorColor,wheelSelection, interiorColor,sectionView,defaultOptions,selectedOptionCheck, price:trimBasePrice }
