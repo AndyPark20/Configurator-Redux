@@ -358,7 +358,7 @@ const carData = () => {
       },
     },
     "Premium Plus": {
-      "Q4 40 e-tron": {
+      /*"Q4 40 e-tron": {
         spec: {
           engine: "Asynchronous electric motor®",
           hp: "201",
@@ -486,7 +486,7 @@ const carData = () => {
             },
           },
         },
-      },
+      },*/
       "Q4 50 e-tron": {
         spec: {
           engine:
