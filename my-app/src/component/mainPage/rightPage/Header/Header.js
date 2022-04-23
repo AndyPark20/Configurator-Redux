@@ -11,22 +11,22 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
 
   return (
     <div className="sections">
-
+      {console.log('trim',currentSelection)}
       <Link to="/">
         <h4>TRIM</h4>
       </Link>
       <Link to="/Exterior">
         <h4
-          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages,currentSelection.price)}
+          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages)}
         >
           EXTERIOR
         </h4>
       </Link>
       <Link to="/Interior">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,currentSelection.price)}>INTERIOR</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>INTERIOR</h4>
       </Link>
       <Link to="/Options">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,currentSelection.price)}>OPTIONS</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>OPTIONS</h4>
       </Link>
       <Link to="/Summary">
         <h4>SUMMARY</h4>
@@ -36,7 +36,6 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
 }
 
 const mapStateToProps =(state)=>{
-console.log(state.userSelection)
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
