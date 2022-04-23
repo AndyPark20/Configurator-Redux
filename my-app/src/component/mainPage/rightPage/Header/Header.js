@@ -11,7 +11,6 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
 
   return (
     <div className="sections">
-      {console.log('trim',currentSelection.price)}
       <Link to="/">
         <h4>TRIM</h4>
       </Link>
@@ -23,10 +22,10 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
         </h4>
       </Link>
       <Link to="/Interior">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>INTERIOR</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,null,currentSelection.price)}>INTERIOR</h4>
       </Link>
       <Link to="/Options">
-        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages)}>OPTIONS</h4>
+        <h4 onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,false,carData[trim][model].spec.optionsPackages,null,currentSelection.price)}>OPTIONS</h4>
       </Link>
       <Link to="/Summary">
         <h4>SUMMARY</h4>
