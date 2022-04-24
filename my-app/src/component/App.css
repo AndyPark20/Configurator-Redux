@@ -4,6 +4,7 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
+
 }
 
 
@@ -16,4 +17,7 @@ align-items:flex-start;
 
 .footer{
   border:2px solid black;
+  position:fixed;
+  bottom:0;
+  width:100%;
 }
