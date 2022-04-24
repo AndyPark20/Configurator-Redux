@@ -14,4 +14,4 @@ const mapStateToProps =()=>{
   return{}
 }
 
-export default(mapStateToProps)(Footer)
+export default connect(mapStateToProps)(Footer)
