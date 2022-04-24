@@ -9,6 +9,8 @@ import { Gallery } from "./Gallery/Gallery.js";
 //import Action
 import { userSelectedTrim } from "../../../Actions/";
 
+
+
 const MainLeft = ({
   carData,
   currentSelection,
@@ -40,24 +42,24 @@ const MainLeft = ({
   //Specification Render for Trim Selected
   const specRender = () => {
     return (
-      <div className="spec">
-        <p>
-          <span className="spec-category-style">Engine Type: </span>
-          <span className="engine-type">{engine}</span>
-        </p>
-        <p>
-          <span className="spec-category-style">Max. Output: </span>
-          <span className="engine-type">{hp} HP</span>
-        </p>
-        <p>
-          <span className="spec-category-style">Max. Torque: </span>
-          <span className="engine-type">{torque} LB-FT</span>
-        </p>
-        <p>
-          <span className="spec-category-style">Acceleration: </span>
-          <span className="engine-type">{acceleration} Seconds</span>
-        </p>
-      </div>
+        <div className="spec">
+          <p>
+            <span className="spec-category-style">Engine Type: </span>
+            <span className="engine-type">{engine}</span>
+          </p>
+          <p>
+            <span className="spec-category-style">Max. Output: </span>
+            <span className="engine-type">{hp} HP</span>
+          </p>
+          <p>
+            <span className="spec-category-style">Max. Torque: </span>
+            <span className="engine-type">{torque} LB-FT</span>
+          </p>
+          <p>
+            <span className="spec-category-style">Acceleration: </span>
+            <span className="engine-type">{acceleration} Seconds</span>
+          </p>
+        </div>
     );
   };
 
@@ -84,7 +86,6 @@ const MainLeft = ({
 
   return (
     <div className="audi-container-left">
-      {console.log("frontpage")}
       <div className="row-section">
         <div className="col section-left">
           <div className="description">
