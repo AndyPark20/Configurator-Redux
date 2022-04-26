@@ -4,12 +4,13 @@ import {connect} from 'react-redux';
 import "./Footer.css"
 
 
-const Footer =({optionedPrice})=>{
+const Footer =({optionedPrice,model,trim})=>{
   return (
     <div className="footer-container">
-      <div class="row">
+      <div className="row">
         <div class="col model-trim">
           <p className="year">2022<span className="make">&nbsp; Audi</span></p>
+          <p className="user-selected-trim">{`${model} ${trim}`}</p>
         </div>
         <div class="col model-price">
             <p className="footer-styling">Price as built:{optionedPrice}</p>
