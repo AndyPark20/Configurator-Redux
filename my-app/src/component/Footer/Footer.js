@@ -9,7 +9,7 @@ const Footer =({optionedPrice})=>{
     <div className="footer-container">
       <div class="row">
         <div class="col model-trim">
-          <p>2022</p>
+          <p className="year">2022<span className="make">&nbsp; Audi</span></p>
         </div>
         <div class="col model-price">
             <p className="footer-styling">Price as built:{optionedPrice}</p>
