@@ -798,6 +798,7 @@ const userSelectionDataObject = {
   viewPosition: "extImage",
   intcolor: "Santos Brown with Steel Gray stitching",
   price:49999,
+  optionedPrice:49999,
   sectionView: true,
   selectedOptions: [],
   userTrimSelectedOptions: [],

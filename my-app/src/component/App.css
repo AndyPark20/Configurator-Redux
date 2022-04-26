@@ -16,8 +16,8 @@ align-items:flex-start;
 
 
 .footer{
-  border:2px solid black;
+  background-color:#383434;
   position:fixed;
   bottom:0;
-  width:80%;
+  width:100%;
 }
