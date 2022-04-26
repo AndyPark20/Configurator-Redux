@@ -1,17 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import "./Footer.css"
+
 
 const Footer =({optionedPrice})=>{
   return(
     <div>
-      <h1>Price as built:{optionedPrice}</h1>
+      <p className="footer-styling">Price as built:{optionedPrice}</p>
     </div>
   )
 }
 
 const mapStateToProps =(state)=>{
-  console.log('state from Footer',state.userSelection.optionedPrice)
   return {
     optionedPrice: state.userSelection.optionedPrice,
   };
