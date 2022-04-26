@@ -1,3 +1,17 @@
+.footer-container{
+  height:85px;
+}
+
+
 .footer-styling{
   color:white;
+}
+
+.model-trim{
+  line-height:.2;
+}
+
+.footer-layout{
+  display:flex;
+  align-items: center;
 }
