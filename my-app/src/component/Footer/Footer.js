@@ -10,8 +10,11 @@ const Footer =()=>{
   )
 }
 
-const mapStateToProps =()=>{
-  return{}
+const mapStateToProps =(state)=>{
+  console.log('state from Footer',state.userSelection.optionedPrice)
+  return {
+    optionedPrice: state.userSelection.optionedPrice,
+  };
 }
 
 export default connect(mapStateToProps)(Footer)

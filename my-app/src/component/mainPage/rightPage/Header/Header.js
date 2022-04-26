@@ -36,6 +36,7 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
 
 
 const mapStateToProps =(state)=>{
+
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
@@ -47,6 +48,7 @@ const mapStateToProps =(state)=>{
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
     price: state.userSelection.price,
+
   };
 }
 
