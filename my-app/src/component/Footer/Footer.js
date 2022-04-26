@@ -2,10 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 
-const Footer =()=>{
+const Footer =({optionedPrice})=>{
   return(
     <div>
-      <h1>Hello</h1>
+      <h1>Price as built:{optionedPrice}</h1>
     </div>
   )
 }
