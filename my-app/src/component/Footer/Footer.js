@@ -7,9 +7,11 @@ import "./Footer.css"
 const Footer =({optionedPrice,model,trim})=>{
 
   //function to put comma for pricing
-  const priceComma =(optionedPrice)=>{
+  const priceComma =()=>{
 
-      console.log(optionedPrice)
+    let splitPriceArray = optionedPrice.toString().split('');
+    console.log(splitPriceArray)
+    return optionedPrice
 
   }
 
@@ -21,7 +23,7 @@ const Footer =({optionedPrice,model,trim})=>{
           <p className="user-selected-trim">{`${model} ${trim}`}</p>
         </div>
         <div class="col model-price">
-            <p className="footer-styling">Price as built:{optionedPrice}</p>
+            <p className="footer-styling">Price as built:{priceComma()}</p>
         </div>
       </div>
     </div>
