@@ -10,8 +10,12 @@ const Footer =({optionedPrice,model,trim})=>{
   const priceComma =()=>{
 
     let splitPriceArray = optionedPrice.toString().split('');
-    console.log(splitPriceArray)
-    return optionedPrice
+    if(splitPriceArray.length ===5){
+      splitPriceArray.splice(2, 0, ",");
+       let finalPrice = splitPriceArray.join("");
+       return finalPrice;
+    }
+
 
   }
 
@@ -23,7 +27,7 @@ const Footer =({optionedPrice,model,trim})=>{
           <p className="user-selected-trim">{`${model} ${trim}`}</p>
         </div>
         <div class="col model-price">
-            <p className="footer-styling">Price as built:{priceComma()}</p>
+            <p className="footer-styling">Price as built:&nbsp; ${priceComma()}</p>
         </div>
       </div>
     </div>
