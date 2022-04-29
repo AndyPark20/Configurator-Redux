@@ -5,6 +5,14 @@ import "./Footer.css"
 
 
 const Footer =({optionedPrice,model,trim})=>{
+
+  //function to put comma for pricing
+  const priceComma =(optionedPrice)=>{
+
+      console.log(optionedPrice)
+
+  }
+
   return (
     <div className="footer-container">
       <div className="row footer-layout">
