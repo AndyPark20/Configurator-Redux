@@ -9,12 +9,12 @@ const Footer =({optionedPrice,model,trim})=>{
   //function to put comma for pricing
   const priceComma =()=>{
     console.log(optionedPrice)
-    // let splitPriceArray = optionedPrice.toString().split('');
-    // if(splitPriceArray.length ===5){
-    //   splitPriceArray.splice(2, 0, ",");
-    //    let finalPrice = splitPriceArray.join("");
-    //    return finalPrice;
-    // }
+    let splitPriceArray = optionedPrice.toString().split('');
+    if(splitPriceArray.length ===5){
+      splitPriceArray.splice(2, 0, ",");
+       let finalPrice = splitPriceArray.join("");
+       return finalPrice;
+    }
 
 
   }
