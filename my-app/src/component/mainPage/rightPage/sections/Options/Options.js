@@ -65,6 +65,7 @@ const OptionsSection = ({
   //Object.keys(values) is the key name of the option (Convenience Package, trailer, etc..)
 
   const renderEachOptions = (values) => {
+    console.log('options',values)
     const renderOptions = values.option.map((values, index) => {
       return (
         <div className="options-container" key={index}>
@@ -77,6 +78,7 @@ const OptionsSection = ({
           </div>
           <div className="options-detail">
             <h3>{Object.keys(values)}</h3>
+            <h4>Hello</h4>
             <span>{renderOptionDescription(Object.keys(values), values)}</span>
             <div className="add-button">
               <button
