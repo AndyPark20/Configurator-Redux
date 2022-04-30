@@ -218,6 +218,7 @@ const carData = () => {
                   "SiriusXM® All Access service (w/ 3-month trial subscription)",
                 ],
                 click: false,
+                price:1800
               },
             },
             {
@@ -225,6 +226,7 @@ const carData = () => {
                 image: require("../img/premium/Q440e-tron/Options/Homelink.jpg"),
                 description: [],
                 click: false,
+                price:250
               },
             },
             {
@@ -232,6 +234,7 @@ const carData = () => {
                 image: require("../img/premium/Q440e-tron/Options/Trailer-hitch.png"),
                 description: [],
                 click: false,
+                price:650
               },
             },
           ],
