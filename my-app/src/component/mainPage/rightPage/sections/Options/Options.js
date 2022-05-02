@@ -48,8 +48,8 @@ const OptionsSection = ({
       optionsArray.option.forEach((eachOption, index) => {
         if (eachOption[arrayToString] && e.target.textContent === "ADD") {
           eachOption[arrayToString].click = true;
-          console.log("eachOption", eachOption[arrayToString].price);
-          userSelectedOptions(currentSelection.selectedOptions, arrayToString);
+          const selectedOptionPricing = eachOption[arrayToString].price;
+          userSelectedOptions(currentSelection.selectedOptions, arrayToString, selectedOptionPricing);
         } else if (
           eachOption[arrayToString] &&
           e.target.textContent === "REMOVE"
