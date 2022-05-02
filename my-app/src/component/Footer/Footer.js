@@ -35,6 +35,7 @@ const Footer =({optionedPrice,model,trim})=>{
 }
 
 const mapStateToProps =(state)=>{
+
   return {
     trim: state.userSelection.trim,
     model: state.userSelection.model,
