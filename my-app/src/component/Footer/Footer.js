@@ -39,6 +39,7 @@ const mapStateToProps =(state)=>{
     trim: state.userSelection.trim,
     model: state.userSelection.model,
     optionedPrice: state.userSelection.optionedPrice,
+
   };
 }
 
