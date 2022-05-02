@@ -876,6 +876,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
           ...userValue.userTrimSelectedOptions,
           action.payload.keys,
         ],
+        optionedPrice: userValue.optionedPrice +action.payload.optionPricing,
       };
       return updatedSelection;
 
