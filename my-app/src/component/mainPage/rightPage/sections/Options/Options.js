@@ -48,11 +48,16 @@ const OptionsSection = ({
       optionsArray.option.forEach((eachOption, index) => {
         if (eachOption[arrayToString] && e.target.textContent === "ADD") {
           eachOption[arrayToString].click = true;
-          const selectedOptionPricing = eachOption[arrayToString].price;
-          userSelectedOptions(currentSelection.selectedOptions, arrayToString, selectedOptionPricing);
+          const addSelectedPricing = eachOption[arrayToString].price;
+          userSelectedOptions(
+            currentSelection.selectedOptions,
+            arrayToString,
+            addSelectedPricing
+          );
         } else if (eachOption[arrayToString] &&e.target.textContent === "REMOVE") {
+          const removeSelectedPricing = eachOption[arrayToString].price;
           eachOption[arrayToString].click = false;
-          deleteOptions(arrayToString);
+          deleteOptions(arrayToString, removeSelectedPricing);
         }
       });
     });
