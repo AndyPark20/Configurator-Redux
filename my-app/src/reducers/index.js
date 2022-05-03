@@ -876,7 +876,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
           ...userValue.userTrimSelectedOptions,
           action.payload.keys,
         ],
-        optionedPrice: userValue.optionedPrice +action.payload.optionPricing,
+        optionedPrice: userValue.optionedPrice +action.payload.optionPricing
       };
       return updatedSelection;
 
@@ -888,7 +888,8 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
              userValue.userTrimSelectedOptions.splice(index, 1);
                updatedSelection = {
                  ...userValue,
-                 userTrimSelectedOptions: userValue.userTrimSelectedOptions
+                 userTrimSelectedOptions: userValue.userTrimSelectedOptions,
+                 optionedPrice: userValue.optionedPrice - action.payload.removeSelectedPricing
                };
           };
         });
