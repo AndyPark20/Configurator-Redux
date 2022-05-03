@@ -50,10 +50,7 @@ const OptionsSection = ({
           eachOption[arrayToString].click = true;
           const selectedOptionPricing = eachOption[arrayToString].price;
           userSelectedOptions(currentSelection.selectedOptions, arrayToString, selectedOptionPricing);
-        } else if (
-          eachOption[arrayToString] &&
-          e.target.textContent === "REMOVE"
-        ) {
+        } else if (eachOption[arrayToString] &&e.target.textContent === "REMOVE") {
           eachOption[arrayToString].click = false;
           deleteOptions(arrayToString);
         }
