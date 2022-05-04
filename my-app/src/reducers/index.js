@@ -751,6 +751,7 @@ const carData = () => {
                 standard_wheel_one: {
                   wheelName: "19 5-arm design wheels",
                   img: require("../img/PremiumPlus/Q450e-tron/Wheels/Standard/19 5-arm design wheels.png"),
+                  price:'Standard'
                   //Need standard_one two, etc or premium key value pair
                 },
               },
@@ -758,6 +759,7 @@ const carData = () => {
                 premium_wheel_one: {
                   wheelName: '20" 5-Y-spoke design, graphite gray wheels',
                   img: require("../img/PremiumPlus/Q450e-tron/Wheels/Premium/20 5-Y-spoke design, graphite gray wheels.png"),
+                  price:800
                   //Need standard_one two, etc or premium key value pair
                 },
               },
