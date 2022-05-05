@@ -80,6 +80,8 @@ const ExteriorSection = ({
   );
 };
 
+
+
 const mapStateToProps = (state) => {
   console.log(state.userSelection.wheelName);
   console.log(state.userSelection)
