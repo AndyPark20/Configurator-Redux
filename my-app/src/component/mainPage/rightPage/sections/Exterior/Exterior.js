@@ -81,6 +81,8 @@ const ExteriorSection = ({
 };
 
 const mapStateToProps = (state) => {
+  console.log(state.userSelection.wheelName);
+  console.log(state.userSelection)
   return {
     data: state.carData,
     trim: state.userSelection.trim,
