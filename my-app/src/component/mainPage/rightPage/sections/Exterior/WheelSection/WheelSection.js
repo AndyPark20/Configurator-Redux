@@ -30,7 +30,6 @@ const WheelSection = ({
   const renderWheelList = () => {
     //function to check if user selected premium wheel two
     const checksLineWheel = (value) => {
-      console.log('value',value)
       if (Object.keys(value).toString() === "premium_wheel_two") {
         return "Black with Rock Gray stitching S-Line®";
       }
@@ -56,6 +55,7 @@ const WheelSection = ({
             )
           }
         >
+          {console.log('values',value)}
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
                 <img
