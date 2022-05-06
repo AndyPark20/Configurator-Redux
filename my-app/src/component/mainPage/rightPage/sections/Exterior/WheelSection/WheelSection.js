@@ -29,8 +29,8 @@ const WheelSection = ({
 
   const renderWheelList = () => {
     //function to check if user selected premium wheel two
-    const checksLineWheel = (value,e) => {
-      console.log('checksLineWheel',e.target.alt)
+    const checksLineWheel = (value) => {
+
       if (Object.keys(value).toString() === "premium_wheel_two") {
         return "Black with Rock Gray stitching S-Line®";
       }
@@ -48,7 +48,7 @@ const WheelSection = ({
               model,
               extColor,
               Object.keys(value).toString(),
-              (intColor = checksLineWheel(value,e)),
+              (intColor = checksLineWheel(value)),
               sectionView,
               carData[trim][model].spec.optionsPackages,
               null,
