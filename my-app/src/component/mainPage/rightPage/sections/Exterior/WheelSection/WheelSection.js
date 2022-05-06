@@ -29,7 +29,8 @@ const WheelSection = ({
 
   const renderWheelList = () => {
     //function to check if user selected premium wheel two
-    const checksLineWheel = (value) => {
+    const checksLineWheel = (value,e) => {
+      console.log('checksLineWheel',e.target.alt)
       if (Object.keys(value).toString() === "premium_wheel_two") {
         return "Black with Rock Gray stitching S-Line®";
       }
@@ -41,13 +42,13 @@ const WheelSection = ({
         <span
           key={index}
           className="wheel-picture-spacing"
-          onClick={() =>
+          onClick={(e) =>
             userSelectedTrim(
               trim,
               model,
               extColor,
               Object.keys(value).toString(),
-              (intColor = checksLineWheel(value)),
+              (intColor = checksLineWheel(value,e)),
               sectionView,
               carData[trim][model].spec.optionsPackages,
               null,
@@ -55,7 +56,6 @@ const WheelSection = ({
             )
           }
         >
-          {console.log('values',value)}
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
                 <img
