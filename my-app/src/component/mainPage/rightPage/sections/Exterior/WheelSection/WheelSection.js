@@ -27,6 +27,11 @@ const WheelSection = ({
   //For Wheel Selection:
   const wheelList = carData[trim][model].spec.wheels.wheelImage;
 
+  //Function to populate wheel name when user clicks wheel choices
+  const renderWheelName =()=>{
+
+  }
+
   const renderWheelList = () => {
     //function to check if user selected premium wheel two
     const checksLineWheel = (value) => {
