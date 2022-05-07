@@ -42,30 +42,28 @@ const WheelSection = ({
         <span
           key={index}
           className="wheel-picture-spacing"
-          onClick={
-            ((e) =>
-              userSelectedTrim(
-                trim,
-                model,
-                extColor,
-                Object.keys(value).toString(),
-                (intColor = checksLineWheel(value)),
-                sectionView,
-                carData[trim][model].spec.optionsPackages,
-                null,
-                currentSelection.price
-              ),
-            console.log('wheel selection',Object.keys(value).toString()))
+          onClick={(e) =>
+            userSelectedTrim(
+              trim,
+              model,
+              extColor,
+              Object.keys(value).toString(),
+              (intColor = checksLineWheel(value)),
+              sectionView,
+              carData[trim][model].spec.optionsPackages,
+              null,
+              currentSelection.price
+            )
           }
         >
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
-              <img
-                key={imgIndex}
-                src={imgSrc.img}
-                alt={imgSrc.wheelName}
-                className="wheel-image-size"
-              />
+                <img
+                  key={imgIndex}
+                  src={imgSrc.img}
+                  alt={imgSrc.wheelName}
+                  className="wheel-image-size"
+                />
             );
           })}
         </span>
