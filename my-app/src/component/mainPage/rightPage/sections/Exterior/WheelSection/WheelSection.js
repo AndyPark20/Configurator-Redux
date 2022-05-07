@@ -28,8 +28,14 @@ const WheelSection = ({
   const wheelList = carData[trim][model].spec.wheels.wheelImage;
 
   //Function to populate wheel name when user clicks wheel choices
-  const renderWheelName =()=>{
+  const renderWheelName =(wheelType)=>{
+    console.log(carData[trim][model].spec.wheels.wheelImage);
+    const wheelNameArray = carData[trim][model].spec.wheels.wheelImage;
+    const wheelName=wheelNameArray.forEach((values,index)=>{
 
+    })
+    console.log('final',wheelName)
+    return wheelType
   }
 
   const renderWheelList = () => {
@@ -52,7 +58,7 @@ const WheelSection = ({
               trim,
               model,
               extColor,
-              Object.keys(value).toString(),
+              renderWheelName(Object.keys(value).toString()),
               (intColor = checksLineWheel(value)),
               sectionView,
               carData[trim][model].spec.optionsPackages,
