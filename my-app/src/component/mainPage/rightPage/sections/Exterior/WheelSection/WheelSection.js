@@ -31,8 +31,8 @@ const WheelSection = ({
   const renderWheelName =(wheelType)=>{
 
     const wheelNameArray = carData[trim][model].spec.wheels.wheelImage;
-    const wheelName=wheelNameArray.forEach((values,index)=>{
-      console.log(Object.keys(values));
+    const wheelName=wheelNameArray.map((values,index)=>{
+
       if(Object.keys(values) === wheelSelection){
         console.log('values',values)
       }
