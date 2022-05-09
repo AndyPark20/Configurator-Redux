@@ -33,7 +33,7 @@ const WheelSection = ({
     const wheelNameArray = carData[trim][model].spec.wheels.wheelImage;
     const wheelName=wheelNameArray.map((values,index)=>{
         Object.keys(values).forEach((wheels,index)=>{
-
+          console.log('values',carData[trim][model].spec.wheels.wheelImage)
         })
 
     })
