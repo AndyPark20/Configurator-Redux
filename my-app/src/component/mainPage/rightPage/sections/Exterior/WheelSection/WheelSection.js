@@ -69,14 +69,13 @@ const WheelSection = ({
         >
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
-              <span>
                 <img
                   key={imgIndex}
                   src={imgSrc.img}
                   alt={imgSrc.wheelName}
                   className="wheel-image-size"
                 />
-                </span>
+
             );
           })}
         </span>
