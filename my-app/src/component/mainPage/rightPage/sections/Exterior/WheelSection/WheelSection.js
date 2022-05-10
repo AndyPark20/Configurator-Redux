@@ -32,12 +32,9 @@ const WheelSection = ({
 
     const wheelNameArray = carData[trim][model].spec.wheels.wheelImage;
     const wheelName=wheelNameArray.map((values,index)=>{
-        Object.keys(values).forEach((wheels,index)=>{
-          console.log('values',carData[trim][model].spec.wheels.wheelImage)
-        })
+
 
     })
-    console.log('final',wheelName)
     return wheelType
   }
 
@@ -90,6 +87,7 @@ const WheelSection = ({
 };
 
 const mapStateToProps=(state)=>{
+  console.log("wheelSelection", state.userSelection.wheelSelection);
   return {
     carData: state.carData,
     userSelection: state.userSelection,
