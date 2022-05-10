@@ -69,12 +69,14 @@ const WheelSection = ({
         >
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
+              <span>
                 <img
                   key={imgIndex}
                   src={imgSrc.img}
                   alt={imgSrc.wheelName}
                   className="wheel-image-size"
                 />
+                </span>
             );
           })}
         </span>
@@ -87,7 +89,7 @@ const WheelSection = ({
 };
 
 const mapStateToProps=(state)=>{
-  console.log("wheelSelection", state.userSelection.wheelSelection);
+
   return {
     carData: state.carData,
     userSelection: state.userSelection,
