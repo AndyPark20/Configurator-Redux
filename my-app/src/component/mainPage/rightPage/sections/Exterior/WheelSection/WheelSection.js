@@ -30,12 +30,7 @@ const WheelSection = ({
   //Function to populate wheel name when user clicks wheel choices
   const renderWheelName =(wheelType)=>{
 
-    const wheelNameArray = carData[trim][model].spec.wheels.wheelImage;
-    const wheelName=wheelNameArray.map((values,index)=>{
 
-
-    })
-    return wheelType
   }
 
   const renderWheelList = () => {
