@@ -66,7 +66,7 @@ const WheelSection = ({
                     trim,
                     model,
                     extColor,
-                    renderWheelName(imgSrc.wheelName),
+                    renderWheelName(Object.keys(value).toString()),
                     (intColor = checksLineWheel(value)),
                     sectionView,
                     carData[trim][model].spec.optionsPackages,
