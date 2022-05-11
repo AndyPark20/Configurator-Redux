@@ -30,7 +30,12 @@ const WheelSection = ({
   //Function to populate wheel name when user clicks wheel choices
   const renderWheelName =(wheelType)=>{
 
+    const wheelNameArray = carData[trim][model].spec.wheels.wheelImage;
+    const wheelName=wheelNameArray.map((values,index)=>{
 
+
+    })
+    return wheelType
   }
 
   const renderWheelList = () => {
@@ -48,29 +53,28 @@ const WheelSection = ({
         <span
           key={index}
           className="wheel-picture-spacing"
-          onClick={(e) =>
-            userSelectedTrim(
-              trim,
-              model,
-              extColor,
-              renderWheelName(Object.keys(value).toString()),
-              (intColor = checksLineWheel(value)),
-              sectionView,
-              carData[trim][model].spec.optionsPackages,
-              null,
-              currentSelection.price
-            )
-          }
         >
           {Object.values(value).map((imgSrc, imgIndex) => {
             return (
-                <img
-                  key={imgIndex}
-                  src={imgSrc.img}
-                  alt={imgSrc.wheelName}
-                  className="wheel-image-size"
-                />
-
+              <img
+                key={imgIndex}
+                src={imgSrc.img}
+                alt={imgSrc.wheelName}
+                className="wheel-image-size"
+                onClick={(e) =>
+                  userSelectedTrim(
+                    trim,
+                    model,
+                    extColor,
+                    renderWheelName(imgSrc.wheelName),
+                    (intColor = checksLineWheel(value)),
+                    sectionView,
+                    carData[trim][model].spec.optionsPackages,
+                    null,
+                    currentSelection.price
+                  )
+                }
+              />
             );
           })}
         </span>
