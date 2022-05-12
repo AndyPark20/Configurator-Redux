@@ -870,6 +870,7 @@ const userSelectedValues = (userValue = userSelectionDataObject, action) => {
             click: action.payload.selectedOptionCheck,
           },
         ],
+        wheelName:action.payload.wheelTitle
       };
       return updatedSelection;
 
