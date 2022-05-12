@@ -72,7 +72,8 @@ const WheelSection = ({
                     sectionView,
                     carData[trim][model].spec.optionsPackages,
                     null,
-                    currentSelection.price
+                    currentSelection.price,
+                    imgSrc.wheelName
                   )
                 }
               />
