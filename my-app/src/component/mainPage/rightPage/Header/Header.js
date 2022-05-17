@@ -7,7 +7,7 @@ import { userSelectedTrim } from "../../../../Actions";
 
 
 
-const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView,userTrimSelectedOptions, price})=>{
+const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wheelSelection,extColor,viewPosition,intColor,sectionView,userTrimSelectedOptions, price, userSelectedWheelName})=>{
 
   return (
     <div className="sections">
@@ -48,7 +48,7 @@ const mapStateToProps =(state)=>{
     intColor: state.userSelection.intcolor,
     sectionView: state.userSelection.sectionView,
     price: state.userSelection.price,
-
+    userSelectedWheelName: state.userSelection.wheelName,
   };
 }
 
