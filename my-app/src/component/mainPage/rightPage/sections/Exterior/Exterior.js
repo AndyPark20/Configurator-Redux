@@ -57,6 +57,8 @@ const ExteriorSection = ({
     return renderColor;
   };
 
+
+
   return (
     <div className="">
       <div>

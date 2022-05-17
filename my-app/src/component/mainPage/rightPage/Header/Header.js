@@ -16,7 +16,7 @@ const RightSideHeader=({userSelectedTrim, carData,currentSelection,trim,model,wh
       </Link>
       <Link to="/Exterior">
         <h4
-          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages,null,currentSelection.price)}
+          onClick={() => userSelectedTrim(trim, model, extColor,wheelSelection,intColor,true, carData[trim][model].spec.optionsPackages,null,currentSelection.price, userSelectedWheelName)}
         >
           EXTERIOR
         </h4>
