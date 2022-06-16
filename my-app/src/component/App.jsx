@@ -9,20 +9,26 @@ import MainLeft from '../Component/MainPage/Leftpage/Leftpage';
 import {MainRight} from '../Component/MainPage/RightPage/Rightpage';
 import Footer from './Footer/Footer';
 
+export const Context = React.createContext();
 
-export const App =({data,trim,model,extColor,wheelSelection,intcolor})=>{
+
+export const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
   return (
-    <div className="container">
-      <div className="row">
-        <div className="page-split">
-          <MainLeft />
-          <MainRight />
-        </div>
-        <div className="footer">
-          <Footer/>
+    <Context.Provider
+      value={{ data, trim, model, extColor, wheelSelection, intColor }}
+    >
+      <div className="container">
+        <div className="row">
+          <div className="page-split">
+            <MainLeft />
+            <MainRight />
+          </div>
+          <div className="footer">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
+    </Context.Provider>
   );
 };
 
