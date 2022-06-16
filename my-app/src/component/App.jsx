@@ -33,6 +33,7 @@ export const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
 };
 
 const mapStateToProps=(state)=>{
+  console.log('hello')
   return {
     data: state.carData,
     trim: state.userSelection.trim,
