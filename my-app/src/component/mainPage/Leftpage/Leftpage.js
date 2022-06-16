@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 //Connect functionality from React-Redux;
 import { connect } from "react-redux";
 //CSS Styling
@@ -126,6 +126,7 @@ const MainLeft = ({
 };
 
 const mapStateToProps = (state) => {
+
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
