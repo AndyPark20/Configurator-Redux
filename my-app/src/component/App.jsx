@@ -10,7 +10,7 @@ import {MainRight} from '../Component/MainPage/RightPage/Rightpage';
 import Footer from './Footer/Footer';
 
 
-export const App =()=>{
+export const App =({data,trim,model,extColor,wheelSelection,intcolor})=>{
   return (
     <div className="container">
       <div className="row">
@@ -27,7 +27,14 @@ export const App =()=>{
 };
 
 const mapStateToProps=(state)=>{
-
+  return {
+    data: state.carData,
+    trim: state.userSelection.trim,
+    model: state.userSelection.model,
+    extColor: state.userSelection.extColor,
+    wheelSelection: state.userSelection.wheelSelection,
+    intColor: state.userSelection.intcolor,
+  };
 }
 
 export default connect(mapStateToProps)(App);
