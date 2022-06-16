@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 //CSS Style
 import './App.css';
@@ -24,3 +25,9 @@ export const App =()=>{
     </div>
   );
 };
+
+const mapStateToProps=(state)=>{
+
+}
+
+export default connect(mapStateToProps)(App);
