@@ -9,6 +9,8 @@ import { Gallery } from "./Gallery/Gallery.js";
 //import Action
 import { userSelectedTrim } from "../../../Actions/";
 
+//Import Context
+import {Context} from '../../App';
 
 
 const MainLeft = ({
@@ -26,6 +28,14 @@ const MainLeft = ({
 }) => {
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
+
+  const mainLeftContext = React.useContext(Context);
+
+
+  //Test to see if context is working
+  const testContext = ()=>{
+    console.log('mainleft context', mainLeftContext);
+  }
 
   const toggleImageSection = () => {
     let exteriorPictures =
@@ -102,6 +112,7 @@ const MainLeft = ({
               <h3 className="msrp">${pricing()}</h3>
             </div>
           </div>
+          {console.log(testContext())}
           <Gallery
             carData={currentSelection}
             gallery={toggleImageSection()}
