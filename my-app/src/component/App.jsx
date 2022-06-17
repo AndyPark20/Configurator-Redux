@@ -32,6 +32,8 @@ export const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
   );
 };
 
+
+
 const mapStateToProps=(state)=>{
   console.log('hello')
   return {
@@ -43,5 +45,6 @@ const mapStateToProps=(state)=>{
     intColor: state.userSelection.intcolor,
   };
 }
+
 
 export default connect(mapStateToProps)(App);

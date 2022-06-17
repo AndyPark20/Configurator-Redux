@@ -126,7 +126,6 @@ const MainLeft = ({
 };
 
 const mapStateToProps = (state) => {
-
   return {
     carData: state.carData,
     currentSelection: state.userSelection,
