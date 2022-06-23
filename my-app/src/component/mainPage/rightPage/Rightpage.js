@@ -11,7 +11,8 @@ import Trim from "./Sections/Trim/Trim";
 import ExteriorSection from "./Sections/Exterior/Exterior";
 import InteriorSection from './Sections/Interior/Interior';
 import RightSideHeader  from "../RightPage/Header/Header.js";
-import  OptionsSection  from "./Sections/Options/Options";
+import OptionsSection  from "./Sections/Options/Options";
+import SummaryPage from "./SummaryPage/SummaryPage";
 
 export const MainRight = () => {
   return (
