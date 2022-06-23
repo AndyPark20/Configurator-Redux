@@ -12,7 +12,7 @@ import Footer from './Footer/Footer';
 export const Context = React.createContext();
 
 
-export const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
+ const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
   return (
     <Context.Provider
       value={{ data, trim, model, extColor, wheelSelection, intColor }}
