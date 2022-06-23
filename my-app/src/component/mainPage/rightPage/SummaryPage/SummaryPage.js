@@ -3,17 +3,28 @@ import {connect} from 'react-redux';
 
 
 
- const SummaryPage =()=>{
+ const SummaryPage =({userSelection})=>{
+
+
+  const test =()=>{
+    return(
+      <div>
+        <h3>{userSelection.model}</h3>
+      </div>
+    )
+  }
+
 return(
   <div>
-    <h1>Hello</h1>
+    <h1>{test()}</h1>
   </div>
 )
 }
 
 const mapStateToProps =(state)=>{
+
   return{
-    state
+    userSelection: state.userSelection
   }
 }
 
