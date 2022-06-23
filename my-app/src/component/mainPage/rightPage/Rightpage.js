@@ -24,6 +24,7 @@ export const MainRight = () => {
           <Route path="/Exterior" element={<ExteriorSection />} />
           <Route path="/Interior" element={<InteriorSection />} />
           <Route path="/Options" element={<OptionsSection />} />
+          <Route path="/Summary" element={<SummaryPage />} />
         </Routes>
       </BrowserRouter>
     </div>
