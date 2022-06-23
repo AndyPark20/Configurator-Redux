@@ -35,7 +35,6 @@ export const Context = React.createContext();
 
 
 const mapStateToProps=(state)=>{
-  console.log('hello')
   return {
     data: state.carData,
     trim: state.userSelection.trim,
