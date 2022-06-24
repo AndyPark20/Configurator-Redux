@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import "../SummaryPage/SummaryPage.css"
 
 
  const SummaryPage =({userSelection})=>{
@@ -8,15 +9,16 @@ import {connect} from 'react-redux';
 
   const test =()=>{
     console.log('selection',userSelection)
-    return(
+    return (
       <div>
         <h3>{userSelection.model}</h3>
         <div>
-          <p>{userSelection.extColor}</p>
-          <p>{userSelection.intcolor}</p>
+          <p>Color:</p>
+          <p className="summary-color">{userSelection.extColor}</p>
+          <p className="summary-color">{userSelection.intcolor}</p>
         </div>
       </div>
-    )
+    );
   }
 
 return(
