@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 
 
   const test =()=>{
+    console.log('selection',userSelection)
     return(
       <div>
         <h3>{userSelection.model}</h3>
