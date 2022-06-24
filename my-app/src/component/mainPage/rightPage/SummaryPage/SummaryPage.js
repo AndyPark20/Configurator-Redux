@@ -6,9 +6,18 @@ import "../SummaryPage/SummaryPage.css"
 
  const SummaryPage =({userSelection})=>{
 
+  const summaryOptions =()=>{
+    if(userSelection.selectedOptions){
+ const renderSummaryOptions = userSelection.selectedOptions.map((values,index)=>>{
 
-  const test =()=>{
-    console.log('selection',userSelection)
+ })
+    }
+
+  }
+
+
+  const summary =()=>{
+    console.log(userSelection)
     return (
       <div>
         <h3>{userSelection.model}</h3>
@@ -20,7 +29,7 @@ import "../SummaryPage/SummaryPage.css"
         <div>
           <h3>Options:</h3>
           <div>
-            <p className="summary-options"></p>
+            {/* <p className="summary-options">{userSelection}</p> */}
           </div>
         </div>
       </div>
@@ -29,7 +38,7 @@ import "../SummaryPage/SummaryPage.css"
 
 return(
   <div>
-    <h1>{test()}</h1>
+    <h1>{summary()}</h1>
   </div>
 )
 }
