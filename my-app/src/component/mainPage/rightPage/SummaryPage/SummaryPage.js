@@ -11,6 +11,10 @@ import {connect} from 'react-redux';
     return(
       <div>
         <h3>{userSelection.model}</h3>
+        <div>
+          <p>{userSelection.extColor}</p>
+          <p>{userSelection.intcolor}</p>
+        </div>
       </div>
     )
   }
