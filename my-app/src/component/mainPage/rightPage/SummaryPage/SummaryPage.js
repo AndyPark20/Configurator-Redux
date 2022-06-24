@@ -17,6 +17,12 @@ import "../SummaryPage/SummaryPage.css"
           <p className="summary-color">{userSelection.extColor}</p>
           <p className="summary-color">{userSelection.intcolor}</p>
         </div>
+        <div>
+          <h3>Options:</h3>
+          <div>
+            <p className="summary-options"></p>
+          </div>
+        </div>
       </div>
     );
   }
