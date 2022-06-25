@@ -6,19 +6,15 @@ import "../SummaryPage/SummaryPage.css";
 const SummaryPage = ({ userSelection }) => {
   const summaryOptions = () => {
     if (userSelection.selectedOptions) {
-      const renderSummaryOptions = userSelection.selectedOptions.map(
-        (values, index) => {
-          return values.option.forEach((value, index) => {
-            return (
-              <div>
-                <p>{Object.keys(value)}</p>
-              </div>
-            );
-          });
-
-        }
-      );
-      return renderSummaryOptions;
+      console.log(userSelection.selectedOptions.options)
+      // const renderSummaryOptions = userSelection.selectedOptions.options.map((values,index)=>{
+      //   return(
+      //     <div>
+      //       {console.log('values',values)}
+      //     </div>
+      //   )
+      // })
+      // return renderSummaryOptions;
     }
   };
 
