@@ -11,7 +11,8 @@ const SummaryPage = ({ userSelection }) => {
           return values.option.forEach((value, index) => {
             return (
               <div>
-                <p>{console.log('values',value)}</p>
+                {console.log("object", value)}
+                <p>{Object.keys(value)}</p>
               </div>
             );
           });
