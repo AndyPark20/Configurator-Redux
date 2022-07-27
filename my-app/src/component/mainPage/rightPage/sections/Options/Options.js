@@ -81,7 +81,7 @@ const OptionsSection = ({
           <div className="options-detail">
             <h3>{Object.keys(values)}</h3>
             <h4>${(values[Object.keys(values)].price)}</h4>
-            <span>{renderOptionDescription(Object.keys(values), values)}</span>
+            {/* <span>{renderOptionDescription(Object.keys(values), values)}</span> */}
             <div className="add-button">
               <button
                 type="button"
