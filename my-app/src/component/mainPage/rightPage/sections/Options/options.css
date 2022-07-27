@@ -28,3 +28,7 @@
 .btn-custom{
   width:80%;
 }
+
+.learn-more-container{
+  display:flex;
+}
