@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-export const Test =()=>{
+export const OptionsDetail =()=>{
   return(
     <div>
       Hello
@@ -15,4 +15,4 @@ const thisMapStateToProps =(state)=>{
   }
 }
 
-export default connect(thisMapStateToProps)(Test)
+export default connect(thisMapStateToProps)(OptionsDetail)

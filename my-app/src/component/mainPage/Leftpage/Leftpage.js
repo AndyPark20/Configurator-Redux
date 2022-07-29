@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import "./Leftpage.css";
 //Import Components
 import { Gallery } from "./Gallery/Gallery.js";
+import OptionsModal from "../../OptionsModal/OptionsModal";
 
 //import Action
 import { userSelectedTrim } from "../../../Actions/";
@@ -119,6 +120,7 @@ const MainLeft = ({
             sectionView={sectionView}
           />
         </div>
+        <OptionsModal></OptionsModal>
         {specRender()}
       </div>
     </div>
