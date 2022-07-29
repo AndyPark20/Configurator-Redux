@@ -8,3 +8,11 @@ export const Test =()=>{
     </div>
   )
 }
+
+const thisMapStateToProps =(state)=>{
+  return{
+
+  }
+}
+
+export default connect(thisMapStateToProps)(Test)
