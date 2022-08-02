@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 
 export const OptionsDetail =()=>{
   return(
-    <div>
-      Hello
+    <div className="option-detail-modal">
+
     </div>
   )
 }
