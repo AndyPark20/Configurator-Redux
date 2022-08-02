@@ -6,14 +6,16 @@ import './OptionsModal.css';
 export const OptionsDetail =({userSelection})=>{
 
   const optionList =()=>{
-    const renderOptionList = userSelection.selectedOptions.map((value,index)=>{
-      return(
-        <div>
-          {console.log('values',value)}
-        </div>
-      )
-    })
-    renderOptionList();
+      if(userSelection){
+        const renderOptionList = userSelection.selectedOptions.map((value,index)=>{
+          return(
+            <div>
+              {console.log('values',value)}
+            </div>
+          )
+        })
+        renderOptionList();
+      };
   }
 
   return(
