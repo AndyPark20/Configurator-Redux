@@ -4,9 +4,21 @@ import {connect} from 'react-redux';
 import './OptionsModal.css';
 
 export const OptionsDetail =({userSelection})=>{
+
+  const optionList =()=>{
+    const renderOptionList = userSelection.selectedOptions.map((value,index)=>{
+      return(
+        <div>
+          {console.log('values',value)}
+        </div>
+      )
+    })
+    renderOptionList();
+  }
+
   return(
     <div className="option-detail-modal">
-      {console.log('from const', userSelection)}
+      {optionList()}
     </div>
   )
 }
