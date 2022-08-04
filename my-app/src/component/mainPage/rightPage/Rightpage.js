@@ -14,7 +14,7 @@ import RightSideHeader  from "../RightPage/Header/Header.js";
 import OptionsSection  from "./Sections/Options/Options";
 import SummaryPage from "./SummaryPage/SummaryPage";
 
-export const MainRight = ({updateModal}) => {
+export const MainRight = ({updateModal ,updateSelectedOption}) => {
 
   return (
     <div className="audi-container-right right-side-background">
@@ -24,7 +24,7 @@ export const MainRight = ({updateModal}) => {
             <Route path="/" element={<Trim />} />
           <Route path="/Exterior" element={<ExteriorSection />} />
           <Route path="/Interior" element={<InteriorSection />} />
-          <Route path="/Options" element={<OptionsSection updateModal={updateModal}/>}/>
+          <Route path="/Options" element={<OptionsSection updateModal={updateModal} updateSelectedOption={updateSelectedOption}/>}/>
           <Route path="/Summary" element={<SummaryPage />} />
         </Routes>
       </BrowserRouter>
