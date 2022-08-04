@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import './OptionsModal.css';
 
-export const OptionsDetail =({userSelection})=>{
+export const OptionsDetail =({userSelection, modal})=>{
 
   const optionList =()=>{
       // if(userSelection){
@@ -16,7 +16,7 @@ export const OptionsDetail =({userSelection})=>{
       //   })
       //   renderOptionList();
       // };
-      console.log('userSelection', userSelection.selectedOptions)
+      console.log('userSelection', modal)
   }
 
   return(

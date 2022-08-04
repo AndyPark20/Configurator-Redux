@@ -26,6 +26,7 @@ const MainLeft = ({
   sectionView,
   intColor,
   price,
+  modal
 }) => {
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
@@ -120,7 +121,7 @@ const MainLeft = ({
             sectionView={sectionView}
           />
         </div>
-        <OptionsModal></OptionsModal>
+        <OptionsModal modal={modal}></OptionsModal>
         {specRender()}
       </div>
     </div>

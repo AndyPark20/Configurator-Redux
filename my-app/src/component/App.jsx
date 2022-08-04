@@ -16,15 +16,11 @@ export const Context = React.createContext();
 
   const [modal,updateModal] =useState(false);
 
-  useEffect(()=>{
-    console.log('modal useEffect', modal)
-  })
-
   return (
     <div className="container">
       <div className="row">
         <div className="page-split">
-          <MainLeft />
+          <MainLeft modal={modal}/>
           <MainRight updateModal={updateModal} />
         </div>
         <div className="footer">
