@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import {connect} from 'react-redux';
 
 //CSS Style
@@ -13,19 +13,25 @@ export const Context = React.createContext();
 
 
  const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
+
+  const [modal,updateModal] =useState(false);
+
+  useEffect(()=>{
+    console.log('modal useEffect', modal)
+  })
+
   return (
-      <div className="container">
-        <div className="row">
-          <div className="page-split">
-            <MainLeft />
-            <MainRight />
-          </div>
-          <div className="footer">
-            <Footer />
-          </div>
+    <div className="container">
+      <div className="row">
+        <div className="page-split">
+          <MainLeft />
+          <MainRight updateModal={updateModal} />
+        </div>
+        <div className="footer">
+          <Footer />
         </div>
       </div>
-
+    </div>
   );
 };
 

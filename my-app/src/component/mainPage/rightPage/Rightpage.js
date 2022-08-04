@@ -14,13 +14,7 @@ import RightSideHeader  from "../RightPage/Header/Header.js";
 import OptionsSection  from "./Sections/Options/Options";
 import SummaryPage from "./SummaryPage/SummaryPage";
 
-export const MainRight = () => {
-
-  const [modal,updateModal] = useState(false);
-
-    useEffect(()=>{
-      console.log('modal from right page', modal)
-    });
+export const MainRight = ({updateModal}) => {
 
   return (
     <div className="audi-container-right right-side-background">
