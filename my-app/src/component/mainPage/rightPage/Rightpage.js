@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 //CSS style
 import "./Rightpage.css";
@@ -17,6 +17,10 @@ import SummaryPage from "./SummaryPage/SummaryPage";
 export const MainRight = () => {
 
   const [modal,updateModal] = useState(false);
+
+    useEffect(()=>{
+      console.log('modal from right page', modal)
+    });
 
   return (
     <div className="audi-container-right right-side-background">
