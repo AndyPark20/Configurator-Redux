@@ -3,11 +3,12 @@ import {connect} from 'react-redux';
 
 import './OptionsModal.css';
 
-export const OptionsDetail =({userSelection, modal})=>{
+export const OptionsDetail =({userSelection, modal,selectedOption})=>{
 
   const optionList =()=>{
     if(modal){
  console.log("userSelection", userSelection.selectedOptions);
+ console.log('selectedOption', selectedOption)
     }
       // if(userSelection){
       //   const renderOptionList = userSelection.selectedOptions.map((value,index)=>{
