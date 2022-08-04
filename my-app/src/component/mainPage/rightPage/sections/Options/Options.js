@@ -65,6 +65,11 @@ carData,
     });
   };
 
+  const clickEventPassData =()=>{
+
+    updateModal(true);
+  }
+
   //Options in an array of objects, need to map thru the objects to get the property
   //values are from mapping OptionList.
   //Object.keys(values) is the key name of the option (Convenience Package, trailer, etc..)
@@ -83,7 +88,7 @@ carData,
           <div className="options-detail">
             <div className="learn-more-container">
               <h3>{Object.keys(values)}</h3>
-              <button type="click" className="btn btn-dark" onClick={()=>updateModal(true)}>LEARN MORE</button>
+              <button type="click" className="btn btn-dark" onClick={()=>clickEventPassData()}>LEARN MORE</button>
             </div>
             <h4>${values[Object.keys(values)].price}</h4>
             {/* <span>{renderOptionDescription(Object.keys(values), values)}</span> */}
