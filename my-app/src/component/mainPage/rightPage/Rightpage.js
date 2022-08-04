@@ -30,7 +30,7 @@ export const MainRight = () => {
             <Route path="/" element={<Trim />} />
           <Route path="/Exterior" element={<ExteriorSection />} />
           <Route path="/Interior" element={<InteriorSection />} />
-          <Route path="/Options" element={<OptionsSection />} updateModal={updateModal}/>
+          <Route path="/Options" element={<OptionsSection updateModal={updateModal}/>}/>
           <Route path="/Summary" element={<SummaryPage />} />
         </Routes>
       </BrowserRouter>

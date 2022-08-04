@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./options.css";
 import { connect } from "react-redux";
 
@@ -11,7 +11,7 @@ import {
 } from "../../../../../Actions";
 
 const OptionsSection = ({
-  carData,
+carData,
   currentSelection,
   trim,
   model,
@@ -26,6 +26,11 @@ const OptionsSection = ({
   deleteOptions,
   updateModal
 }) => {
+
+  useEffect(()=>{
+    console.log('here',updateModal)
+  })
+
   //Options checklist description are in an array, use the map method to render the list
   const renderOptionDescription = (keys, values) => {
     const optionDescriptionArray = values[keys].description.map(
@@ -82,7 +87,7 @@ const OptionsSection = ({
           <div className="options-detail">
             <div className="learn-more-container">
               <h3>{Object.keys(values)}</h3>
-              <button type="click" className="btn btn-dark" onClick={()=>updateModal(true)}>LEARN MORE</button>
+              <button type="click" className="btn btn-dark" onClick={()=>console.log('from learn more', updateModal)}>LEARN MORE</button>
             </div>
             <h4>${values[Object.keys(values)].price}</h4>
             {/* <span>{renderOptionDescription(Object.keys(values), values)}</span> */}
