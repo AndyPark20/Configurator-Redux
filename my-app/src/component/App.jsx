@@ -14,9 +14,6 @@ export const Context = React.createContext();
 
  const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
   return (
-    <Context.Provider
-      value={{ data, trim, model, extColor, wheelSelection, intColor }}
-    >
       <div className="container">
         <div className="row">
           <div className="page-split">
@@ -28,7 +25,7 @@ export const Context = React.createContext();
           </div>
         </div>
       </div>
-    </Context.Provider>
+
   );
 };
 
