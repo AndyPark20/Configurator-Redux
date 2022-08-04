@@ -15,13 +15,14 @@ export const Context = React.createContext();
  const App =({data,trim,model,extColor,wheelSelection,intColor})=>{
 
   const [modal,updateModal] =useState(false);
+  const [selectedOption, updateSelectedOption] = useState(null);
 
   return (
     <div className="container">
       <div className="row">
         <div className="page-split">
-          <MainLeft modal={modal}/>
-          <MainRight updateModal={updateModal} />
+          <MainLeft modal={modal} selectedOption={selectedOption}/>
+          <MainRight updateModal={updateModal} updateSelectedOption={updateSelectedOption} />
         </div>
         <div className="footer">
           <Footer />
