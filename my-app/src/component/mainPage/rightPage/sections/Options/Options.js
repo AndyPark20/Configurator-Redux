@@ -67,7 +67,6 @@ carData,
   };
 
   const clickEventPassData =(index)=>{
-    console.log(index)
     updateSelectedOption(index)
     updateModal(true);
   }

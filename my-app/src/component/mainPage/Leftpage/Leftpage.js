@@ -34,10 +34,7 @@ const MainLeft = ({
 
   const mainLeftContext = React.useContext(Context);
 
-  //Test to see if context is working
-  const testContext = () => {
-    console.log("mainleft context", mainLeftContext);
-  };
+
 
   const toggleImageSection = () => {
     let exteriorPictures =
@@ -114,7 +111,6 @@ const MainLeft = ({
               <h3 className="msrp">${pricing()}</h3>
             </div>
           </div>
-          {console.log(testContext())}
           <Gallery
             carData={currentSelection}
             gallery={toggleImageSection()}
