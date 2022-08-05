@@ -9,7 +9,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
     if (modal) {
       const renderOptionList = userSelection.selectedOptions.map(
         (values, innerIndex) => {
-          return <div>{console.log(values.option[])}</div>;
+          return <div>{console.log(values.option[selectedOption])}</div>;
         }
       );
       return renderOptionList;
