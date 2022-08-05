@@ -9,6 +9,9 @@ export const OptionsDetail =({userSelection, modal,selectedOption})=>{
     if(modal){
  console.log("userSelection", userSelection.selectedOptions);
  console.log('selectedOption', selectedOption)
+ const renderOptionList = userSelection.selectedOptions.map((values,index)=>{
+
+ })
     }
       // if(userSelection){
       //   const renderOptionList = userSelection.selectedOptions.map((value,index)=>{
