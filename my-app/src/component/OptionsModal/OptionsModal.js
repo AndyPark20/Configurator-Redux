@@ -16,7 +16,12 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
     }
   };
 
-  return <div className="option-detail-modal">{optionList()}</div>;
+  return <div className="option-detail-modal">
+    <div className="col">
+    {optionList()}
+    <div className="col"></div>
+    </div>
+    </div>;
 };
 
 const thisMapStateToProps = (state) => {
