@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import "./OptionsModal.css";
 
 export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
+
   const optionList = () => {
     if (modal) {
       const renderOptionList = userSelection.selectedOptions.map(
@@ -14,6 +15,9 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
               <div className="row">
                 <div className="col">
                   <h3>{Object.keys(values.option[selectedOption])[0]}</h3>
+                </div>
+                <div className="col">
+                  {console.log(values.option)}
                 </div>
               </div>
             </div>
