@@ -17,7 +17,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
                   <h3>{Object.keys(values.option[selectedOption])[0]}</h3>
                 </div>
                 <div className="col">
-                  {console.log(values.option)}
+                  {console.log(values.option[selectedOption])}
                 </div>
               </div>
             </div>
