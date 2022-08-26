@@ -6,6 +6,7 @@ import "./OptionsModal.css";
 
 export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitle}) => {
 
+  //Left of HERE (08/16/2022)
 
   const renderOptionDescription=()=>{
     const description = userSelection.selectedOptions.map((values,index)=>{
