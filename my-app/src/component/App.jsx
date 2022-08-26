@@ -16,14 +16,14 @@ export const Context = React.createContext();
 
   const [modal,updateModal] =useState(false);
   const [selectedOption, updateSelectedOption] = useState(null);
-  // const []
+  const [optionTitle, updateOptionTitle] =useState(null);
 
   return (
     <div className="container">
       <div className="row">
         <div className="page-split">
           <MainLeft modal={modal} selectedOption={selectedOption}/>
-          <MainRight updateModal={updateModal} updateSelectedOption={updateSelectedOption} />
+          <MainRight updateModal={updateModal} updateSelectedOption={updateSelectedOption} updateOptionTitle={updateOptionTitle}/>
         </div>
         <div className="footer">
           <Footer />

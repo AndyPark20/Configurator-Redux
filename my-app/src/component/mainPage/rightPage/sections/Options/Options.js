@@ -25,7 +25,8 @@ carData,
   removeOrAdd,
   deleteOptions,
   updateModal,
-  updateSelectedOption
+  updateSelectedOption,
+  updateOptionTitle
 }) => {
 
   //Options checklist description are in an array, use the map method to render the list
@@ -66,7 +67,8 @@ carData,
     });
   };
 
-  const clickEventPassData =(index)=>{
+  const clickEventPassData =(index, optionTitle)=>{
+    console.log('title', optionTitle[0])
     updateSelectedOption(index)
     updateModal(true);
   }
