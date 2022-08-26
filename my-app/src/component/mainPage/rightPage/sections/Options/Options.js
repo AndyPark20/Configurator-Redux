@@ -89,7 +89,7 @@ carData,
           <div className="options-detail">
             <div className="learn-more-container">
               <h3>{Object.keys(values)}</h3>
-              <button type="click" className="btn btn-dark" onClick={()=>clickEventPassData(index)}>LEARN MORE</button>
+              <button type="click" className="btn btn-dark" onClick={()=>clickEventPassData(index, Object.keys(values))}>LEARN MORE</button>
             </div>
             <h4>${values[Object.keys(values)].price}</h4>
             {/* <span>{renderOptionDescription(Object.keys(values), values)}</span> */}

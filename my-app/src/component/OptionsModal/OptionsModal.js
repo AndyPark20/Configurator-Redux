@@ -11,7 +11,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
     const description = userSelection.selectedOptions.map((values,index)=>{
       return(
         <div>
-          {console.log(Object.keys(values.option[selectedOption]))}
+          {console.log(values.option[selectedOption])}
         </div>
       )
     })
