@@ -6,6 +6,11 @@ import "./OptionsModal.css";
 
 export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
 
+
+  const renderOptionDescription=()=>{
+
+  }
+
   const optionList = () => {
     if (modal) {
       const renderOptionList = userSelection.selectedOptions.map(
