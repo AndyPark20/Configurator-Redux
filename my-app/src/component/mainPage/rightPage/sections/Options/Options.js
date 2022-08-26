@@ -68,9 +68,9 @@ carData,
   };
 
   const clickEventPassData =(index, optionTitle)=>{
-    console.log('title', optionTitle[0])
     updateSelectedOption(index)
     updateModal(true);
+    updateOptionTitle(optionTitle[0]);
   }
 
   //Options in an array of objects, need to map thru the objects to get the property

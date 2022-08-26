@@ -4,14 +4,14 @@ import { connect } from "react-redux";
 
 import "./OptionsModal.css";
 
-export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
+export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitle}) => {
 
 
   const renderOptionDescription=()=>{
     const description = userSelection.selectedOptions.map((values,index)=>{
       return(
         <div>
-          {console.log(values.option[selectedOption])}
+          {console.log(values.option[selectedOption][optionTitle].description)}
         </div>
       )
     })

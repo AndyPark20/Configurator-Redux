@@ -22,7 +22,7 @@ export const Context = React.createContext();
     <div className="container">
       <div className="row">
         <div className="page-split">
-          <MainLeft modal={modal} selectedOption={selectedOption}/>
+          <MainLeft modal={modal} selectedOption={selectedOption} optionTitle={optionTitle}/>
           <MainRight updateModal={updateModal} updateSelectedOption={updateSelectedOption} updateOptionTitle={updateOptionTitle}/>
         </div>
         <div className="footer">
