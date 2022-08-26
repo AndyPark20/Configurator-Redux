@@ -8,7 +8,14 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
 
 
   const renderOptionDescription=()=>{
-
+    const description = userSelection.selectedOptions.map((values,index)=>{
+      return(
+        <div>
+          {console.log(values)}
+        </div>
+      )
+    })
+    return description;
   }
 
   const optionList = () => {
@@ -22,7 +29,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption }) => {
                   <h3>{Object.keys(values.option[selectedOption])[0]}</h3>
                 </div>
                 <div className="col">
-                  {console.log(values.option[selectedOption])}
+                  {renderOptionDescription()}
                 </div>
               </div>
             </div>
