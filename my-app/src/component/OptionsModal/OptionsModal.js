@@ -46,6 +46,8 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
                 <div className="col">
                   <h6>Close</h6>
                 </div>
+              </div>
+              <div className="row">
                 <div className="col">{renderOptionDescription()}</div>
               </div>
             </div>
