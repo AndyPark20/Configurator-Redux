@@ -10,19 +10,23 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
 
   const renderOptionDescription=()=>{
     const description = userSelection.selectedOptions.map((values,index)=>{
-      return(
-        <div>
-          {values.option[selectedOption][optionTitle].description.map((values,index)=>{
-            return(
-              <div>
-                <ul>
-                  <li>{values}</li>
-                </ul>
-                </div>
-            )
-          })}
+      return (
+        <div className="modal-container">
+          <div>
+            {values.option[selectedOption][optionTitle].description.map(
+              (values, index) => {
+                return (
+                  <div>
+                    <ul>
+                      <li>{values}</li>
+                    </ul>
+                  </div>
+                );
+              }
+            )}
+          </div>
         </div>
-      )
+      );
     })
     return description;
   }
