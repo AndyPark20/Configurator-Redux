@@ -10,25 +10,19 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
 
   const renderOptionDescription=()=>{
     const description = userSelection.selectedOptions.map((values,index)=>{
-      return (
-        <div className="modal-container">
-          <div className="row">
-            <div className="col">
-              {values.option[selectedOption][optionTitle].description.map(
-                (values, index) => {
-                  return (
-                    <div>
-                      <ul>
-                        <li>{values}</li>
-                      </ul>
-                    </div>
-                  );
-                }
-              )}
-            </div>
-          </div>
+      return(
+        <div>
+          {values.option[selectedOption][optionTitle].description.map((values,index)=>{
+            return(
+              <div>
+                <ul>
+                  <li>{values}</li>
+                </ul>
+                </div>
+            )
+          })}
         </div>
-      );
+      )
     })
     return description;
   }
@@ -39,16 +33,16 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
         (values, innerIndex) => {
           return (
             <div className="options-modal-container">
-              <div className="row modal-styling">
+              <div className="row">
                 <div className="col">
                   <h3>{Object.keys(values.option[selectedOption])[0]}</h3>
                 </div>
                 <div className="col">
-                  <h6>Close</h6>
+                  {renderOptionDescription()}
                 </div>
-              </div>
-              <div className="row">
-                <div className="col">{renderOptionDescription()}</div>
+                 <div className="col">
+                  <h5>Close</h5>
+                </div>
               </div>
             </div>
           );
