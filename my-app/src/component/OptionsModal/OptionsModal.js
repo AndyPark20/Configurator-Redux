@@ -26,9 +26,6 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
                 }
               )}
             </div>
-            <div className="col">
-               <h6>Close</h6>
-            </div>
           </div>
         </div>
       );
@@ -42,13 +39,14 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
         (values, innerIndex) => {
           return (
             <div className="options-modal-container">
-              <div className="row">
+              <div className="row modal-styling">
                 <div className="col">
                   <h3>{Object.keys(values.option[selectedOption])[0]}</h3>
                 </div>
                 <div className="col">
-                  {renderOptionDescription()}
+                  <h6>Close</h6>
                 </div>
+                <div className="col">{renderOptionDescription()}</div>
               </div>
             </div>
           );

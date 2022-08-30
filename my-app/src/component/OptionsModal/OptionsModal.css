@@ -13,3 +13,9 @@
   width:35%;
   border:1px solid black;
 }
+
+.modal-styling{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+}
