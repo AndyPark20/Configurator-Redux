@@ -13,13 +13,11 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
       return(
         <div>
           {values.option[selectedOption][optionTitle].description.map((values,index)=>{
-            return(
+            return (
               <div>
-                <ul>
-                  <li>{values}</li>
-                </ul>
-                </div>
-            )
+                <p>{values}</p>
+              </div>
+            );
           })}
         </div>
       )
@@ -35,7 +33,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
             <div className="options-modal-container">
               <div className="row">
                 <div className="col">
-                  <h3>{Object.keys(values.option[selectedOption])[0]}</h3>
+                  <h2>{Object.keys(values.option[selectedOption])[0]}</h2>
                 </div>
                 <div className="col">
                   {renderOptionDescription()}
