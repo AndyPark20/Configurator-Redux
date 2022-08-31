@@ -39,7 +39,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
                   {renderOptionDescription()}
                 </div>
                  <div className="col">
-                  <h5>Close</h5>
+                  <h5 className="close" onClick={()=>console.log('hello')}>Close</h5>
                 </div>
               </div>
             </div>
