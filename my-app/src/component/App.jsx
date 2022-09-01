@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 //CSS Style
@@ -22,7 +22,7 @@ export const Context = React.createContext();
     <div className="container">
       <div className="row">
         <div className="page-split">
-          <MainLeft modal={modal} selectedOption={selectedOption} optionTitle={optionTitle}/>
+          <MainLeft modal={modal} updateModal={updateModal} selectedOption={selectedOption} optionTitle={optionTitle}/>
           <MainRight updateModal={updateModal} updateSelectedOption={updateSelectedOption} updateOptionTitle={updateOptionTitle}/>
         </div>
         <div className="footer">
