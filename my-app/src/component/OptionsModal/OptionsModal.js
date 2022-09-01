@@ -37,7 +37,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
                   {renderOptionDescription()}
                 </div>
                  <div className="col">
-                  <h5 className="close" >Close</h5>
+                  <h5 className="close" onClick={()=>updateModal(false)}>Close</h5>
                 </div>
               </div>
             </div>
