@@ -4,9 +4,7 @@ import { connect } from "react-redux";
 
 import "./OptionsModal.css";
 
-export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitle}) => {
-
-  //Left of HERE (08/16/2022)
+export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitle, updateModal}) => {
 
   const renderOptionDescription=()=>{
     const description = userSelection.selectedOptions.map((values,index)=>{
@@ -39,7 +37,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
                   {renderOptionDescription()}
                 </div>
                  <div className="col">
-                  <h5 className="close" onClick={()=>console.log('hello')}>Close</h5>
+                  <h5 className="close" >Close</h5>
                 </div>
               </div>
             </div>
