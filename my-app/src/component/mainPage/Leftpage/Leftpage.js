@@ -33,8 +33,6 @@ const MainLeft = ({
   //Destructre data
   const { acceleration, engine, hp, torque } = carData[trim][model].spec;
 
-  const mainLeftContext = React.useContext(Context);
-
 
 
   const toggleImageSection = () => {
