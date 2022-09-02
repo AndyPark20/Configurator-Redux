@@ -32,7 +32,7 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
               <div className="row">
                 <div className="col">
                   <h2>{Object.keys(values.option[selectedOption])[0]}</h2>
-                  {console.log(Object.values(values.option[selectedOption])[0].image)}
+                 <img src={Object.values(values.option[selectedOption])[0].image}  alt="audi-selected-option-picture"/>
                 </div>
                 <div className="col">{renderOptionDescription()}</div>
                 <div className="col">
