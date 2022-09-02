@@ -32,12 +32,13 @@ export const OptionsDetail = ({ userSelection, modal, selectedOption, optionTitl
               <div className="row">
                 <div className="col">
                   <h2>{Object.keys(values.option[selectedOption])[0]}</h2>
+                  {console.log(userSelection.selectedOptions.option)}
                 </div>
+                <div className="col">{renderOptionDescription()}</div>
                 <div className="col">
-                  {renderOptionDescription()}
-                </div>
-                 <div className="col">
-                  <h5 className="close" onClick={()=>updateModal(false)}>Close</h5>
+                  <h5 className="close" onClick={() => updateModal(false)}>
+                    Close
+                  </h5>
                 </div>
               </div>
             </div>
