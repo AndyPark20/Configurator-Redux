@@ -32,3 +32,8 @@
 .learn-more-container{
   display:flex;
 }
+
+.learn-more-button{
+  background: #406ce4;
+  border:none;
+}
