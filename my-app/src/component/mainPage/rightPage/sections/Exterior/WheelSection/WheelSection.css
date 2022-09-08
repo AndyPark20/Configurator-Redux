@@ -3,6 +3,7 @@
 /***Wheel Image Size***/
 .wheel-image-size{
   width:25%;
+  border:1px solid black;
 }
 
 /***Wheel list alignment***/
